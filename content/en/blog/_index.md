@@ -1,7 +1,7 @@
 ---
 title: "Blog"
 description: "Ideas, research, and practical insights on software engineering, startups, agile methods, and technology."
-hero_image: "/images/blog/blog-hero.jpg"
+hero_image: "/images/blog-hero.jpg"
 draft: false
 ---
 

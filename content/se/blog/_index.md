@@ -1,7 +1,7 @@
 ---
 title: "Blogg"
 description: "Idéer, forskning och praktiska erfarenheter inom mjukvaruutveckling, startups, agila metoder och teknik."
-hero_image: "/images/blog/blog-hero.jpg"
+hero_image: "/images/blog-hero.jpg"
 draft: false
 ---
 
