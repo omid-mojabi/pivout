@@ -1,0 +1,28 @@
+[
+    {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/omid-mojabi/",
+        "image": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+    },
+    {
+        "name": "Twitter",
+        "link": "https://twitter.com/1agilist",
+        "image": "social/twitter.svg"
+    },
+    {
+        "name": "Instagram",
+        "link": "https://instagram.com/1agilist",
+        "image": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+    },
+    {
+        "name": "Telegram",
+        "link": "https://t.me/yekagilist",
+        "image": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"
+    },
+    {
+        "name": "Github",
+        "link": "https://github.com/omid-mojabi",
+        "image": "social/github.svg"
+    }
+]
+

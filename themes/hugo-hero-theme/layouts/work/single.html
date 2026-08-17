@@ -1,0 +1,121 @@
+{{ define "header_css" }}{{ end }}
+
+{{ define "body_classes" }}page-work-single{{ end }}
+
+{{ define "header_classes" }}header-absolute{{ end }}
+
+{{ define "main" }}
+
+{{ partial "hero-image-setheight.html" (dict
+  "background" .Params.heroBackground
+  "heading" .Params.heroHeading
+  "subheading" .Params.heroSubHeading
+  "content" .
+)}}
+
+<div class="container pt-4 pt-md-10 pb-4 pb-md-10">
+
+  <div class="row justify-content-start">
+
+    <div class="col-12 col-md-8">
+
+<div class="work work-single">
+
+  {{ if .Params.companyURL }}
+
+    <h2 class="work-company-title">
+      {{ if eq .Site.Language.Lang "fa" }}
+        درباره
+      {{ else if eq .Site.Language.Lang "se" }}
+        Om
+      {{ else }}
+        About
+      {{ end }}
+
+      <a
+        href="{{ .Params.companyURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="work-company-link">
+        {{ .Title }}
+      </a>
+    </h2>
+
+  {{ end }}
+
+  <div class="content">
+    {{ .Content }}
+  </div>
+
+</div>
+
+    </div>
+
+
+    {{ if .Params.images }}
+
+    <div class="col-12 pt-4 pt-md-10">
+
+      <h2 class="mb-2">
+
+        {{ if eq .Site.Language.Lang "fa" }}
+          گالری
+        {{ else if eq .Site.Language.Lang "se" }}
+          Galleri
+        {{ else }}
+          Gallery
+        {{ end }}
+
+      </h2>
+
+      <div class="masonry">
+
+        {{ range .Params.images }}
+
+          <div class="work-image item">
+            <img
+              src="{{ . | relURL }}"
+              alt="{{ $.Title }}"
+              loading="lazy"
+            />
+          </div>
+
+        {{ end }}
+
+      </div>
+
+    </div>
+
+    {{ end }}
+
+  </div>
+
+</div>
+
+{{ end }}
+
+
+{{ define "footer_js" }}
+
+{{ $library := resources.Get "js/libs/library.js" }}
+{{ $services := resources.Get "js/pages/services.js" }}
+
+{{ $servicesJS := slice $library $services | resources.Concat "js/services.js" }}
+
+{{ if hugo.IsServer }}
+
+<script
+  type="text/javascript"
+  src="{{ $servicesJS.RelPermalink }}">
+</script>
+
+{{ else }}
+
+<script
+  type="text/javascript"
+  src="{{ ($servicesJS | minify | fingerprint).RelPermalink }}">
+</script>
+
+{{ end }}
+
+{{ end }}

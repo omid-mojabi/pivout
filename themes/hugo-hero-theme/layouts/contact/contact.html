@@ -1,0 +1,119 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-contact{{ end }}
+{{ define "header_classes" }}header-absolute{{ end }}
+
+{{ define "main" }}
+
+{{ $lang := .Site.Language.Lang }}
+
+<div class="contact-hero"
+     style="background-image: url('{{ "/images/contact-header.jpg" | relURL }}');">
+</div>
+
+<div class="contact-page">
+  <div class="container">
+
+    <!-- PAGE TITLE -->
+    <div class="row">
+      <div class="col-12 col-lg-8">
+
+        <h1 class="contact-title">{{ .Title }}</h1>
+
+        <div class="contact-intro">
+          {{ .Content }}
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- BOOKING + EMAIL -->
+    <div class="contact-tools">
+
+
+      <!-- BOOKING -->
+      <section class="contact-booking">
+
+        <h2>
+          {{ if eq $lang "fa" }}
+            رزرو جلسه مشاوره
+          {{ else if eq $lang "se" }}
+            Boka en konsultation
+          {{ else }}
+            Book a Consultation
+          {{ end }}
+        </h2>
+
+        <p>
+          {{ if eq $lang "fa" }}
+            زمان مناسب خود را برای یک جلسه مشاوره انتخاب کنید.
+          {{ else if eq $lang "se" }}
+            Välj en tid som passar dig för ett konsultationsmöte.
+          {{ else }}
+            Choose a convenient time for a consultation.
+          {{ end }}
+        </p>
+
+
+        <div class="booking-widget">
+
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/omid-mojabi/coaching-mentoring?hide_gdpr_banner=1"
+            data-resize="true"
+            style="min-width:320px;height:700px;">
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- EMAIL -->
+      <aside class="contact-info-panel">
+
+        <h2>
+          {{ if eq $lang "fa" }}
+            تماس
+          {{ else if eq $lang "se" }}
+            Kontakt
+          {{ else }}
+            Contact
+          {{ end }}
+        </h2>
+
+
+        <div class="contact-info-item">
+
+          <strong>
+            {{ if eq $lang "fa" }}
+              ایمیل
+            {{ else if eq $lang "se" }}
+              E-post
+            {{ else }}
+              Email
+            {{ end }}
+          </strong>
+
+          <a href="mailto:contact@pivout.se">
+            contact@omid-mojabi.com
+          </a>
+
+        </div>
+
+      </aside>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="https://assets.calendly.com/assets/external/widget.js"
+  async>
+</script>
+
+{{ end }}

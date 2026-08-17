@@ -1,0 +1,179 @@
+{{ define "header_css" }}{{ end }}
+
+{{ define "body_classes" }}page-about{{ end }}
+
+{{ define "header_classes" }}header-absolute{{ end }}
+
+{{ define "main" }}
+
+{{/* =========================================================
+   HERO
+   ========================================================= */}}
+
+<!--div class="about-hero"
+     style="background-image: url('{{ .Params.heroBackground | relURL }}');">
+
+  <div class="about-hero-overlay"></div>
+
+  <div class="container about-hero-inner">
+    <div class="about-hero-text">
+
+      {{ with .Params.heroHeading }}
+        <h1>{{ . }}</h1>
+      {{ end }}
+
+      {{ with .Params.heroSubHeading }}
+        <p>{{ . }}</p>
+      {{ end }}
+
+    </div>
+  </div>
+
+</div-->
+
+
+{{/* =========================================================
+   SLIDER
+   ========================================================= */}}
+
+{{ $slides := .Pages.ByWeight }}
+
+{{ if $slides }}
+
+<div class="about-slider">
+
+  {{ range $index, $slide := $slides }}
+
+    <div
+      class="about-slide{{ if eq $index 0 }} active{{ end }}"
+      style="background-image: url('{{ $slide.Params.background | relURL }}');"
+    >
+
+      <div class="about-slide-overlay"></div>
+
+      <div class="container">
+
+        <div class="about-slide-content align-{{ $slide.Params.align }}">
+
+          <h2>{{ $slide.Title }}</h2>
+
+          <div class="about-slide-text">
+            {{ $slide.Content }}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  {{ end }}
+
+
+  <div class="about-slider-dots">
+
+    {{ range $index, $slide := $slides }}
+
+      <button
+        type="button"
+        {{ if eq $index 0 }}class="active"{{ end }}
+        aria-label="Slide {{ add $index 1 }}">
+      </button>
+
+    {{ end }}
+
+  </div>
+
+</div>
+
+{{ end }}
+
+
+{{/* =========================================================
+   MAIN ABOUT CONTENT
+   ========================================================= */}}
+
+<div class="about-page">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-12 col-lg-8">
+
+        <h2 class="about-title">
+          {{ .Title }}
+        </h2>
+
+        <div class="about-content">
+          {{ .Content }}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+{{/* =========================================================
+   SLIDER SCRIPT
+   ========================================================= */}}
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const slides = document.querySelectorAll(".about-slide");
+  const dots = document.querySelectorAll(".about-slider-dots button");
+
+  if (!slides.length) {
+    return;
+  }
+
+  let current = 0;
+  let intervalId = null;
+
+  function showSlide(index) {
+
+    slides.forEach(function (slide, i) {
+      slide.classList.toggle("active", i === index);
+    });
+
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle("active", i === index);
+    });
+
+    current = index;
+  }
+
+  function nextSlide() {
+    const next = (current + 1) % slides.length;
+    showSlide(next);
+  }
+
+  dots.forEach(function (dot, index) {
+
+    dot.addEventListener("click", function () {
+
+      showSlide(index);
+
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+
+      intervalId = setInterval(nextSlide, 6000);
+
+    });
+
+  });
+
+  if (slides.length > 1) {
+    intervalId = setInterval(nextSlide, 6000);
+  }
+
+});
+</script>
+
+{{ end }}

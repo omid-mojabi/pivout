@@ -1,0 +1,155 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-contact{{ end }}
+{{ define "header_classes" }}header-absolute{{ end }}
+
+{{ define "main" }}
+
+{{ $lang := .Site.Language.Lang }}
+
+<div class="contact-hero blog-hero"
+     style="background-image: url('{{ "/images/blog-hero.jpg" | relURL }}');">
+
+  <div class="blog-hero-overlay"></div>
+
+  <div class="container blog-hero-container">
+    <div class="blog-hero-text">
+
+      <h1>
+        {{ if eq $lang "fa" }}
+          بلاگ
+        {{ else if eq $lang "se" }}
+          Blogg
+        {{ else }}
+          Blog
+        {{ end }}
+      </h1>
+
+      <p>
+        {{ if eq $lang "fa" }}
+          یادداشت‌ها، پژوهش‌ها و تجربه‌هایی درباره مهندسی نرم‌افزار، فناوری و نوآوری
+        {{ else if eq $lang "se" }}
+          Idéer, forskning och erfarenheter inom mjukvaruutveckling, teknik och innovation
+        {{ else }}
+          Ideas, research and experiences in software engineering, technology and innovation
+        {{ end }}
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+
+<div class="blog-page">
+  <div class="container">
+
+    {{ $posts := .RegularPages.ByDate.Reverse }}
+
+    {{ if gt (len $posts) 0 }}
+
+      {{ $featured := index $posts 0 }}
+
+      <div class="blog-layout">
+
+        <!-- LEFT: PUBLISHED POSTS LIST -->
+        <aside class="blog-sidebar">
+
+          <h2 class="blog-sidebar-title">
+            {{ if eq $lang "fa" }}
+              نوشته‌های تازه
+            {{ else if eq $lang "se" }}
+              Senaste publicerade inlägg
+            {{ else }}
+              Latest Published Posts
+            {{ end }}
+          </h2>
+
+          <div class="blog-sidebar-list">
+
+            {{ range $posts }}
+
+              <article class="blog-sidebar-item">
+
+                <a href="{{ .RelPermalink }}" class="blog-sidebar-link">
+                  {{ .Title }}
+                </a>
+
+                <div class="blog-sidebar-date">
+                  {{ .Date.Format "2006-01-02" }}
+                </div>
+
+              </article>
+
+            {{ end }}
+
+          </div>
+
+        </aside>
+
+
+        <!-- RIGHT: MAIN / LATEST POST -->
+<main class="blog-main">
+
+  {{ with $featured.Params.thumbnail }}
+    <a href="{{ $featured.RelPermalink }}" class="blog-main-image">
+      <img
+        src="{{ . | relURL }}"
+        alt="{{ $featured.Title }}"
+      >
+    </a>
+  {{ end }}
+
+  <div class="blog-main-content">
+
+    <div class="blog-card-date">
+      {{ $featured.Date.Format "2006-01-02" }}
+    </div>
+
+    <h2 class="blog-main-title">
+      <a href="{{ $featured.RelPermalink }}">
+        {{ $featured.Title }}
+      </a>
+    </h2>
+
+    <div class="blog-card-summary">
+      {{ with $featured.Params.description }}
+        {{ . }}
+      {{ else }}
+        {{ $featured.Summary | plainify | truncate 220 }}
+      {{ end }}
+    </div>
+
+    <a href="{{ $featured.RelPermalink }}" class="blog-read-more">
+      {{ if eq $lang "fa" }}
+        ادامه مطلب
+      {{ else if eq $lang "se" }}
+        Läs mer
+      {{ else }}
+        Read more
+      {{ end }}
+    </a>
+
+  </div>
+
+</main>
+
+      </div>
+
+    {{ else }}
+
+      <div class="blog-empty">
+        {{ if eq $lang "fa" }}
+          هنوز پستی منتشر نشده است.
+        {{ else if eq $lang "se" }}
+          Inga inlägg har publicerats ännu.
+        {{ else }}
+          No posts have been published yet.
+        {{ end }}
+      </div>
+
+    {{ end }}
+
+  </div>
+</div>
+
+{{ end }}

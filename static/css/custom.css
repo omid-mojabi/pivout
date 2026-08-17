@@ -1,0 +1,3379 @@
+/* =========================================================
+   VAZIRMATN FONT
+   ========================================================= */
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html[lang="fa"],
+html[lang="fa"] body,
+html[lang="fa-IR"],
+html[lang="fa-IR"] body,
+body[class*="fa"] {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* =========================================================
+   HEADER / HERO FIX
+   ========================================================= */
+
+.header.header-absolute,
+.header.header-absolute .container {
+  background: transparent !important;
+}
+
+.header.header-absolute {
+  box-shadow: none !important;
+  border: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+.header.header-absolute .container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  position: relative !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+body.page-home,
+#wrapper.wrapper {
+  background: transparent !important;
+}
+
+.hero-image.hero-image-fullscreen {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* =========================================================
+   REMOVE SUB FOOTER
+   ========================================================= */
+
+.sub-footer {
+  display: none !important;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer .footer-inner {
+  display: grid !important;
+  grid-template-columns: 1.7fr auto 1fr !important;
+  align-items: center !important;
+  gap: 18px !important;
+  position: relative !important;
+}
+
+.footer .footer-inner ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.footer .footer-inner .footer-menu {
+  grid-column: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 22px !important;
+  justify-content: flex-start !important;
+
+  min-width: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Copyright stays exactly centered */
+.footer .footer-inner .footer-menu .copyright {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  white-space: nowrap !important;
+  font-size: 0.9rem !important;
+  opacity: 0.9 !important;
+
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+/* Social icons stay on the far right */
+.footer .footer-inner .social {
+  grid-column: 3 !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 16px !important;
+  justify-content: flex-end !important;
+
+  white-space: nowrap !important;
+}
+
+.footer .social img {
+  filter: brightness(0) invert(1);
+}
+
+.footer .container {
+  max-width: 100% !important;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+/* =========================================================
+   FOOTER MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .footer .footer-inner {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 18px !important;
+  }
+
+  .footer .footer-inner .footer-menu {
+    grid-column: 1 !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px 20px !important;
+  }
+
+  .footer .footer-inner .footer-menu .copyright {
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .footer .footer-inner .social {
+    grid-column: 1 !important;
+    justify-content: center !important;
+  }
+
+  .footer .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* =========================================================
+   TOP CENTER MENU
+   ========================================================= */
+
+.top-center-menu {
+  position: absolute !important;
+  top: 24px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 14px !important;
+  z-index: 9999 !important;
+  direction: ltr !important;
+}
+
+.top-center-menu a,
+.top-center-menu a:visited {
+  display: inline-block !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  padding: 9px 22px !important;
+  min-width: 92px !important;
+  text-align: center !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.10) !important;
+  transition: all 0.2s ease !important;
+}
+
+.top-center-menu a:hover {
+  background: #ffffff !important;
+  color: #2142d8 !important;
+}
+
+html[lang="fa"] .top-center-menu,
+html[lang="fa-IR"] .top-center-menu {
+  direction: rtl !important;
+}
+
+/* =========================================================
+   MOBILE MENU LINKS
+   ========================================================= */
+
+.mobile-center-menu {
+  display: none !important;
+}
+
+/* =========================================================
+   LANGUAGE SWITCHER
+   ========================================================= */
+
+.language-switcher {
+  position: absolute !important;
+  top: 24px !important;
+  left: calc(50% + 360px) !important;
+  right: auto !important;
+  z-index: 20000 !important;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+
+.language-current {
+  height: 48px !important;
+  min-width: 130px !important;
+  padding: 0 38px 0 14px !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.10) !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 48px !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  outline: none !important;
+  position: relative !important;
+}
+
+.language-current::after {
+  content: "▾";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+}
+
+.language-dropdown {
+  display: none !important;
+  position: absolute !important;
+  top: 48px !important;
+  left: 0 !important;
+  min-width: 130px !important;
+  padding-top: 8px !important;
+  background: transparent !important;
+  border-radius: 8px !important;
+  overflow: visible !important;
+  box-shadow: none !important;
+}
+
+.language-dropdown a {
+  display: block !important;
+  padding: 10px 14px !important;
+  color: #111111 !important;
+  background: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+}
+
+.language-dropdown a:first-child {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.language-dropdown a:last-child {
+  border-radius: 0 0 8px 8px !important;
+}
+
+.language-switcher:hover .language-dropdown,
+.language-dropdown:hover {
+  display: block !important;
+}
+
+/* =========================================================
+   HERO TEXT - DESKTOP
+   ========================================================= */
+
+.hero-image .hero-text {
+  max-width: 900px !important;
+  width: auto !important;
+}
+
+.hero-image .hero-text h1 {
+  font-size: 64px !important;
+  line-height: 1.12 !important;
+  white-space: normal !important;
+}
+
+.hero-image .hero-text p {
+  max-width: 820px !important;
+  font-size: 28px !important;
+  line-height: 1.4 !important;
+  white-space: normal !important;
+}
+
+html[lang="fa"] .hero-text,
+html[lang="fa-IR"] .hero-text,
+body[class*="fa"] .hero-text {
+  direction: rtl !important;
+  text-align: right !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+html[lang="fa"] .hero-text h1,
+html[lang="fa"] .hero-text p,
+html[lang="fa-IR"] .hero-text h1,
+html[lang="fa-IR"] .hero-text p,
+body[class*="fa"] .hero-text h1,
+body[class*="fa"] .hero-text p {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* =========================================================
+   HOME SECOND SECTION - DESKTOP
+   ========================================================= */
+
+#home {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
+html[lang="fa"] #home,
+html[lang="fa-IR"] #home,
+body[class*="fa"] #home {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[lang="fa"] #home h1,
+html[lang="fa"] #home h2,
+html[lang="fa"] #home h3,
+html[lang="fa"] #home p,
+html[lang="fa"] #home a,
+html[lang="fa-IR"] #home h1,
+html[lang="fa-IR"] #home h2,
+html[lang="fa-IR"] #home h3,
+html[lang="fa-IR"] #home p,
+html[lang="fa-IR"] #home a,
+body[class*="fa"] #home h1,
+body[class*="fa"] #home h2,
+body[class*="fa"] #home h3,
+body[class*="fa"] #home p,
+body[class*="fa"] #home a {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[lang="en"] #home .row,
+html[lang="en-us"] #home .row,
+html[lang="se"] #home .row,
+html[lang="sv-SE"] #home .row {
+  transform: translateX(-280px) !important;
+}
+
+html[lang="en"] #home .row > div,
+html[lang="en-us"] #home .row > div,
+html[lang="se"] #home .row > div,
+html[lang="sv-SE"] #home .row > div {
+  text-align: left !important;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .header.header-absolute {
+    height: 56px !important;
+    min-height: 56px !important;
+  }
+
+  .header.header-absolute .container {
+    height: 56px !important;
+    min-height: 56px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  #toggle-main-menu-mobile {
+    display: block !important;
+    position: absolute !important;
+    top: 16px !important;
+    right: 18px !important;
+    z-index: 10000 !important;
+  }
+
+  html[lang="fa"] #toggle-main-menu-mobile,
+  html[lang="fa-IR"] #toggle-main-menu-mobile {
+    right: auto !important;
+    left: 18px !important;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: #ffffff !important;
+  }
+
+  .top-center-menu {
+    display: none !important;
+  }
+
+  body.main-menu-mobile-open .mobile-center-menu {
+    display: flex !important;
+    position: fixed !important;
+    top: 130px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    z-index: 10001 !important;
+    text-align: center !important;
+  }
+
+  .mobile-center-menu a,
+  .mobile-center-menu a:visited {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    padding: 8px 18px !important;
+    border: none !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+  }
+
+  .mobile-center-menu a:hover {
+    background: #ffffff !important;
+    color: #2142d8 !important;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .language-switcher {
+    position: absolute !important;
+    top: 14px !important;
+    right: 72px !important;
+    left: auto !important;
+  }
+
+  .language-current {
+    height: 38px !important;
+    min-width: 92px !important;
+    padding: 0 28px 0 10px !important;
+    font-size: 12px !important;
+    line-height: 38px !important;
+  }
+
+  .language-current::after {
+    right: 10px !important;
+  }
+
+  .language-dropdown {
+    top: 44px !important;
+    min-width: 110px !important;
+  }
+
+  .language-dropdown a {
+    font-size: 12px !important;
+    padding: 9px 10px !important;
+  }
+
+  /* HERO MOBILE */
+  .hero-image.hero-image-fullscreen {
+    height: 420px !important;
+    min-height: 420px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .hero-image .hero-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-image .hero-text h1 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.7px !important;
+  }
+
+  html[lang="fa"] .hero-image .hero-text h1,
+  html[lang="fa-IR"] .hero-image .hero-text h1 {
+    font-size: 29px !important;
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+  html[lang="en"] .hero-image .hero-text h1,
+  html[lang="en-us"] .hero-image .hero-text h1 {
+    font-size: 31px !important;
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  html[lang="se"] .hero-image .hero-text h1,
+  html[lang="sv-SE"] .hero-image .hero-text h1 {
+    font-size: 25px !important;
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  .hero-image .hero-text h1 br {
+    display: none !important;
+  }
+
+  .hero-image .hero-text p {
+    font-size: 19px !important;
+    line-height: 1.45 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  html[lang="fa"] .hero-image .hero-text,
+  html[lang="fa-IR"] .hero-image .hero-text,
+  body[class*="fa"] .hero-image .hero-text {
+    text-align: right !important;
+    direction: rtl !important;
+  }
+
+  /* SECOND SECTION MOBILE */
+  #home {
+    height: auto !important;
+    min-height: auto !important;
+    background-size: 100% auto !important;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    padding-top: 52vw !important;
+    padding-bottom: 24px !important;
+    overflow: visible !important;
+  }
+
+  #home .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin: 0 !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+
+  #home .row {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    display: block !important;
+  }
+
+  #home .row > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  #home h1,
+  #home h2,
+  #home h3 {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 14px !important;
+    white-space: nowrap !important;
+  }
+
+  #home p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 18px !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
+
+  #home a {
+    display: inline-block !important;
+  }
+
+  html[lang="fa"] #home .row > div,
+  html[lang="fa-IR"] #home .row > div,
+  body[class*="fa"] #home .row > div,
+  html[lang="fa"] #home h1,
+  html[lang="fa"] #home h2,
+  html[lang="fa"] #home h3,
+  html[lang="fa"] #home p,
+  html[lang="fa-IR"] #home h1,
+  html[lang="fa-IR"] #home h2,
+  html[lang="fa-IR"] #home h3,
+  html[lang="fa-IR"] #home p,
+  body[class*="fa"] #home h1,
+  body[class*="fa"] #home h2,
+  body[class*="fa"] #home h3,
+  body[class*="fa"] #home p {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+  html[lang="en"] #home .row > div,
+  html[lang="en-us"] #home .row > div,
+  html[lang="se"] #home .row > div,
+  html[lang="sv-SE"] #home .row > div,
+  html[lang="en"] #home h1,
+  html[lang="en"] #home h2,
+  html[lang="en"] #home h3,
+  html[lang="en"] #home p,
+  html[lang="en-us"] #home h1,
+  html[lang="en-us"] #home h2,
+  html[lang="en-us"] #home h3,
+  html[lang="en-us"] #home p,
+  html[lang="se"] #home h1,
+  html[lang="se"] #home h2,
+  html[lang="se"] #home h3,
+  html[lang="se"] #home p,
+  html[lang="sv-SE"] #home h1,
+  html[lang="sv-SE"] #home h2,
+  html[lang="sv-SE"] #home h3,
+  html[lang="sv-SE"] #home p {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  .footer .footer-inner {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 12px !important;
+  }
+
+  .footer .footer-inner .footer-menu {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .footer .footer-inner .social {
+    justify-content: center !important;
+  }
+
+  .footer .footer-inner .footer-menu .copyright {
+    position: static !important;
+    transform: none !important;
+  }
+}
+/* =========================================================
+   FINAL MOBILE #home NO GAP FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+  #home {
+    padding-top: 0 !important;
+    padding-bottom: 24px !important;
+    min-height: auto !important;
+    height: auto !important;
+    background-size: 100% auto !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  #home .container {
+    padding-top: 52vw !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #home .row {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    transform: none !important;
+  }
+
+  #home .row > div {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* =========================================================
+   Persian About section
+   ========================================================= */
+
+html[lang="fa"] .bg-primary .text-center,
+html[lang="fa-IR"] .bg-primary .text-center,
+body[class*="fa"] .bg-primary .text-center {
+
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[lang="fa"] .bg-primary h1,
+html[lang="fa"] .bg-primary h2,
+html[lang="fa"] .bg-primary h3,
+html[lang="fa"] .bg-primary p,
+html[lang="fa-IR"] .bg-primary h1,
+html[lang="fa-IR"] .bg-primary h2,
+html[lang="fa-IR"] .bg-primary h3,
+html[lang="fa-IR"] .bg-primary p {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+html[lang="fa"] .bg-primary .button,
+html[lang="fa-IR"] .bg-primary .button {
+    float: right !important;
+}
+/* =========================================================
+   PERSIAN BLUE SECTION - ALIGN WITH UPPER #home SECTION
+   DESKTOP ONLY
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  html[lang="fa"] .bg-primary .row,
+  html[lang="fa-IR"] .bg-primary .row,
+  body[class*="fa"] .bg-primary .row {
+    justify-content: flex-start !important;
+  }
+
+  html[lang="fa"] .bg-primary .col-md-8,
+  html[lang="fa-IR"] .bg-primary .col-md-8,
+  body[class*="fa"] .bg-primary .col-md-8 {
+    flex: 0 0 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+
+    margin-left: 50% !important;
+    margin-right: 0 !important;
+
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+  html[lang="fa"] .bg-primary h2,
+  html[lang="fa"] .bg-primary p,
+  html[lang="fa-IR"] .bg-primary h2,
+  html[lang="fa-IR"] .bg-primary p,
+  body[class*="fa"] .bg-primary h2,
+  body[class*="fa"] .bg-primary p {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+  html[lang="fa"] .bg-primary .button,
+  html[lang="fa-IR"] .bg-primary .button,
+  body[class*="fa"] .bg-primary .button {
+    float: right !important;
+  }
+}
+/* =========================================================
+   SERVICES RTL (Persian)
+   ========================================================= */
+
+html[lang="fa"] .service-content,
+html[lang="fa-IR"] .service-content,
+body[class*="fa"] .service-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[lang="fa"] .service-title,
+html[lang="fa-IR"] .service-title,
+body[class*="fa"] .service-title,
+html[lang="fa"] .service-title a,
+html[lang="fa-IR"] .service-title a,
+body[class*="fa"] .service-title a {
+    direction: rtl !important;
+    text-align: right !important;
+    display: block !important;
+}
+
+html[lang="fa"] .service-content p,
+html[lang="fa-IR"] .service-content p,
+body[class*="fa"] .service-content p {
+    direction: rtl !important;
+    text-align: right !important;
+}
+html[lang="fa"] .service-summary,
+html[lang="fa-IR"] .service-summary {
+    flex-direction: row-reverse !important;
+}
+/* =========================================================
+   PERSIAN SERVICES - ICON/TITLE SPACING
+   ========================================================= */
+
+html[lang="fa"] .service-summary,
+html[lang="fa-IR"] .service-summary,
+body[class*="fa"] .service-summary {
+  flex-direction: row-reverse !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+}
+
+html[lang="fa"] .service-image,
+html[lang="fa-IR"] .service-image,
+body[class*="fa"] .service-image {
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+html[lang="fa"] .service-content,
+html[lang="fa-IR"] .service-content,
+body[class*="fa"] .service-content {
+  flex: 1 1 auto !important;
+}
+/* ===========================
+   Persian Services Typography
+   =========================== */
+
+html[lang="fa"] .service-title,
+html[lang="fa"] .service-title a,
+html[lang="fa-IR"] .service-title,
+html[lang="fa-IR"] .service-title a,
+body[class*="fa"] .service-title,
+body[class*="fa"] .service-title a {
+    font-family: "Vazirmatn", "Vazir", sans-serif !important;
+    font-weight: 500;
+    direction: rtl;
+}
+
+html[lang="fa"] .service-content,
+html[lang="fa-IR"] .service-content,
+body[class*="fa"] .service-content {
+    font-family: "Vazirmatn", "Vazir", sans-serif !important;
+}
+/* =========================================================
+   PERSIAN SERVICES - ICON SIZE FIX
+   ========================================================= */
+
+html[lang="fa"] .service-image,
+html[lang="fa-IR"] .service-image,
+body[class*="fa"] .service-image {
+  width: 36px !important;
+  min-width: 36px !important;
+  max-width: 36px !important;
+  flex: 0 0 36px !important;
+}
+
+html[lang="fa"] .service-image img,
+html[lang="fa-IR"] .service-image img,
+body[class*="fa"] .service-image img {
+  width: 36px !important;
+  height: 36px !important;
+  max-width: 36px !important;
+  max-height: 36px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+/* =========================================================
+   MOBILE FIX - BLUE ABOUT / CTA SECTION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* خود سکشن آبی */
+  html[lang="fa"] .strip.bg-primary,
+  html[lang="fa-IR"] .strip.bg-primary,
+  body[class*="fa"] .strip.bg-primary {
+    min-height: auto !important;
+    height: auto !important;
+
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+
+    overflow: visible !important;
+  }
+
+  /* container داخلی */
+  html[lang="fa"] .strip.bg-primary > .container,
+  html[lang="fa-IR"] .strip.bg-primary > .container,
+  body[class*="fa"] .strip.bg-primary > .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  /* row */
+  html[lang="fa"] .strip.bg-primary .row,
+  html[lang="fa-IR"] .strip.bg-primary .row,
+  body[class*="fa"] .strip.bg-primary .row {
+    min-height: auto !important;
+    height: auto !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    align-items: flex-start !important;
+  }
+
+  /* ستون متن */
+  html[lang="fa"] .strip.bg-primary .col-12,
+  html[lang="fa-IR"] .strip.bg-primary .col-12,
+  body[class*="fa"] .strip.bg-primary .col-12 {
+    min-height: auto !important;
+    height: auto !important;
+
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* تیتر */
+  html[lang="fa"] .strip.bg-primary h2,
+  html[lang="fa-IR"] .strip.bg-primary h2,
+  body[class*="fa"] .strip.bg-primary h2 {
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+  }
+
+  /* متن */
+  html[lang="fa"] .strip.bg-primary p,
+  html[lang="fa-IR"] .strip.bg-primary p,
+  body[class*="fa"] .strip.bg-primary p {
+    margin-bottom: 22px !important;
+  }
+
+  /* دکمه */
+  html[lang="fa"] .strip.bg-primary .button,
+  html[lang="fa-IR"] .strip.bg-primary .button,
+  body[class*="fa"] .strip.bg-primary .button {
+    float: none !important;
+    display: inline-block !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+/* =========================================================
+   MOBILE CLEAN FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -----------------------------------------
+     SECOND IMAGE SECTION
+     ----------------------------------------- */
+
+  #home {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+
+    background-size: 100% auto !important;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+
+    padding-top: 52vw !important;
+    padding-bottom: 28px !important;
+
+    overflow: visible !important;
+  }
+
+  #home .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+
+    padding: 0 20px !important;
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+
+  #home .row {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+    display: block !important;
+  }
+
+  #home .row > div {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  /* English / Swedish */
+  html[lang="en"] #home,
+  html[lang="en-us"] #home,
+  html[lang="se"] #home,
+  html[lang="sv-SE"] #home {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  html[lang="en"] #home .row,
+  html[lang="en-us"] #home .row,
+  html[lang="se"] #home .row,
+  html[lang="sv-SE"] #home .row {
+    transform: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  html[lang="en"] #home h1,
+  html[lang="en"] #home h2,
+  html[lang="en"] #home h3,
+  html[lang="en"] #home p,
+  html[lang="en-us"] #home h1,
+  html[lang="en-us"] #home h2,
+  html[lang="en-us"] #home h3,
+  html[lang="en-us"] #home p,
+  html[lang="se"] #home h1,
+  html[lang="se"] #home h2,
+  html[lang="se"] #home h3,
+  html[lang="se"] #home p,
+  html[lang="sv-SE"] #home h1,
+  html[lang="sv-SE"] #home h2,
+  html[lang="sv-SE"] #home h3,
+  html[lang="sv-SE"] #home p {
+    direction: ltr !important;
+    text-align: left !important;
+    max-width: 100% !important;
+  }
+
+  /* Persian */
+  html[lang="fa"] #home,
+  html[lang="fa-IR"] #home {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+  html[lang="fa"] #home h1,
+  html[lang="fa"] #home h2,
+  html[lang="fa"] #home h3,
+  html[lang="fa"] #home p,
+  html[lang="fa-IR"] #home h1,
+  html[lang="fa-IR"] #home h2,
+  html[lang="fa-IR"] #home h3,
+  html[lang="fa-IR"] #home p {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+
+  /* -----------------------------------------
+     BLUE CTA SECTION
+     ----------------------------------------- */
+
+  #about-cta {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: auto !important;
+
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+
+    overflow: visible !important;
+  }
+
+  #about-cta .container {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: auto !important;
+
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+
+    margin: 0 auto !important;
+  }
+
+  #about-cta .row {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+  }
+
+  #about-cta .col-12 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+  }
+
+  #about-cta h2 {
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+  }
+
+  #about-cta p {
+    margin-bottom: 22px !important;
+  }
+
+  #about-cta .button {
+    display: inline-block !important;
+    float: none !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* EN / SE CTA */
+  html[lang="en"] #about-cta,
+  html[lang="en-us"] #about-cta,
+  html[lang="se"] #about-cta,
+  html[lang="sv-SE"] #about-cta {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  html[lang="en"] #about-cta .text-center,
+  html[lang="en-us"] #about-cta .text-center,
+  html[lang="se"] #about-cta .text-center,
+  html[lang="sv-SE"] #about-cta .text-center {
+    text-align: left !important;
+  }
+
+  /* FA CTA */
+  html[lang="fa"] #about-cta,
+  html[lang="fa-IR"] #about-cta {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+  html[lang="fa"] #about-cta .text-center,
+  html[lang="fa-IR"] #about-cta .text-center {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+}
+/* =========================================================
+   CTA ALIGNMENT BY LANGUAGE
+   ========================================================= */
+
+/* English + Swedish = left aligned */
+html[lang="en"] .strip.bg-primary .text-center,
+html[lang="en-us"] .strip.bg-primary .text-center,
+html[lang="se"] .strip.bg-primary .text-center,
+html[lang="sv-SE"] .strip.bg-primary .text-center {
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+/* Persian = right aligned */
+html[lang="fa"] .strip.bg-primary .text-center,
+html[lang="fa-IR"] .strip.bg-primary .text-center,
+body[class*="fa"] .strip.bg-primary .text-center {
+  text-align: right !important;
+  direction: rtl !important;
+}
+/* =========================================================
+   BLUE CTA - ENGLISH / SWEDISH DESKTOP ALIGNMENT
+   Align with services container
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  /* row را از حالت centered خارج کن */
+  html[lang="en"] .strip.bg-primary .row.justify-content-center,
+  html[lang="en-us"] .strip.bg-primary .row.justify-content-center,
+  html[lang="se"] .strip.bg-primary .row.justify-content-center,
+  html[lang="sv"] .strip.bg-primary .row.justify-content-center,
+  html[lang="sv-SE"] .strip.bg-primary .row.justify-content-center {
+    justify-content: flex-start !important;
+  }
+
+  /* باکس متن از لبه چپ container شروع شود */
+  html[lang="en"] .strip.bg-primary .col-md-8,
+  html[lang="en-us"] .strip.bg-primary .col-md-8,
+  html[lang="se"] .strip.bg-primary .col-md-8,
+  html[lang="sv"] .strip.bg-primary .col-md-8,
+  html[lang="sv-SE"] .strip.bg-primary .col-md-8 {
+    flex: 0 0 66.666667% !important;
+    width: 66.666667% !important;
+    max-width: 66.666667% !important;
+
+    margin-left: 0 !important;
+    margin-right: auto !important;
+
+    text-align: left !important;
+    direction: ltr !important;
+  }
+
+  /* title + paragraph */
+  html[lang="en"] .strip.bg-primary h2,
+  html[lang="en"] .strip.bg-primary p,
+  html[lang="en-us"] .strip.bg-primary h2,
+  html[lang="en-us"] .strip.bg-primary p,
+  html[lang="se"] .strip.bg-primary h2,
+  html[lang="se"] .strip.bg-primary p,
+  html[lang="sv"] .strip.bg-primary h2,
+  html[lang="sv"] .strip.bg-primary p,
+  html[lang="sv-SE"] .strip.bg-primary h2,
+  html[lang="sv-SE"] .strip.bg-primary p {
+    text-align: left !important;
+    direction: ltr !important;
+  }
+
+  /* button */
+  html[lang="en"] .strip.bg-primary .button,
+  html[lang="en-us"] .strip.bg-primary .button,
+  html[lang="se"] .strip.bg-primary .button,
+  html[lang="sv"] .strip.bg-primary .button,
+  html[lang="sv-SE"] .strip.bg-primary .button {
+    float: none !important;
+    display: inline-block !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+}
+/* =========================================================
+   EN / SV - UPPER IMAGE SECTION ALIGN LEFT
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  /* فقط سکشن عکس، نه سکشن آبی */
+  html[lang="en"] #home:not(.bg-primary) .row,
+  html[lang="en-us"] #home:not(.bg-primary) .row,
+  html[lang="se"] #home:not(.bg-primary) .row,
+  html[lang="sv"] #home:not(.bg-primary) .row,
+  html[lang="sv-SE"] #home:not(.bg-primary) .row {
+    justify-content: flex-start !important;
+    transform: none !important;
+  }
+
+  /* offset بوت‌استرپ را حذف کن */
+  html[lang="en"] #home:not(.bg-primary) .offset-md-6,
+  html[lang="en-us"] #home:not(.bg-primary) .offset-md-6,
+  html[lang="se"] #home:not(.bg-primary) .offset-md-6,
+  html[lang="sv"] #home:not(.bg-primary) .offset-md-6,
+  html[lang="sv-SE"] #home:not(.bg-primary) .offset-md-6 {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  /* همان نصف صفحه بماند، فقط از چپ شروع شود */
+  html[lang="en"] #home:not(.bg-primary) .col-md-6,
+  html[lang="en-us"] #home:not(.bg-primary) .col-md-6,
+  html[lang="se"] #home:not(.bg-primary) .col-md-6,
+  html[lang="sv"] #home:not(.bg-primary) .col-md-6,
+  html[lang="sv-SE"] #home:not(.bg-primary) .col-md-6 {
+    flex: 0 0 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+
+    text-align: left !important;
+    direction: ltr !important;
+  }
+
+  html[lang="en"] #home:not(.bg-primary) h2,
+  html[lang="en"] #home:not(.bg-primary) p,
+  html[lang="se"] #home:not(.bg-primary) h2,
+  html[lang="se"] #home:not(.bg-primary) p,
+  html[lang="sv"] #home:not(.bg-primary) h2,
+  html[lang="sv"] #home:not(.bg-primary) p,
+  html[lang="sv-SE"] #home:not(.bg-primary) h2,
+  html[lang="sv-SE"] #home:not(.bg-primary) p {
+    text-align: left !important;
+  }
+}
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-page {
+  padding: 70px 0 60px;
+}
+
+.contact-title {
+  margin: 0 0 28px 0;
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+.contact-intro {
+  margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.contact-intro p {
+  margin: 0;
+}
+
+.contact-details {
+  margin-bottom: 45px;
+}
+
+.contact-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.contact-address {
+  align-items: flex-start;
+}
+
+.contact-hours-title {
+  margin: 0 0 16px;
+  font-size: 28px;
+}
+
+.opening-hours-table {
+  width: 100%;
+  max-width: 720px;
+}
+
+.opening-hours-table td {
+  padding: 10px 6px;
+  vertical-align: middle;
+}
+
+.opening-hours-table .day {
+  padding-left: 0;
+  font-weight: 600;
+}
+
+.opening-hours-table .separator {
+  width: 30px;
+  text-align: center;
+}
+
+/* Persian */
+html[lang="fa"] .contact-page,
+html[lang="fa-IR"] .contact-page {
+  direction: rtl;
+  text-align: right;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+html[lang="fa"] .contact-line,
+html[lang="fa-IR"] .contact-line {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+html[lang="fa"] .opening-hours-table,
+html[lang="fa-IR"] .opening-hours-table {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 36px 0 40px;
+  }
+
+  .contact-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .contact-intro {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+
+  .contact-line {
+    font-size: 15px;
+    flex-wrap: wrap;
+  }
+
+  .contact-hours-title {
+    font-size: 24px;
+    margin-top: 32px;
+  }
+
+  .opening-hours-table td {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+}
+
+/* CONTACT HERO */
+
+.contact-hero {
+  width: 100% !important;
+  height: 380px !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    height: 220px !important;
+  }
+}
+
+.page-contact .header.header-absolute {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+}
+
+/* =========================================================
+   ABOUT PAGE - FINAL
+   ========================================================= */
+
+/* Keep the site header over the About hero, same behavior as Contact */
+.page-about .header.header-absolute {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+}
+
+.page-about .header.header-absolute .container {
+  position: relative !important;
+  z-index: 1001 !important;
+}
+
+/* =========================================================
+   ABOUT HERO
+   ========================================================= */
+
+.page-about .about-hero {
+  display: block !important;
+  width: 100% !important;
+  height: 380px !important;
+  min-height: 380px !important;
+  position: relative !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.page-about .about-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background: rgba(8, 20, 80, 0.36) !important;
+}
+
+.page-about .about-hero-inner {
+  position: relative !important;
+  z-index: 2 !important;
+  height: 100% !important;
+
+  display: flex !important;
+  align-items: center !important;
+}
+
+.page-about .about-hero-text {
+  width: 100% !important;
+  max-width: 760px !important;
+  color: #ffffff !important;
+}
+
+.page-about .about-hero-text h1 {
+  margin: 0 0 18px !important;
+  color: #ffffff !important;
+  font-size: 54px !important;
+  line-height: 1.15 !important;
+}
+
+.page-about .about-hero-text p {
+  margin: 0 !important;
+  max-width: 760px !important;
+  color: #ffffff !important;
+  font-size: 21px !important;
+  line-height: 1.65 !important;
+}
+
+/* =========================================================
+   ABOUT SLIDER
+   ========================================================= */
+
+.page-about .about-slider {
+  display: block !important;
+  width: 100% !important;
+  height: 420px !important;
+  min-height: 420px !important;
+
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.page-about .about-slide {
+  position: absolute !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  opacity: 0 !important;
+  visibility: hidden !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease !important;
+}
+
+.page-about .about-slide.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.page-about .about-slide-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background: rgba(0, 25, 90, 0.42) !important;
+}
+
+.page-about .about-slide .container {
+  height: 100% !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.page-about .about-slide-content {
+  height: 100% !important;
+  max-width: 620px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+
+  color: #ffffff !important;
+}
+
+.page-about .about-slide-content h2 {
+  margin: 0 0 18px !important;
+  color: #ffffff !important;
+  font-size: 40px !important;
+  line-height: 1.25 !important;
+}
+
+.page-about .about-slide-content p {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 19px !important;
+  line-height: 1.7 !important;
+}
+
+.page-about .about-slide-content.align-left {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
+}
+
+.page-about .about-slide-content.align-right {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  text-align: right !important;
+}
+
+.page-about .about-slide-content.align-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+/* Slider navigation dots */
+.page-about .about-slider-dots {
+  position: absolute !important;
+  z-index: 10 !important;
+
+  bottom: 22px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  display: flex !important;
+  gap: 10px !important;
+}
+
+.page-about .about-slider-dots button {
+  display: block !important;
+  width: 11px !important;
+  height: 11px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: 2px solid #ffffff !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+
+  cursor: pointer !important;
+}
+
+.page-about .about-slider-dots button.active {
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   ABOUT MAIN TEXT
+   ========================================================= */
+
+.page-about .about-page {
+  padding: 70px 0 80px !important;
+}
+
+.page-about .about-title {
+  margin: 0 0 26px !important;
+  font-size: 46px !important;
+  line-height: 1.2 !important;
+}
+
+.page-about .about-content {
+  max-width: 850px !important;
+  font-size: 19px !important;
+  line-height: 1.8 !important;
+}
+
+.page-about .about-content p {
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+}
+
+/* =========================================================
+   ABOUT - PERSIAN RTL
+   ========================================================= */
+
+html[lang="fa"] .page-about .about-hero-text,
+html[lang="fa-IR"] .page-about .about-hero-text,
+html[lang="fa"] .page-about .about-page,
+html[lang="fa-IR"] .page-about .about-page,
+body[class*="fa"].page-about .about-hero-text,
+body[class*="fa"].page-about .about-page {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .page-about .about-hero-text,
+html[lang="fa-IR"] .page-about .about-hero-text,
+body[class*="fa"].page-about .about-hero-text {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+html[lang="fa"] .page-about .about-slide-content,
+html[lang="fa-IR"] .page-about .about-slide-content,
+body[class*="fa"].page-about .about-slide-content {
+  direction: rtl !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+/* =========================================================
+   ABOUT - MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .page-about .about-hero {
+    height: 220px !important;
+    min-height: 220px !important;
+  }
+
+  .page-about .about-hero-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .page-about .about-hero-text {
+    max-width: 100% !important;
+  }
+
+  .page-about .about-hero-text h1 {
+    font-size: 34px !important;
+    line-height: 1.2 !important;
+  }
+
+  .page-about .about-hero-text p {
+    max-width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  .page-about .about-slider {
+    height: 360px !important;
+    min-height: 360px !important;
+  }
+
+  .page-about .about-slide-content {
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .page-about .about-slide-content h2 {
+    font-size: 30px !important;
+  }
+
+  .page-about .about-slide-content p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .page-about .about-page {
+    padding: 42px 0 50px !important;
+  }
+
+  .page-about .about-title {
+    font-size: 34px !important;
+  }
+
+  .page-about .about-content {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* =========================================================
+   WORK PAGE
+   ========================================================= */
+
+.page-work-list .header.header-absolute,
+.page-work-single .header.header-absolute {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+}
+
+/* Work list spacing */
+
+.page-work-list .work-summary {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.page-work-list .work-image {
+  width: 100% !important;
+  margin-bottom: 18px !important;
+  overflow: hidden !important;
+}
+
+.page-work-list .work-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 260px !important;
+  object-fit: cover !important;
+}
+
+.page-work-list .work-title {
+  margin: 0 0 12px !important;
+  font-size: 30px !important;
+  line-height: 1.3 !important;
+}
+
+.page-work-list .work-content {
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+}
+
+
+/* Persian */
+
+html[lang="fa"] .page-work-list,
+html[lang="fa-IR"] .page-work-list,
+html[lang="fa"] .page-work-single,
+html[lang="fa-IR"] .page-work-single {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .page-work-list .work-title,
+html[lang="fa-IR"] .page-work-list .work-title,
+html[lang="fa"] .page-work-list .work-content,
+html[lang="fa-IR"] .page-work-list .work-content {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .page-work-list .work-image img {
+    height: 220px !important;
+  }
+
+  .page-work-list .work-title {
+    font-size: 25px !important;
+  }
+
+  .page-work-list .work-content {
+    font-size: 16px !important;
+  }
+}
+
+/* =========================================================
+   WORK SINGLE PAGE
+   ========================================================= */
+
+.page-work-single .work-single {
+  width: 100% !important;
+}
+
+.page-work-single .work-single .content {
+  font-size: 18px !important;
+  line-height: 1.9 !important;
+}
+
+.page-work-single .work-single .content h2 {
+  margin-top: 10px !important;
+  margin-bottom: 24px !important;
+
+  font-size: 34px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+}
+
+.page-work-single .work-single .content h3 {
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+}
+
+.page-work-single .work-single .content p {
+  margin-top: 0 !important;
+  margin-bottom: 22px !important;
+}
+
+.page-work-single .work-single .content ul {
+  margin-top: 10px !important;
+  margin-bottom: 30px !important;
+  padding-left: 24px !important;
+}
+
+.page-work-single .work-single .content li {
+  margin-bottom: 16px !important;
+  line-height: 1.9 !important;
+}
+
+.page-work-single .work-single .content li strong {
+  font-weight: 700 !important;
+}
+
+
+/* =========================================================
+   WORK SINGLE - PERSIAN
+   ========================================================= */
+
+html[lang="fa"] .page-work-single .work-single,
+html[lang="fa-IR"] .page-work-single .work-single {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .page-work-single .work-single .content,
+html[lang="fa-IR"] .page-work-single .work-single .content,
+html[lang="fa"] .page-work-single .work-single .content h1,
+html[lang="fa"] .page-work-single .work-single .content h2,
+html[lang="fa"] .page-work-single .work-single .content h3,
+html[lang="fa"] .page-work-single .work-single .content p,
+html[lang="fa"] .page-work-single .work-single .content li,
+html[lang="fa-IR"] .page-work-single .work-single .content h1,
+html[lang="fa-IR"] .page-work-single .work-single .content h2,
+html[lang="fa-IR"] .page-work-single .work-single .content h3,
+html[lang="fa-IR"] .page-work-single .work-single .content p,
+html[lang="fa-IR"] .page-work-single .work-single .content li {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+/* RTL list indentation */
+html[lang="fa"] .page-work-single .work-single .content ul,
+html[lang="fa-IR"] .page-work-single .work-single .content ul {
+  padding-left: 0 !important;
+  padding-right: 26px !important;
+}
+
+
+/* =========================================================
+   WORK GALLERY
+   ========================================================= */
+
+.page-work-single .masonry {
+  margin-top: 18px !important;
+}
+
+.page-work-single .masonry .work-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+/* =========================================================
+   WORK SINGLE MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .page-work-single .work-single .content {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+  }
+
+  .page-work-single .work-single .content h2 {
+    font-size: 28px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .page-work-single .work-single .content li {
+    margin-bottom: 14px !important;
+  }
+}
+
+/* =========================================================
+   WORK SINGLE - CONTENT TYPOGRAPHY
+   ========================================================= */
+
+.page-work-single .work-single .content > p {
+  font-size: 18px !important;
+  line-height: 1.9 !important;
+  margin: 0 0 28px 0 !important;
+}
+
+/* Persian */
+html[lang="fa"] .page-work-single .work-single .content > p,
+html[lang="fa-IR"] .page-work-single .work-single .content > p {
+  font-size: 18px !important;
+  line-height: 1.9 !important;
+  margin-bottom: 28px !important;
+}
+.page-work-single .work-company-title {
+  font-size: 30px !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+  margin: 0 0 20px !important;
+}
+
+.page-work-single .work-company-link {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease;
+}
+
+.page-work-single .work-company-link:hover {
+  opacity: 0.65;
+  text-decoration: underline !important;
+}
+
+html[lang="fa"] .page-work-single .work-company-title,
+html[lang="fa-IR"] .page-work-single .work-company-title {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+/* WORK SINGLE - force heading size */
+
+html[lang="fa"] .page-work-single .work-single .content h2,
+html[lang="fa-IR"] .page-work-single .work-single .content h2 {
+  font-size: 26px !important;
+  line-height: 1.5 !important;
+  margin-top: 28px !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+/* WORK SINGLE - force heading size */
+
+html[lang="en"] .page-work-single .work-single .content h2 {
+  font-size: 26px !important;
+  line-height: 1.5 !important;
+  margin-top: 28px !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+/* =========================================================
+   WORK LIST - PERSIAN VAZIRMATN FIX
+   ========================================================= */
+
+html[lang="fa"] .page-work-list .work-title,
+html[lang="fa"] .page-work-list .work-title a,
+html[lang="fa"] .page-work-list .work-content,
+html[lang="fa"] .page-work-list .work-content a,
+html[lang="fa"] .page-work-list .work-summary-text,
+html[lang="fa"] .page-work-list .work-summary-text p,
+
+html[lang="fa-IR"] .page-work-list .work-title,
+html[lang="fa-IR"] .page-work-list .work-title a,
+html[lang="fa-IR"] .page-work-list .work-content,
+html[lang="fa-IR"] .page-work-list .work-content a,
+html[lang="fa-IR"] .page-work-list .work-summary-text,
+html[lang="fa-IR"] .page-work-list .work-summary-text p {
+    font-family: "Vazirmatn", sans-serif !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+/* =========================================================
+   BLOG PAGE
+   ========================================================= */
+
+.page-blog .header.header-absolute {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+}
+
+
+/* =========================================================
+   BLOG HERO
+   ========================================================= */
+
+.blog-hero {
+  width: 100% !important;
+  height: 520px !important;
+  min-height: 520px !important;
+
+  position: relative !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/* Dark overlay */
+
+.blog-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+
+  background: rgba(0, 20, 65, 0.30) !important;
+}
+
+
+/* Content container */
+
+.blog-hero-inner {
+  position: relative !important;
+  z-index: 2 !important;
+
+  height: 100% !important;
+
+  display: flex !important;
+  align-items: flex-end !important;
+
+  padding-bottom: 55px !important;
+}
+
+
+/* Text */
+
+.blog-hero-content {
+  width: 100% !important;
+  max-width: 850px !important;
+
+  color: #ffffff !important;
+}
+
+.blog-title {
+  margin: 0 0 18px !important;
+
+  color: #ffffff !important;
+
+  font-size: 52px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+}
+
+.blog-intro {
+  margin: 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: 18px !important;
+  line-height: 1.9 !important;
+}
+
+.blog-intro p {
+  color: #ffffff !important;
+  margin: 0 0 10px !important;
+}
+
+.blog-intro p:last-child {
+  margin-bottom: 0 !important;
+}
+
+
+/* =========================================================
+   PERSIAN BLOG
+   ========================================================= */
+
+html[lang="fa"] .blog-hero-content,
+html[lang="fa-IR"] .blog-hero-content {
+  direction: rtl !important;
+  text-align: right !important;
+
+  margin-left: auto !important;
+  margin-right: 0 !important;
+
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .blog-title,
+html[lang="fa-IR"] .blog-title,
+html[lang="fa"] .blog-intro,
+html[lang="fa-IR"] .blog-intro,
+html[lang="fa"] .blog-intro p,
+html[lang="fa-IR"] .blog-intro p {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+
+/* =========================================================
+   BLOG BODY
+   ========================================================= */
+
+.blog-page {
+  padding: 70px 0 80px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .blog-hero {
+    height: 420px !important;
+    min-height: 420px !important;
+  }
+
+  .blog-hero-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 35px !important;
+  }
+
+  .blog-title {
+    font-size: 36px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .blog-intro {
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+  }
+
+  .blog-page {
+    padding: 45px 0 55px !important;
+  }
+}
+
+/* =========================================================
+   BLOG HERO TEXT
+   ========================================================= */
+
+.blog-hero {
+  position: relative !important;
+}
+
+.blog-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(0, 20, 70, 0.22) !important;
+  z-index: 1 !important;
+}
+
+.blog-hero-container {
+  position: relative !important;
+  z-index: 2 !important;
+
+  height: 100% !important;
+
+  display: flex !important;
+  align-items: flex-end !important;
+
+  padding-bottom: 42px !important;
+}
+
+.blog-hero-text {
+  max-width: 760px !important;
+  color: #ffffff !important;
+}
+
+.blog-hero-text h1 {
+  margin: 0 0 10px !important;
+  color: #ffffff !important;
+
+  font-size: 48px !important;
+  line-height: 1.2 !important;
+}
+
+.blog-hero-text p {
+  margin: 0 !important;
+  color: #ffffff !important;
+
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+}
+
+
+/* Persian */
+
+html[lang="fa"] .blog-hero-text,
+html[lang="fa-IR"] .blog-hero-text {
+  direction: rtl !important;
+  text-align: right !important;
+
+  margin-left: auto !important;
+  margin-right: 0 !important;
+
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .blog-hero-text h1,
+html[lang="fa-IR"] .blog-hero-text h1,
+html[lang="fa"] .blog-hero-text p,
+html[lang="fa-IR"] .blog-hero-text p {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .blog-hero-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .blog-hero-text h1 {
+    font-size: 34px !important;
+  }
+
+  .blog-hero-text p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+}
+/* =========================================================
+   BLOG POSTS
+   ========================================================= */
+
+.blog-posts {
+  margin-top: 55px !important;
+}
+
+.blog-card {
+  height: 100% !important;
+}
+
+.blog-card-image {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 20px !important;
+  overflow: hidden !important;
+}
+
+.blog-card-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 260px !important;
+  object-fit: cover !important;
+}
+
+.blog-card-date {
+  margin-bottom: 8px !important;
+  font-size: 14px !important;
+  opacity: 0.65 !important;
+}
+
+.blog-card-title {
+  margin: 0 0 12px !important;
+  font-size: 28px !important;
+  line-height: 1.4 !important;
+}
+
+.blog-card-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.blog-card-summary {
+  margin-bottom: 16px !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+.blog-read-more {
+  font-weight: 600 !important;
+}
+
+
+/* Persian */
+
+html[lang="fa"] .blog-posts,
+html[lang="fa"] .blog-card,
+html[lang="fa"] .blog-card-content,
+html[lang="fa"] .blog-card-title,
+html[lang="fa"] .blog-card-title a,
+html[lang="fa"] .blog-card-summary,
+html[lang="fa"] .blog-card-date {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+.blog-list-section {
+  width: 100% !important;
+}
+
+.blog-section-header {
+  width: 100% !important;
+  margin-bottom: 35px !important;
+}
+
+.blog-section-header h2 {
+  margin: 0 !important;
+  font-size: 36px !important;
+  line-height: 1.3 !important;
+}
+
+/* Featured with image */
+.blog-featured.has-image {
+  display: grid !important;
+  grid-template-columns: 1.15fr 1fr !important;
+  gap: 42px !important;
+  align-items: center !important;
+  margin-bottom: 65px !important;
+}
+
+/* Featured without image */
+.blog-featured.no-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: 850px !important;
+  margin-bottom: 65px !important;
+}
+
+.blog-featured-content {
+  width: 100% !important;
+}
+
+.blog-featured-title {
+  margin: 8px 0 14px !important;
+  font-size: 34px !important;
+  line-height: 1.4 !important;
+}
+
+.blog-featured-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+
+/* Persian */
+html[lang="fa"] .blog-list-section,
+html[lang="fa-IR"] .blog-list-section {
+  width: 100% !important;
+  max-width: 850px !important;
+
+  margin-left: 0 !important;
+  margin-right: auto !important;
+
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .blog-section-header,
+html[lang="fa-IR"] .blog-section-header,
+html[lang="fa"] .blog-section-header h2,
+html[lang="fa-IR"] .blog-section-header h2,
+html[lang="fa"] .blog-featured-content,
+html[lang="fa-IR"] .blog-featured-content {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[lang="fa"] .blog-featured.no-image,
+html[lang="fa-IR"] .blog-featured.no-image {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .blog-posts {
+    margin-top: 35px !important;
+  }
+
+  .blog-card-image img {
+    height: 220px !important;
+  }
+
+  .blog-card-title {
+    font-size: 24px !important;
+  }
+}
+
+
+/* =========================================================
+   BLOG FINAL OVERRIDE
+   Latest-posts block on the LEFT, Persian text remains RTL
+   ========================================================= */
+
+/* Keep the blog body clean and predictable */
+.blog-page {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.blog-page > .container {
+  width: 100% !important;
+  max-width: 1140px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* The whole latest-posts area sits on the LEFT on desktop */
+.blog-list-section {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto 0 0 !important;
+  padding: 70px 0 80px !important;
+  box-sizing: border-box !important;
+}
+
+/* Section heading stays on the left */
+.blog-section-header {
+  width: 100% !important;
+  margin: 0 0 34px 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+.blog-section-header h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 36px !important;
+  line-height: 1.35 !important;
+  text-align: left !important;
+}
+
+/* Featured post without image must stay in the same LEFT column */
+.blog-featured.no-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 60px 0 !important;
+  padding: 0 !important;
+}
+
+/* Featured post with image */
+.blog-featured.has-image {
+  display: grid !important;
+  grid-template-columns: 1.15fr 1fr !important;
+  gap: 36px !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 60px 0 !important;
+}
+
+/* Content must actually occupy the block */
+.blog-featured-content,
+.blog-card-content {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  position: static !important;
+  transform: none !important;
+}
+
+.blog-featured-title {
+  margin: 8px 0 14px !important;
+  font-size: 34px !important;
+  line-height: 1.4 !important;
+}
+
+.blog-card-date {
+  margin: 0 0 8px !important;
+  font-size: 14px !important;
+  opacity: 0.65 !important;
+}
+
+.blog-card-summary {
+  margin: 0 0 16px !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+.blog-read-more {
+  display: inline-block !important;
+  font-weight: 700 !important;
+}
+
+/* Remaining posts */
+.blog-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 48px 30px !important;
+  width: 100% !important;
+}
+
+/* Persian:
+   block remains on LEFT, but text inside it remains RTL/right-aligned */
+html[lang="fa"] .blog-list-section,
+html[lang="fa-IR"] .blog-list-section {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  direction: ltr !important;
+  text-align: left !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .blog-section-header,
+html[lang="fa-IR"] .blog-section-header,
+html[lang="fa"] .blog-section-header h2,
+html[lang="fa-IR"] .blog-section-header h2 {
+  direction: rtl !important;
+  text-align: left !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+/* Kill the older rule that pushed the featured post to the RIGHT */
+html[lang="fa"] .blog-featured.no-image,
+html[lang="fa-IR"] .blog-featured.no-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Persian article text */
+html[lang="fa"] .blog-featured-content,
+html[lang="fa-IR"] .blog-featured-content,
+html[lang="fa"] .blog-card-content,
+html[lang="fa-IR"] .blog-card-content,
+html[lang="fa"] .blog-featured-title,
+html[lang="fa-IR"] .blog-featured-title,
+html[lang="fa"] .blog-featured-title a,
+html[lang="fa-IR"] .blog-featured-title a,
+html[lang="fa"] .blog-card-title,
+html[lang="fa-IR"] .blog-card-title,
+html[lang="fa"] .blog-card-title a,
+html[lang="fa-IR"] .blog-card-title a,
+html[lang="fa"] .blog-card-summary,
+html[lang="fa-IR"] .blog-card-summary,
+html[lang="fa"] .blog-card-date,
+html[lang="fa-IR"] .blog-card-date {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+/* In Persian featured-with-image:
+   keep image/text layout stable, while the text itself stays RTL */
+html[lang="fa"] .blog-featured.has-image,
+html[lang="fa-IR"] .blog-featured.has-image {
+  direction: ltr !important;
+}
+
+html[lang="fa"] .blog-featured.has-image .blog-featured-content,
+html[lang="fa-IR"] .blog-featured.has-image .blog-featured-content {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .blog-page > .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .blog-list-section,
+  html[lang="fa"] .blog-list-section,
+  html[lang="fa-IR"] .blog-list-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 42px 0 55px !important;
+  }
+
+  .blog-section-header h2 {
+    font-size: 28px !important;
+  }
+
+  .blog-featured.has-image {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .blog-featured-title {
+    font-size: 27px !important;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 38px !important;
+  }
+}
+/* =========================================================
+   BLOG TWO-COLUMN LAYOUT
+   ========================================================= */
+
+.blog-page {
+  padding: 70px 0 80px !important;
+}
+
+.blog-layout {
+  display: grid !important;
+  grid-template-columns: 320px minmax(0, 1fr) !important;
+  gap: 70px !important;
+  align-items: start !important;
+}
+
+
+/* LEFT SIDEBAR */
+
+.blog-sidebar {
+  width: 100% !important;
+}
+
+.blog-sidebar-title {
+  margin: 0 0 28px !important;
+  font-size: 30px !important;
+  line-height: 1.4 !important;
+}
+
+.blog-sidebar-list {
+  width: 100% !important;
+}
+
+.blog-sidebar-item {
+  padding: 0 0 18px !important;
+  margin: 0 0 18px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+.blog-sidebar-link {
+  display: block !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+}
+
+.blog-sidebar-link:hover {
+  text-decoration: underline !important;
+}
+
+.blog-sidebar-date {
+  margin-top: 6px !important;
+  font-size: 13px !important;
+  opacity: 0.6 !important;
+}
+
+
+/* RIGHT MAIN POST */
+
+.blog-main {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.blog-main-image {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 24px !important;
+  overflow: hidden !important;
+}
+
+.blog-main-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 340px !important;
+  object-fit: cover !important;
+}
+
+.blog-main-title {
+  margin: 8px 0 14px !important;
+  font-size: 38px !important;
+  line-height: 1.35 !important;
+}
+
+.blog-main-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.blog-main-title a:hover {
+  text-decoration: underline !important;
+}
+
+
+/* Persian */
+
+html[lang="fa"] .blog-layout,
+html[lang="fa-IR"] .blog-layout {
+  direction: ltr !important;
+}
+
+html[lang="fa"] .blog-sidebar,
+html[lang="fa-IR"] .blog-sidebar,
+html[lang="fa"] .blog-main,
+html[lang="fa-IR"] .blog-main {
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .blog-sidebar-title,
+html[lang="fa-IR"] .blog-sidebar-title {
+  direction: rtl !important;
+  text-align: left !important;
+}
+
+html[lang="fa"] .blog-sidebar-item,
+html[lang="fa-IR"] .blog-sidebar-item {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[lang="fa"] .blog-main-content,
+html[lang="fa-IR"] .blog-main-content,
+html[lang="fa"] .blog-main-title,
+html[lang="fa-IR"] .blog-main-title,
+html[lang="fa"] .blog-card-summary,
+html[lang="fa-IR"] .blog-card-summary,
+html[lang="fa"] .blog-card-date,
+html[lang="fa-IR"] .blog-card-date {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .blog-page {
+    padding: 42px 0 55px !important;
+  }
+
+  .blog-layout {
+    grid-template-columns: 1fr !important;
+    gap: 45px !important;
+  }
+
+  .blog-sidebar {
+    order: 2 !important;
+  }
+
+  .blog-main {
+    order: 1 !important;
+  }
+
+  .blog-sidebar-title {
+    font-size: 26px !important;
+  }
+
+  .blog-main-title {
+    font-size: 28px !important;
+  }
+
+  .blog-main-image img {
+    height: 230px !important;
+  }
+}
+/* BLOG SIDEBAR - Persian RTL */
+
+html[lang="fa"] .blog-sidebar,
+html[lang="fa-IR"] .blog-sidebar {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .blog-sidebar-title,
+html[lang="fa-IR"] .blog-sidebar-title {
+  direction: rtl !important;
+  text-align: right !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+html[lang="fa"] .blog-sidebar-list,
+html[lang="fa-IR"] .blog-sidebar-list {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[lang="fa"] .blog-sidebar-item,
+html[lang="fa-IR"] .blog-sidebar-item {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[lang="fa"] .blog-sidebar-link,
+html[lang="fa-IR"] .blog-sidebar-link {
+  display: block !important;
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .blog-sidebar-date,
+html[lang="fa-IR"] .blog-sidebar-date {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* =========================================================
+   BLOG SINGLE PAGE
+   ========================================================= */
+
+.blog-single-page {
+  padding: 70px 0 80px !important;
+}
+
+.blog-single {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+}
+
+.blog-single-date {
+  margin-bottom: 12px !important;
+  font-size: 14px !important;
+  opacity: 0.65 !important;
+}
+
+.blog-single-title {
+  margin: 0 0 18px !important;
+  font-size: 46px !important;
+  line-height: 1.3 !important;
+}
+
+.blog-single-description {
+  margin: 0 0 28px !important;
+  font-size: 19px !important;
+  line-height: 1.8 !important;
+  opacity: 0.85 !important;
+}
+
+.blog-single-image {
+  margin: 0 0 32px !important;
+}
+
+.blog-single-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.blog-single-content {
+  font-size: 18px !important;
+  line-height: 1.95 !important;
+}
+
+.blog-single-content p {
+  margin: 0 0 22px !important;
+}
+
+.blog-single-content h2 {
+  margin: 38px 0 18px !important;
+  font-size: 30px !important;
+  line-height: 1.4 !important;
+}
+
+.blog-single-content h3 {
+  margin: 30px 0 14px !important;
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+}
+
+.blog-single-back {
+  margin-top: 45px !important;
+}
+
+
+/* Persian */
+
+html[lang="fa"] .blog-single,
+html[lang="fa-IR"] .blog-single,
+html[lang="fa"] .blog-single-title,
+html[lang="fa-IR"] .blog-single-title,
+html[lang="fa"] .blog-single-description,
+html[lang="fa-IR"] .blog-single-description,
+html[lang="fa"] .blog-single-content,
+html[lang="fa-IR"] .blog-single-content,
+html[lang="fa"] .blog-single-date,
+html[lang="fa-IR"] .blog-single-date {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .blog-single-page {
+    padding: 42px 0 55px !important;
+  }
+
+  .blog-single {
+    max-width: 100% !important;
+  }
+
+  .blog-single-title {
+    font-size: 32px !important;
+  }
+
+  .blog-single-description {
+    font-size: 16px !important;
+  }
+
+  .blog-single-content {
+    font-size: 16px !important;
+    line-height: 1.85 !important;
+  }
+}
+/* =========================================================
+   BLOG - COLUMN POSITION BY LANGUAGE
+   ========================================================= */
+
+/* ENGLISH + SWEDISH
+   Main post LEFT / posts list RIGHT
+*/
+html[lang="en"] .blog-layout,
+html[lang="se"] .blog-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 320px !important;
+  grid-template-areas: "main sidebar" !important;
+  gap: 70px !important;
+  direction: ltr !important;
+}
+
+html[lang="en"] .blog-main,
+html[lang="se"] .blog-main {
+  grid-area: main !important;
+  text-align: left !important;
+}
+
+html[lang="en"] .blog-sidebar,
+html[lang="se"] .blog-sidebar {
+  grid-area: sidebar !important;
+  text-align: left !important;
+}
+
+
+/* PERSIAN
+   posts list LEFT / Main post RIGHT
+*/
+html[lang="fa"] .blog-layout,
+html[lang="fa-IR"] .blog-layout {
+  display: grid !important;
+  grid-template-columns: 320px minmax(0, 1fr) !important;
+  grid-template-areas: "sidebar main" !important;
+  gap: 70px !important;
+  direction: ltr !important;
+}
+
+html[lang="fa"] .blog-sidebar,
+html[lang="fa-IR"] .blog-sidebar {
+  grid-area: sidebar !important;
+}
+
+html[lang="fa"] .blog-main,
+html[lang="fa-IR"] .blog-main {
+  grid-area: main !important;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  html[lang="en"] .blog-layout,
+  html[lang="se"] .blog-layout,
+  html[lang="fa"] .blog-layout,
+  html[lang="fa-IR"] .blog-layout {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "main"
+      "sidebar" !important;
+    gap: 45px !important;
+  }
+}
+/* Images inside blog posts */
+.blog-single-content img,
+.blog-single .content img {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+
+  object-fit: contain !important;
+
+  margin: 30px auto !important;
+}
+/* =========================================================
+   CONTACT - BOOKING + FORM
+   ========================================================= */
+
+.contact-tools {
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.85fr !important;
+  gap: 60px !important;
+  align-items: start !important;
+
+  margin-top: 55px !important;
+}
+
+.contact-booking,
+.contact-form-section {
+  min-width: 0 !important;
+}
+
+.contact-booking h2,
+.contact-form-section h2 {
+  margin: 0 0 12px !important;
+  font-size: 32px !important;
+  line-height: 1.35 !important;
+}
+
+.contact-booking > p,
+.contact-form-section > p {
+  margin: 0 0 28px !important;
+  line-height: 1.7 !important;
+}
+
+
+/* Booking */
+
+.booking-widget {
+  width: 100% !important;
+  min-height: 520px !important;
+}
+
+.booking-placeholder {
+  min-height: 420px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 30px !important;
+
+  border: 1px solid #ddd !important;
+
+  text-align: center !important;
+}
+
+
+/* Form */
+
+.contact-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+}
+
+.form-field {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 7px !important;
+}
+
+.form-field label {
+  font-weight: 600 !important;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100% !important;
+
+  padding: 12px 14px !important;
+
+  border: 1px solid #d7d7d7 !important;
+  background: #fff !important;
+
+  font: inherit !important;
+
+  box-sizing: border-box !important;
+}
+
+.form-field textarea {
+  resize: vertical !important;
+}
+
+.contact-submit {
+  align-self: flex-start !important;
+
+  padding: 12px 24px !important;
+
+  border: 0 !important;
+
+  cursor: pointer !important;
+}
+
+
+/* Bottom contact details */
+
+.contact-details-bottom {
+  margin-top: 55px !important;
+  padding-top: 30px !important;
+
+  border-top: 1px solid #ddd !important;
+}
+
+
+/* Persian */
+
+html[lang="fa"] .contact-tools,
+html[lang="fa-IR"] .contact-tools,
+html[lang="fa"] .contact-details-bottom,
+html[lang="fa-IR"] .contact-details-bottom {
+  direction: rtl !important;
+  text-align: right !important;
+
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+html[lang="fa"] .contact-booking,
+html[lang="fa-IR"] .contact-booking,
+html[lang="fa"] .contact-form-section,
+html[lang="fa-IR"] .contact-form-section {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[lang="fa"] .contact-submit,
+html[lang="fa-IR"] .contact-submit {
+  align-self: flex-end !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .contact-tools {
+    grid-template-columns: 1fr !important;
+    gap: 50px !important;
+  }
+
+  .booking-widget {
+    min-height: 450px !important;
+  }
+
+}
+/* =========================================================
+   CONTACT - CALENDLY + CONTACT INFO
+   ========================================================= */
+
+.contact-tools {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.35fr) 340px !important;
+  gap: 55px !important;
+  align-items: start !important;
+
+  margin-top: 50px !important;
+}
+
+
+/* Calendly */
+
+.contact-booking {
+  min-width: 0 !important;
+}
+
+.booking-widget {
+  width: 100% !important;
+  min-width: 0 !important;
+  margin-top: 25px !important;
+}
+
+.calendly-inline-widget {
+  width: 100% !important;
+  min-width: 320px !important;
+}
+
+
+/* Contact info */
+
+.contact-info-panel {
+  padding-top: 5px !important;
+}
+
+.contact-info-panel h2 {
+  margin: 0 0 30px !important;
+
+  font-size: 30px !important;
+  line-height: 1.4 !important;
+}
+
+.contact-info-item {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+
+  margin-bottom: 28px !important;
+  padding-bottom: 22px !important;
+
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.contact-info-item strong {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+.contact-info-item a,
+.contact-info-item span {
+  font-size: 17px !important;
+  line-height: 1.6 !important;
+}
+
+
+/* Persian */
+
+html[lang="fa"] .contact-tools,
+html[lang="fa-IR"] .contact-tools {
+  direction: ltr !important;
+}
+
+html[lang="fa"] .contact-booking,
+html[lang="fa-IR"] .contact-booking,
+html[lang="fa"] .contact-info-panel,
+html[lang="fa-IR"] .contact-info-panel {
+  direction: rtl !important;
+  text-align: right !important;
+
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .contact-tools {
+    grid-template-columns: 1fr !important;
+    gap: 45px !important;
+  }
+
+  .contact-info-panel {
+    padding-top: 0 !important;
+  }
+
+}

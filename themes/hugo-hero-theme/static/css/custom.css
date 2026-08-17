@@ -1,0 +1,9 @@
+/* 1) remove browser default spacing */
+html, body { margin: 0; padding: 0; }
+
+/* 2) make the header area transparent so hero reaches the top */
+.header { background: transparent !important; }
+
+.wrapper { padding-top: 0 !important; }
+.header { margin: 0 !important; padding: 0 !important; }
+.hero-image-fullscreen { padding-top: 0 !important; }

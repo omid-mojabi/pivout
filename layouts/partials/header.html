@@ -1,0 +1,192 @@
+<div class='header header-absolute'>
+  <div class="container">
+
+    <div class="logo">
+      <a href="{{ .Site.BaseURL }}">
+        <img
+          height={{ .Site.Params.logo.desktop_height }}
+          width={{ .Site.Params.logo.desktop_width }}
+          alt="{{ .Site.Params.logo.alt }}"
+          src="{{ .Site.Params.logo.desktop | relURL }}"
+        />
+      </a>
+    </div>
+
+    <div class="logo-mobile">
+      <a href="{{ .Site.BaseURL }}">
+        <img
+          height={{ .Site.Params.logo.mobile_height }}
+          width={{ .Site.Params.logo.mobile_width }}
+          alt="{{ .Site.Params.logo.alt }}"
+          src="{{ .Site.Params.logo.mobile | relURL }}"
+        />
+      </a>
+    </div>
+
+    <!-- DESKTOP TOP MENU -->
+    <div class="top-center-menu">
+
+      {{ if eq .Site.Language.Lang "fa" }}
+
+        <a href="{{ "" | relLangURL }}">خانه</a>
+        <a href="{{ "about/" | relLangURL }}">درباره ما</a>
+        <a href="{{ "blog/" | relLangURL }}">بلاگ</a>
+        <a href="{{ "contact/" | relLangURL }}">تماس با ما</a>
+
+      {{ else if eq .Site.Language.Lang "se" }}
+
+        <a href="{{ "" | relLangURL }}">Hem</a>
+	<a href="{{ "about/" | relLangURL }}">Om Oss</a>
+        <a href="{{ "blog/" | relLangURL }}">Blogg</a>
+        <a href="{{ "contact/" | relLangURL }}">Kontakt Oss</a>
+
+      {{ else }}
+
+        <a href="{{ "" | relLangURL }}">Home</a>
+	<a href="{{ "about/" | relLangURL }}">About</a>
+        <a href="{{ "blog/" | relLangURL }}">Blog</a>
+        <a href="{{ "contact/" | relLangURL }}">Contact</a>
+
+      {{ end }}
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-center-menu">
+
+      {{ if eq .Site.Language.Lang "fa" }}
+
+        <a href="{{ "" | relLangURL }}">خانه</a>
+	<a href="{{ "about/" | relLangURL }}">درباره ما</a>
+        <a href="{{ "blog/" | relLangURL }}">بلاگ</a>
+        <a href="{{ "contact/" | relLangURL }}">تماس با ما</a>
+
+      {{ else if eq .Site.Language.Lang "se" }}
+
+        <a href="{{ "" | relLangURL }}">Hem</a>
+	<a href="{{ "about/" | relLangURL }}">Om Oss</a>
+        <a href="{{ "blog/" | relLangURL }}">Blogg</a>
+        <a href="{{ "contact/" | relLangURL }}">Kontakt Oss</a>
+
+      {{ else }}
+
+        <a href="{{ "" | relLangURL }}">Home</a>
+	<a href="{{ "about/" | relLangURL }}">About</a>
+        <a href="{{ "blog/" | relLangURL }}">Blog</a>
+        <a href="{{ "contact/" | relLangURL }}">Contact</a>
+
+      {{ end }}
+
+    </div>
+
+<!-- LANGUAGE SWITCHER -->
+<div class="language-switcher">
+
+  <button type="button" class="language-current">
+    {{ if eq .Site.Language.Lang "fa" }}
+      فارسی
+    {{ else if eq .Site.Language.Lang "se" }}
+      Svenska
+    {{ else }}
+      English
+    {{ end }}
+  </button>
+
+  <div class="language-dropdown">
+
+    {{ range .AllTranslations }}
+
+      {{ if eq .Language.Lang "en" }}
+        <a href="{{ .RelPermalink }}">English</a>
+
+      {{ else if eq .Language.Lang "se" }}
+        <a href="{{ .RelPermalink }}">Svenska</a>
+
+      {{ else if eq .Language.Lang "fa" }}
+        <a href="{{ .RelPermalink }}">فارسی</a>
+
+      {{ end }}
+
+    {{ end }}
+
+  </div>
+
+</div>
+
+    {{ partial "main-menu.html" . }}
+    {{ partial "hamburger.html" . }}
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    var button = document.getElementById("toggle-main-menu-mobile");
+
+    if (!button) return;
+
+    button.addEventListener("click", function () {
+      document.body.classList.toggle("main-menu-mobile-open");
+    });
+
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  var hero = document.querySelector(".hero-image-fullscreen");
+
+  if (!hero) return;
+
+  var images = [];
+
+  /* Persian */
+  {{ if eq .Site.Language.Lang "fa" }}
+
+  images = [
+    "/images/pexels-photo-3799176.jpeg",
+    "/images/adrien-converse-unsplash.jpg",
+    "/images/shutterstock_561931702.png",
+    "/images/fabio-oyXis2kALVg-unsplash.jpg"
+  ];
+
+  /* Swedish */
+  {{ else if eq .Site.Language.Lang "se" }}
+
+  images = [
+    "/images/karlskrona-landscape-unsplash.jpg",
+    "/images/adrien-converse-unsplash.jpg",
+    "/images/shutterstock_561931702.png",
+    "/images/fabio-oyXis2kALVg-unsplash.jpg"
+  ];
+
+  /* English */
+  {{ else }}
+
+  images = [
+    "/images/karlskrona-landscape-unsplash.jpg",
+    "/images/adrien-converse-unsplash.jpg",
+    "/images/shutterstock_561931702.png",
+    "/images/fabio-oyXis2kALVg-unsplash.jpg"
+  ];
+
+  {{ end }}
+
+  var current = 0;
+
+  hero.style.backgroundImage =
+    "url('" + images[current] + "')";
+
+  setInterval(function () {
+
+    current = (current + 1) % images.length;
+
+    hero.style.backgroundImage =
+      "url('" + images[current] + "')";
+
+  }, 7000);
+
+});
+</script>

@@ -1,0 +1,24 @@
+baseURL: https://omid-mojabi.com/
+title: Omid Mojabi
+theme: "hugo-hero-theme"
+
+params:
+  customCSS:
+    - css/custom.css
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    contentDir: content/en
+  se:
+    languageName: "Svenska"
+    weight: 2
+    contentDir: content/se
+  fa:
+    languageName: "فارسی"
+    weight: 3
+    contentDir: content/fa

@@ -1,0 +1,89 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-contact page-blog-single{{ end }}
+{{ define "header_classes" }}header-absolute{{ end }}
+
+{{ define "main" }}
+
+{{ $lang := .Site.Language.Lang }}
+
+<div class="contact-hero blog-hero"
+     style="background-image: url('{{ "/images/blog-hero.jpg" | relURL }}');">
+
+  <div class="blog-hero-overlay"></div>
+
+  <div class="container blog-hero-container">
+    <div class="blog-hero-text">
+
+      <h1>
+        {{ if eq $lang "fa" }}
+          بلاگ
+        {{ else if eq $lang "se" }}
+          Blogg
+        {{ else }}
+          Blog
+        {{ end }}
+      </h1>
+
+      <p>
+        {{ if eq $lang "fa" }}
+          یادداشت‌ها، پژوهش‌ها و تجربه‌هایی درباره مهندسی نرم‌افزار، فناوری و نوآوری
+        {{ else if eq $lang "se" }}
+          Idéer, forskning och erfarenheter inom mjukvaruutveckling, teknik och innovation
+        {{ else }}
+          Ideas, research and experiences in software engineering, technology and innovation
+        {{ end }}
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+
+<div class="blog-single-page">
+  <div class="container">
+
+    <article class="blog-single">
+
+      <div class="blog-single-date">
+        {{ .Date.Format "2006-01-02" }}
+      </div>
+
+      <h1 class="blog-single-title">
+        {{ .Title }}
+      </h1>
+
+      {{ with .Params.description }}
+      <p class="blog-single-description">
+        {{ . }}
+      </p>
+      {{ end }}
+
+      {{ with .Params.image }}
+      <div class="blog-single-image">
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+      </div>
+      {{ end }}
+
+      <div class="blog-single-content">
+        {{ .Content }}
+      </div>
+
+<div class="blog-single-back">
+  <a href="{{ printf "/%s/blog/" $lang | relURL }}">
+    {{ if eq $lang "fa" }}
+      بازگشت به بلاگ
+    {{ else if eq $lang "se" }}
+      Tillbaka till bloggen
+    {{ else }}
+      Back to Blog
+    {{ end }}
+  </a>
+</div>
+
+    </article>
+
+  </div>
+</div>
+
+{{ end }}
