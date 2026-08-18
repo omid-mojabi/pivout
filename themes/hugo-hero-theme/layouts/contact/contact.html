@@ -5,6 +5,7 @@
 {{ define "main" }}
 
 {{ $lang := .Site.Language.Lang }}
+{{ $contact := index .Site.Data.contact $lang }}
 
 <div class="contact-hero"
      style="background-image: url('{{ "/images/contact-header.jpg" | relURL }}');">
@@ -30,30 +31,12 @@
     <!-- BOOKING + EMAIL -->
     <div class="contact-tools">
 
-
       <!-- BOOKING -->
       <section class="contact-booking">
 
-        <h2>
-          {{ if eq $lang "fa" }}
-            رزرو جلسه مشاوره
-          {{ else if eq $lang "se" }}
-            Boka en konsultation
-          {{ else }}
-            Book a Consultation
-          {{ end }}
-        </h2>
+        <h2>{{ $contact.booking_title }}</h2>
 
-        <p>
-          {{ if eq $lang "fa" }}
-            زمان مناسب خود را برای یک جلسه مشاوره انتخاب کنید.
-          {{ else if eq $lang "se" }}
-            Välj en tid som passar dig för ett konsultationsmöte.
-          {{ else }}
-            Choose a convenient time for a consultation.
-          {{ end }}
-        </p>
-
+        <p>{{ $contact.booking_text }}</p>
 
         <div class="booking-widget">
 
@@ -82,7 +65,6 @@
           {{ end }}
         </h2>
 
-
         <div class="contact-info-item">
 
           <strong>
@@ -96,13 +78,12 @@
           </strong>
 
           <a href="mailto:contact@pivout.se">
-            contact@omid-mojabi.com
+            contact@pivout.se
           </a>
 
         </div>
 
       </aside>
-
 
     </div>
 

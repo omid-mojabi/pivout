@@ -1,26 +1,2 @@
-email: 'info@omid-mojabi.com'
-phone: '+46 72 994 79 32'
-address: "Bokvägen 2 Lgh 1201, 371 43 Karlskrona"
-
-hours:
-  - day: Monday
-    open: 9:00am
-    close: 5:00pm
-  - day: Tuesday
-    open: 9:00am
-    close: 5:00pm
-  - day: Wednesday
-    open: 9:00am
-    close: 5:00pm
-  - day: Thursday
-    open: 9:00am
-    close: 5:00pm
-  - day: Friday
-    open: 9:00am
-    close: 5:00pm
-  - day: Saturday
-    open: Closed
-    close:
-  - day: Sunday
-    open: Closed
-    close:
+booking_title: "Book a Call"
+booking_text: "Choose a suitable time from the calendar below."
