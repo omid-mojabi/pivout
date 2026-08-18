@@ -3459,3 +3459,28 @@ html[lang="fa"] .page-services-single .service-single .content li::marker,
 html[lang="fa-IR"] .page-services-single .service-single .content li::marker {
   font-size: 0.9em;
 }
+/* =========================================
+   SERVICE SINGLE PAGE - BULLET LISTS
+========================================= */
+
+/* English + Swedish */
+html[lang="en"] .page-services-single .service-single .content ul,
+html[lang="se"] .page-services-single .service-single .content ul {
+  list-style: disc outside !important;
+  padding-left: 1.8rem !important;
+  margin-left: 0 !important;
+}
+
+html[lang="en"] .page-services-single .service-single .content ul > li,
+html[lang="se"] .page-services-single .service-single .content ul > li {
+  display: list-item !important;
+  list-style-type: disc !important;
+  text-align: left;
+  line-height: 1.9;
+  margin-bottom: 0.45rem;
+}
+
+html[lang="en"] .page-services-single .service-single .content ul > li::marker,
+html[lang="se"] .page-services-single .service-single .content ul > li::marker {
+  font-size: 0.9em;
+}

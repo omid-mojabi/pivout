@@ -1,12 +1,13 @@
 ---
 title: 'Eventproduktion'
+translationKey: "event-production"
 icon: 'services/service-icon-6.png'
 draft: false
 featured: true
 weight: 2
 heroHeading: 'Eventproduktion'
 heroSubHeading: 'Ingen framgång uppnås utan synergier.'
-heroBackground: 'services/service2.jpg'
+heroBackground: 'services/austin-neill-kKlVSrFbjYY-unsplash.jpg'
 ---
 
 Vi planerar och genomför workshops, nätverksträffar, företagsevent och andra typer av evenemang – från idé och planering till genomförande.

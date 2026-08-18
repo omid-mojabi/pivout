@@ -1,13 +1,13 @@
 ---
 title: 'Event Production'
-
+translationKey: "event-production"
 icon: 'services/service-icon-6.png'
 draft: false
 featured: true
 weight: 2
 heroHeading: 'Event Production'
 heroSubHeading: 'No success is achievable without synergy.'
-heroBackground: 'services/service2.jpg'
+heroBackground: 'services/austin-neill-kKlVSrFbjYY-unsplash.jpg'
 ---
 
 We plan and deliver workshops, networking events, corporate events, and other types of gatherings – from initial concept and planning through to execution.

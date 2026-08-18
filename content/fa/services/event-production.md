@@ -1,12 +1,13 @@
 ---
 title: 'برگزاری ایونت و گردهم‌آیی'
+translationKey: "event-production"
 icon: 'services/service-icon-6.png'
 draft: false
 featured: true
 weight: 2
 heroHeading: 'برگزاری ایونت و گردهم‌آیی'
 heroSubHeading: 'هیچ موفقیتی بدون هم‌افزایی به دست نمی‌آید'
-heroBackground: 'services/service2.jpg'
+heroBackground: 'services/austin-neill-kKlVSrFbjYY-unsplash.jpg'
 ---
 
 ما در برنامه‌ریزی و اجرای انواع  کارگاه‌ها، ورک‌شاپ‌ها، رویدادهای شبکه‌سازی و همچنین رویدادهای تفریحی و تجاری، از شکل‌گیری ایده و طراحی برنامه تا هماهنگی و اجرا، مشارکت می‌کنیم.
