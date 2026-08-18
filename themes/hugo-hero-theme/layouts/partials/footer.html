@@ -4,40 +4,48 @@
       <div class="col-12">
         <div class="footer-inner">
 
-          <!-- LEFT: links -->
           <ul class="footer-menu">
 
             {{ if eq .Site.Language.Lang "fa" }}
-              <li><a href="{{ .Site.BaseURL }}fa/">خانه</a></li>
-              <li><a href="{{ .Site.BaseURL }}fa/about/">درباره ما</a></li>
-              <li><a href="{{ .Site.BaseURL }}fa/blog/">بلاگ</a></li>
-              <li><a href="{{ .Site.BaseURL }}fa/contact/"> تماس با ما</a></li>
+
+              <li><a href="{{ "" | relLangURL }}">خانه</a></li>
+              <li><a href="{{ "about/" | relLangURL }}">درباره ما</a></li>
+              <li><a href="{{ "blog/" | relLangURL }}">بلاگ</a></li>
+              <li><a href="{{ "contact/" | relLangURL }}">تماس با ما</a></li>
               <li class="copyright">© {{ now.Format "2006" }} تمامی حقوق محفوظ است</li>
 
-            {{ else if or (eq .Site.Language.Lang "se") }}
-                      <li><a href="{{ .Site.BaseURL }}se/">Hem</a></li>
-                      <li><a href="{{ .Site.BaseURL }}se/about/">Om oss</a></li>
-                      <li><a href="{{ .Site.BaseURL }}se/blog/">Blogg</a></li>
-                      <li><a href="{{ .Site.BaseURL }}se/contact/">Kontakt oss</a></li>
+            {{ else if eq .Site.Language.Lang "se" }}
+
+              <li><a href="{{ "" | relLangURL }}">Hem</a></li>
+              <li><a href="{{ "about/" | relLangURL }}">Om oss</a></li>
+              <li><a href="{{ "blog/" | relLangURL }}">Blogg</a></li>
+              <li><a href="{{ "contact/" | relLangURL }}">Kontakt oss</a></li>
               <li class="copyright">© {{ now.Format "2006" }} Alla rättigheter förbehållna.</li>
 
             {{ else }}
-              <li><a href="{{ .Site.BaseURL }}en/">Home</a></li>
-              <li><a href="{{ .Site.BaseURL }}en/about/">About Us</a></li>
-              <li><a href="{{ .Site.BaseURL }}en/blog/">Blog</a></li>
-              <li><a href="{{ .Site.BaseURL }}en/contact/">Contact Us</a></li>
+
+              <li><a href="{{ "" | relLangURL }}">Home</a></li>
+              <li><a href="{{ "about/" | relLangURL }}">About Us</a></li>
+              <li><a href="{{ "blog/" | relLangURL }}">Blog</a></li>
+              <li><a href="{{ "contact/" | relLangURL }}">Contact Us</a></li>
               <li class="copyright">© {{ now.Format "2006" }} All rights reserved.</li>
+
             {{ end }}
 
           </ul>
 
-          <!-- RIGHT: social icons -->
           {{ if .Site.Data.social }}
           <ul class="social">
             {{ range .Site.Data.social }}
               <li>
                 <a href="{{ .link }}" target="_blank" rel="noopener">
-                  <img width="20" height="20" src="{{ .image | relURL }}" title="{{ .name }}" alt="{{ .name }}" />
+                  <img
+                    width="20"
+                    height="20"
+                    src="{{ .image | relURL }}"
+                    title="{{ .name }}"
+                    alt="{{ .name }}"
+                  />
                 </a>
               </li>
             {{ end }}
