@@ -3484,3 +3484,553 @@ html[lang="en"] .page-services-single .service-single .content ul > li::marker,
 html[lang="se"] .page-services-single .service-single .content ul > li::marker {
   font-size: 0.9em;
 }
+/* =========================================
+   FINAL MOBILE DRAWER MENU
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* Disable theme's original fullscreen mobile menu */
+  .main-menu-mobile {
+    display: none !important;
+  }
+
+
+  /* =====================================
+     OUR MOBILE DRAWER
+     ===================================== */
+
+.mobile-center-menu {
+  display: flex !important;
+  position: fixed !important;
+
+  top: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+
+  width: min(280px, 74vw) !important;
+  height: 100dvh !important;
+
+  /* فقط به اندازه هدر فضا می‌دهیم */
+  padding: 72px 20px 30px !important;
+  box-sizing: border-box !important;
+
+  background: rgba(33, 66, 216, 0.97) !important;
+
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+
+  gap: 2px !important;
+
+  transform: translateX(100%) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease,
+    visibility 0.28s ease !important;
+
+  z-index: 9998 !important;
+}
+
+
+  /* Open drawer */
+
+  body.main-menu-mobile-open .mobile-center-menu {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+
+  /* =====================================
+     MENU LINKS
+     ===================================== */
+
+  .mobile-center-menu a,
+  .mobile-center-menu a:visited {
+    display: block !important;
+
+    width: 100% !important;
+
+    padding: 10px 12px !important;
+    box-sizing: border-box !important;
+
+    color: #ffffff !important;
+    background: transparent !important;
+
+    border: 0 !important;
+    border-radius: 6px !important;
+
+    text-decoration: none !important;
+
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+
+    text-align: left !important;
+  }
+
+
+  .mobile-center-menu a:hover,
+  .mobile-center-menu a:focus {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+  }
+
+
+  /* =====================================
+     HAMBURGER / X BUTTON
+     ===================================== */
+
+  #toggle-main-menu-mobile {
+    display: block !important;
+
+    position: fixed !important;
+
+    top: 18px !important;
+    right: 18px !important;
+    left: auto !important;
+
+    z-index: 10020 !important;
+  }
+
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: #ffffff !important;
+  }
+
+
+  /* =====================================
+     LANGUAGE SWITCHER
+     Hidden normally on mobile
+     ===================================== */
+
+  .language-switcher {
+    display: none !important;
+  }
+
+
+  /* Show language switcher when menu opens */
+
+  body.main-menu-mobile-open .language-switcher {
+    display: block !important;
+
+    position: fixed !important;
+
+    top: 16px !important;
+    right: 68px !important;
+    left: auto !important;
+
+    width: 130px !important;
+
+    z-index: 10010 !important;
+  }
+
+
+  .language-current {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: 42px !important;
+
+    padding: 0 32px 0 12px !important;
+
+    line-height: 42px !important;
+
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  .language-current::after {
+    right: 10px !important;
+  }
+
+
+  .language-dropdown {
+    top: 42px !important;
+
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+
+  .language-dropdown a {
+    font-size: 13px !important;
+    padding: 9px 10px !important;
+  }
+
+
+  /* =====================================
+     PERSIAN / RTL
+     Drawer opens from LEFT
+     ===================================== */
+
+  html[lang="fa"] .mobile-center-menu,
+  html[lang="fa-IR"] .mobile-center-menu {
+    right: auto !important;
+    left: 0 !important;
+
+    transform: translateX(-100%) !important;
+  }
+
+
+  html[lang="fa"] body.main-menu-mobile-open .mobile-center-menu,
+  html[lang="fa-IR"] body.main-menu-mobile-open .mobile-center-menu {
+    transform: translateX(0) !important;
+  }
+
+
+  /* Persian hamburger on left */
+
+  html[lang="fa"] #toggle-main-menu-mobile,
+  html[lang="fa-IR"] #toggle-main-menu-mobile {
+    right: auto !important;
+    left: 18px !important;
+  }
+
+
+  /* Persian language selector */
+
+  html[lang="fa"] body.main-menu-mobile-open .language-switcher,
+  html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
+    right: auto !important;
+    left: 68px !important;
+  }
+
+
+  /* Persian menu links */
+
+  html[lang="fa"] .mobile-center-menu a,
+  html[lang="fa-IR"] .mobile-center-menu a {
+    direction: rtl !important;
+    text-align: right !important;
+
+    font-family: "Vazirmatn", "Vazir", sans-serif !important;
+  }
+
+
+  /* =====================================
+     PREVENT HORIZONTAL SCROLL
+     ===================================== */
+
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+}
+@media (max-width: 768px) {
+
+  body.main-menu-mobile-open .mobile-center-menu {
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+
+    height: 100dvh !important;
+
+    margin: 0 !important;
+
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  html[lang="fa"] body.main-menu-mobile-open .mobile-center-menu,
+  html[lang="fa-IR"] body.main-menu-mobile-open .mobile-center-menu {
+    right: auto !important;
+    left: 0 !important;
+  }
+}
+/* =========================================
+   FOOTER COPYRIGHT - MOBILE FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+  .footer .footer-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 14px !important;
+  }
+
+  .footer .footer-inner .footer-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    gap: 8px 18px !important;
+  }
+
+  .footer .footer-inner .footer-menu li {
+    margin: 0 !important;
+  }
+
+  /* Show copyright on mobile */
+  .footer .footer-inner .footer-menu .copyright {
+    display: block !important;
+
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+
+    flex: 0 0 100% !important;
+    width: 100% !important;
+
+    margin: 8px 0 0 !important;
+
+    text-align: center !important;
+
+    color: rgba(255, 255, 255, 0.75) !important;
+
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+
+    white-space: normal !important;
+  }
+
+  .footer .footer-inner .social {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+  }
+
+}
+/* =========================================
+   MOBILE HERO HEIGHT - FINAL
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* Home / fullscreen hero */
+  .hero-image.hero-image-fullscreen {
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+
+  /* Generic internal-page hero */
+  .hero-image.hero-image-setheight {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+  /* Blog hero */
+  .page-blog-list .contact-hero,
+  .page-blog-single .contact-hero,
+  .blog-hero {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+  /* About hero */
+  .page-about .about-hero {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+  /* Work pages */
+  .page-work-list .hero-image-setheight,
+  .page-work-single .hero-image-setheight {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+  /* Service pages */
+  .page-services-single .hero-image-setheight {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+  /* Contact stays as it is */
+  .page-contact .contact-hero {
+    height: 220px !important;
+    min-height: 220px !important;
+  }
+}
+/* =========================================
+   UNIFIED MOBILE INNER-PAGE HERO HEIGHT
+   Same height as Contact
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* Contact */
+  .page-contact .contact-hero,
+
+  /* About */
+  .page-about .about-hero,
+
+  /* Blog list + single */
+  .page-blog .blog-hero,
+  .page-blog-list .blog-hero,
+  .page-blog-single .blog-hero,
+
+  /* Work list + single */
+  .page-work-list .hero-image-setheight,
+  .page-work-single .hero-image-setheight,
+
+  /* Services */
+  .page-services-list .hero-image-setheight,
+  .page-services-single .hero-image-setheight,
+
+  /* Any other internal page using setheight hero */
+  .hero-image.hero-image-setheight {
+    height: 220px !important;
+    min-height: 220px !important;
+  }
+
+
+  /* Keep background image behaving consistently */
+  .page-contact .contact-hero,
+  .page-about .about-hero,
+  .page-blog .blog-hero,
+  .page-blog-list .blog-hero,
+  .page-blog-single .blog-hero,
+  .page-work-list .hero-image-setheight,
+  .page-work-single .hero-image-setheight,
+  .page-services-list .hero-image-setheight,
+  .page-services-single .hero-image-setheight,
+  .hero-image.hero-image-setheight {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+}
+
+/* =========================================
+   MOBILE HOMEPAGE WORK SECTION - FINAL
+========================================= */
+
+@media (max-width: 768px) {
+
+  #home {
+    position: relative !important;
+
+    min-height: 420px !important;
+    height: 420px !important;
+
+    background-size: cover !important;
+    background-position: 68% center !important;
+    background-repeat: no-repeat !important;
+
+    padding: 0 !important;
+
+    overflow: hidden !important;
+  }
+
+  #home .container {
+    height: 100% !important;
+    max-width: 100% !important;
+
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  #home .row {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  #home .row > div {
+    width: 47% !important;
+    max-width: 47% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex: 0 0 47% !important;
+  }
+
+  #home h1,
+  #home h2,
+  #home h3 {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+
+    font-size: 21px !important;
+    line-height: 1.25 !important;
+
+    text-align: left !important;
+  }
+
+  #home p {
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
+
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+
+    text-align: left !important;
+  }
+
+  #home a,
+  #home .button {
+    display: inline-block !important;
+
+    padding: 9px 12px !important;
+
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* Persian */
+  html[lang="fa"] #home .row,
+  html[lang="fa-IR"] #home .row {
+    justify-content: flex-end !important;
+  }
+
+  html[lang="fa"] #home .row > div,
+  html[lang="fa-IR"] #home .row > div {
+    width: 47% !important;
+    max-width: 47% !important;
+    flex: 0 0 47% !important;
+  }
+
+  html[lang="fa"] #home h1,
+  html[lang="fa"] #home h2,
+  html[lang="fa"] #home h3,
+  html[lang="fa"] #home p,
+  html[lang="fa-IR"] #home h1,
+  html[lang="fa-IR"] #home h2,
+  html[lang="fa-IR"] #home h3,
+  html[lang="fa-IR"] #home p {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+}
