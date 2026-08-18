@@ -9,5 +9,15 @@ heroSubHeading: 'Ingen framgång uppnås utan synergier.'
 heroBackground: 'services/service2.jpg'
 ---
 
-Planering och genomförande av workshops, nätverksevenemang samt underhållnings och affärsevenemang. Dedit dum raptoresque Oete dolorem Cretaeas enim [ipse pectora excusat](#in-poscat) candentibus fertur? Furtiva
-Orontes Erysicthona dona, est per Achille viridi draconis cultis mota milia.
+Vi planerar och genomför workshops, nätverksträffar, företagsevent och andra typer av evenemang – från idé och planering till genomförande.
+
+Vi har erfarenhet av att medverka i och arrangera evenemang i olika sammanhang, från akademiska och universitetsrelaterade aktiviteter till professionella möten, företagsevent och publika arrangemang.
+
+### Exempel på evenemang vi arbetar med
+
+- Akademiska event och universitetsevenemang
+- Workshops, seminarier och konferenser
+- Professionella möten och nätverksevent
+- Företagsevent och affärsevenemang
+- After work och aktiviteter för medarbetare
+- Publika event och festevialerna

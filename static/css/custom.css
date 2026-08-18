@@ -3377,3 +3377,85 @@ html[lang="fa-IR"] .contact-info-panel {
   }
 
 }
+/* =========================================
+   PERSIAN SERVICE SINGLE PAGE
+========================================= */
+
+/* Move the whole content column to the RIGHT */
+html[lang="fa"] .page-services-single .row.justify-content-start,
+html[lang="fa-IR"] .page-services-single .row.justify-content-start {
+  justify-content: flex-end !important;
+}
+
+
+/* Main content */
+html[lang="fa"] .page-services-single .service-single .content,
+html[lang="fa-IR"] .page-services-single .service-single .content {
+  direction: rtl;
+  text-align: right;
+  font-family: "Vazirmatn", "Vazir", sans-serif !important;
+}
+
+
+/* Paragraphs */
+html[lang="fa"] .page-services-single .service-single .content p,
+html[lang="fa-IR"] .page-services-single .service-single .content p {
+  direction: rtl;
+  text-align: right;
+  font-family: "Vazirmatn", "Vazir", sans-serif !important;
+  line-height: 2;
+}
+
+
+/* Headings */
+html[lang="fa"] .page-services-single .service-single .content h2,
+html[lang="fa"] .page-services-single .service-single .content h3,
+html[lang="fa"] .page-services-single .service-single .content h4,
+html[lang="fa-IR"] .page-services-single .service-single .content h2,
+html[lang="fa-IR"] .page-services-single .service-single .content h3,
+html[lang="fa-IR"] .page-services-single .service-single .content h4 {
+  direction: rtl;
+  text-align: right;
+  font-family: "Vazirmatn", "Vazir", sans-serif !important;
+  line-height: 1.6;
+}
+
+
+/* BULLET LIST */
+html[lang="fa"] .page-services-single .service-single .content ul,
+html[lang="fa-IR"] .page-services-single .service-single .content ul {
+  direction: rtl;
+  text-align: right;
+
+  list-style: disc outside !important;
+
+  padding-right: 1.8rem !important;
+  padding-left: 0 !important;
+
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+
+/* Force every LI to behave as a list item */
+html[lang="fa"] .page-services-single .service-single .content ul > li,
+html[lang="fa-IR"] .page-services-single .service-single .content ul > li {
+  display: list-item !important;
+
+  direction: rtl;
+  text-align: right;
+
+  list-style-type: disc !important;
+
+  font-family: "Vazirmatn", "Vazir", sans-serif !important;
+
+  line-height: 1.9;
+  margin-bottom: 0.45rem;
+}
+
+
+/* Bullet itself */
+html[lang="fa"] .page-services-single .service-single .content li::marker,
+html[lang="fa-IR"] .page-services-single .service-single .content li::marker {
+  font-size: 0.9em;
+}
