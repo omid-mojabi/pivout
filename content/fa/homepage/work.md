@@ -1,5 +1,5 @@
 ---
-title: 'ما به رشد کسب‌وکارها کمک می‌کنیم'
+title: 'ما به شما کمک می‌کنیم'
 weight: 1
 background: 'images/agil-parasoll-index-eu.png'
 button: 'جزئیات بیشتر'
