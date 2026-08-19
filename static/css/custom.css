@@ -3508,7 +3508,7 @@ html[lang="se"] .page-services-single .service-single .content ul > li::marker {
   right: 0 !important;
   left: auto !important;
 
-  width: min(280px, 74vw) !important;
+  width: min(280px, 84vw) !important;
   height: 100dvh !important;
 
   /* فقط به اندازه هدر فضا می‌دهیم */
@@ -3622,15 +3622,33 @@ body.main-menu-mobile-open .language-switcher {
   position: fixed !important;
   top: 16px !important;
 
-  /* Keep the language button INSIDE the drawer and clear of the X */
-  right: 68px !important;
+  right: 20px !important;
   left: auto !important;
 
-  width: max(110px, calc(min(280px, 74vw) - 88px)) !important;
-  max-width: calc(min(280px, 74vw) - 58px) !important;
+  /* Drawer width is min(280px, 74vw). Keep 20px inset on both sides. */
+  width: calc(min(230px, 84vw) - 40px) !important;
+  max-width: calc(min(230px, 84vw) - 40px) !important;
+  min-width: 0 !important;
   box-sizing: border-box !important;
 
   z-index: 10010 !important;
+}
+
+/* English + Swedish: explicitly anchor the selector inside the RIGHT drawer. */
+html[lang="en"] body.main-menu-mobile-open .language-switcher,
+html[lang="en-us"] body.main-menu-mobile-open .language-switcher,
+html[lang="se"] body.main-menu-mobile-open .language-switcher,
+html[lang="sv"] body.main-menu-mobile-open .language-switcher,
+html[lang="sv-SE"] body.main-menu-mobile-open .language-switcher {
+  right: 20px !important;
+  left: auto !important;
+}
+
+/* Persian: explicitly anchor the selector inside the LEFT drawer. */
+html[lang="fa"] body.main-menu-mobile-open .language-switcher,
+html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
+  right: auto !important;
+  left: 20px !important;
 }
 
 
@@ -3701,13 +3719,7 @@ body.main-menu-mobile-open .language-switcher {
 
   /* Persian language selector */
 
-  html[lang="fa"] body.main-menu-mobile-open .language-switcher,
-  html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
-    right: auto !important;
-    left: 68px !important;
-    width: max(110px, calc(min(280px, 74vw) - 88px)) !important;
-    max-width: calc(min(280px, 74vw) - 88px) !important;
-  }
+  /* Persian positioning is defined above: 20px inside the LEFT drawer. */
 
 
   /* Persian menu links */
