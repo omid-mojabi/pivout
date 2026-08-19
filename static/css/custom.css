@@ -3626,8 +3626,8 @@ body.main-menu-mobile-open .language-switcher {
   left: auto !important;
 
   /* Drawer width is min(280px, 74vw). Keep 20px inset on both sides. */
-  width: calc(min(230px, 84vw) - 40px) !important;
-  max-width: calc(min(230px, 84vw) - 40px) !important;
+  width: calc(min(210px, 84vw) - 40px) !important;
+  max-width: calc(min(210px, 84vw) - 40px) !important;
   min-width: 0 !important;
   box-sizing: border-box !important;
 
