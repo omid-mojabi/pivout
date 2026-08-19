@@ -3617,19 +3617,18 @@ html[lang="se"] .page-services-single .service-single .content ul > li::marker {
 
   /* Show language switcher when menu opens */
 
-  body.main-menu-mobile-open .language-switcher {
-    display: block !important;
+body.main-menu-mobile-open .language-switcher {
+  display: block !important;
+  position: fixed !important;
+  top: 16px !important;
 
-    position: fixed !important;
+  right: 20px !important;
+  left: auto !important;
 
-    top: 16px !important;
-    right: 68px !important;
-    left: auto !important;
+  width: calc(min(280px, 74vw) - 40px) !important;
 
-    width: 130px !important;
-
-    z-index: 10010 !important;
-  }
+  z-index: 10010 !important;
+}
 
 
   .language-current {
