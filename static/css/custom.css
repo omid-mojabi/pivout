@@ -3622,10 +3622,13 @@ body.main-menu-mobile-open .language-switcher {
   position: fixed !important;
   top: 16px !important;
 
-  right: 20px !important;
+  /* Keep the language button INSIDE the drawer and clear of the X */
+  right: 68px !important;
   left: auto !important;
 
-  width: calc(min(280px, 74vw) - 40px) !important;
+  width: max(110px, calc(min(280px, 74vw) - 88px)) !important;
+  max-width: calc(min(250px, 74vw) - 88px) !important;
+  box-sizing: border-box !important;
 
   z-index: 10010 !important;
 }
@@ -3702,6 +3705,8 @@ body.main-menu-mobile-open .language-switcher {
   html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
     right: auto !important;
     left: 68px !important;
+    width: max(110px, calc(min(280px, 74vw) - 88px)) !important;
+    max-width: calc(min(280px, 74vw) - 88px) !important;
   }
 
 
