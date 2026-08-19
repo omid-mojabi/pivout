@@ -3627,7 +3627,7 @@ body.main-menu-mobile-open .language-switcher {
   left: auto !important;
 
   width: max(110px, calc(min(280px, 74vw) - 88px)) !important;
-  max-width: calc(min(250px, 74vw) - 88px) !important;
+  max-width: calc(min(280px, 74vw) - 58px) !important;
   box-sizing: border-box !important;
 
   z-index: 10010 !important;
