@@ -1,7 +1,7 @@
 ---
 title: 'ما به رشد کسب‌وکارها کمک می‌کنیم'
 weight: 1
-background: 'images/agil-parasoll-index-fa.png'
+background: 'images/agil-parasoll-index-eu.png'
 button: 'جزئیات بیشتر'
 buttonLink: '/fa/work'
 ---
