@@ -16,7 +16,7 @@ Traditionellt avslutades varje lärdom med en manuellt skriven postmortem eller 
 
 Det var exakt den frågan som Zalandos SRE-team ställde sig när de tittade på sin omfattande samling av data om infrastrukturfel. För att besvara den byggde de en AI-pipeline i flera steg, driven av Large Language Models (LLM:er). Systemet sammanfattade automatiskt tusentals postmortems, identifierade vilka tekniker som var involverade (som AWS S3, DynamoDB eller Postgres), analyserade grundorsakerna och identifierade återkommande felmönster mellan olika system. Det som tidigare kunde kräva veckor av mänskligt arbete kunde nu omvandlas till konkreta och användbara insikter inom några timmar.
 
-![Dead Ends or Data Goldmines - Zalando Report 2025](/images/blog/2025-10-11-Dead-Ends-or-Data-Goldmines-Zalando-pipeline.png)
+![Dead Ends or Data Goldmines - Zalando pipeline 2025](/images/blog/2025-10-11-Dead-Ends-or-Data-Goldmines-Zalando-pipeline.png)
 
 Resultaten var slående: AI:n upptäckte återkommande problemområden — från felkonfigurationer och skalningsproblem till brister i förändringshanteringen — vilket hjälpte företaget att rikta sina investeringar bättre och förebygga liknande incidenter i framtiden.
 
