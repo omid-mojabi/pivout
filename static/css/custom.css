@@ -4033,9 +4033,9 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
 
   html[lang="fa"] #home .row > div,
   html[lang="fa-IR"] #home .row > div {
-    width: 47% !important;
-    max-width: 47% !important;
-    flex: 0 0 47% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
   }
 
   html[lang="fa"] #home h1,

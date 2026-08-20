@@ -1,7 +1,7 @@
 ---
 title: 'ما به شما کمک می‌کنیم'
 weight: 1
-background: 'images/agil-parasoll-index-eu.png'
+background: 'images/agil-parasoll-index-fa.png'
 button: 'جزئیات بیشتر'
 buttonLink: '/fa/work'
 ---
