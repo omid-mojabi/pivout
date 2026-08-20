@@ -22,4 +22,4 @@ Euromicro SEAA (Software Engineering and Advanced Applications) is a long-standi
 
 
 ## Conference Achievement:
-The paper titled “Navigating Uncertainty and Adaptability: A Survey on the Role of Kanban and Scrum in Software Startups” was presented at the 51st Euromicro Conference Series on Software Engineering and Advanced Applications (DSD/SEAA Conference) in Salerno, Italy. The final version published in the SpringerLink digital library.
+The paper titled “Navigating Uncertainty and Adaptability: A Survey on the Role of Kanban and Scrum in Software Startups” was presented at the 51st Euromicro Conference Series on Software Engineering and Advanced Applications (DSD/SEAA Conference) in Salerno, Italy. The final version of the [**article**](https://link.springer.com/chapter/10.1007/978-3-032-04207-1_18) is published in the SpringerLink digital library.
