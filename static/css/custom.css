@@ -4050,3 +4050,40 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
     text-align: right !important;
   }
 }
+/* =========================================================
+   HEADER LOGO - PNG
+   ========================================================= */
+
+.logo a,
+.logo-mobile a {
+  display: block !important;
+  background-image: url("/images/logo.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+
+}
+
+/* Hide the existing <img> so the CSS PNG is used */
+.logo a img,
+.logo-mobile a img {
+  display: none !important;
+}
+
+/* Desktop logo */
+.logo a {
+  padding-top: 100px;
+  margin-top:100px;
+  padding-left: -100px;
+  margin-left: -100px;
+  width: 90px !important;
+  height: 50px !important;
+}
+
+/* Mobile logo */
+.logo-mobile a {
+  padding-top: 25px;
+  margin-top:25px;
+  width: 90px !important;
+  height: 50px !important;
+}
