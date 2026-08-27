@@ -70,7 +70,7 @@
       </div>
 
 <div class="blog-single-back">
-  <a href="{{ printf "/%s/blog/" $lang | relURL }}">
+  <a href="{{ "blog/" | relLangURL }}">
     {{ if eq $lang "fa" }}
       بازگشت به بلاگ
     {{ else if eq $lang "se" }}
