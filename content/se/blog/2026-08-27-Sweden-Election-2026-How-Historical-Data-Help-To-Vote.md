@@ -23,7 +23,7 @@ Men eftersom livet i den AI:n tidsålder verkligen är komplicerat och svårt f�
 
 Förutsatt att vi som medborgare inte använder AI:n modeller i stor utsträckning eller på ett tekniskt avancerat sätt, kan vi fortfarande få värdefull information med hjälp av enkla uppmaningar. Till exempel finns det bra data från Eurostat och andra källor om utvecklingen i Sverige under de senaste två decennierna för vissa transparenta indikatorer som Gini-koefficienten, arbetslöshet, förväntad livslängd, BNP, lyckoindex och flera andra. 
 
-![Diagrammet som bygger på ungefärliga allmänna siffror för Korruptionsindex, Ginikoefficient, Lyckoindex, Medellivslängd, BNP-tillväxt, Arbetslöshet från 2014 till 2026](/images/blog/2026-09-27-Sweden-Election2026-Important-Indexes-to-compare-se.png)
+![Diagrammet som bygger på ungefärliga allmänna siffror för Korruptionsindex, Ginikoefficient, Lyckoindex, Medellivslängd, BNP-tillväxt, Arbetslöshet från 2014 till 2026](/images/blog/2026-08-27-Sweden-Election2026-Important-Indexes-to-compare-se.png)
 
 Det kanske inte vore en dålig idé att omvandla dem till trenddiagram som jämför den tidigare situationen, till exempel från 2014 till 2022, med situationen efter policybytet till den nuvarande regeringen, för att få en mer fullständig inblick innan man går till valurnorna. Ett mått som hjälper människor att testa vallöften bortom dekorerade politiska program och uttalanden mot något lite mer realistiskt.
 
