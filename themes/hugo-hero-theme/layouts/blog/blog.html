@@ -87,49 +87,57 @@
         </aside>
 
 
-        <!-- RIGHT: MAIN / LATEST POST -->
+<!-- RIGHT: LATEST 10 POSTS -->
 <main class="blog-main">
 
-  {{ with $featured.Params.thumbnail }}
-    <a href="{{ $featured.RelPermalink }}" class="blog-main-image">
-      <img
-        src="{{ . | relURL }}"
-        alt="{{ $featured.Title }}"
-      >
-    </a>
+  {{ range first 10 $posts }}
+
+    <article class="blog-post">
+
+      {{ with .Params.thumbnail }}
+        <a href="{{ $.RelPermalink }}" class="blog-main-image">
+          <img
+            src="{{ . | relURL }}"
+            alt="{{ $.Title }}"
+          >
+        </a>
+      {{ end }}
+
+      <div class="blog-main-content">
+
+        <div class="blog-card-date">
+          {{ .Date.Format "2006-01-02" }}
+        </div>
+
+        <h2 class="blog-main-title">
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
+        </h2>
+
+        <div class="blog-card-summary">
+          {{ with .Params.description }}
+            {{ . }}
+          {{ else }}
+            {{ .Summary | plainify | truncate 220 }}
+          {{ end }}
+        </div>
+
+        <a href="{{ .RelPermalink }}" class="blog-read-more">
+          {{ if eq $lang "fa" }}
+            ادامه مطلب
+          {{ else if eq $lang "se" }}
+            Läs mer
+          {{ else }}
+            Read more
+          {{ end }}
+        </a>
+
+      </div>
+
+    </article>
+
   {{ end }}
-
-  <div class="blog-main-content">
-
-    <div class="blog-card-date">
-      {{ $featured.Date.Format "2006-01-02" }}
-    </div>
-
-    <h2 class="blog-main-title">
-      <a href="{{ $featured.RelPermalink }}">
-        {{ $featured.Title }}
-      </a>
-    </h2>
-
-    <div class="blog-card-summary">
-      {{ with $featured.Params.description }}
-        {{ . }}
-      {{ else }}
-        {{ $featured.Summary | plainify | truncate 220 }}
-      {{ end }}
-    </div>
-
-    <a href="{{ $featured.RelPermalink }}" class="blog-read-more">
-      {{ if eq $lang "fa" }}
-        ادامه مطلب
-      {{ else if eq $lang "se" }}
-        Läs mer
-      {{ else }}
-        Read more
-      {{ end }}
-    </a>
-
-  </div>
 
 </main>
 

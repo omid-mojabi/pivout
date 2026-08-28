@@ -3126,6 +3126,24 @@ html[lang="fa-IR"] .blog-main {
 
   margin: 30px auto !important;
 }
+
+/* =========================================================
+   BLOG - SHOW LATEST 10 POSTS
+   ========================================================= */
+
+.blog-post {
+  width: 100% !important;
+  margin-bottom: 30px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+.blog-post:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
 /* =========================================================
    CONTACT - BOOKING + FORM
    ========================================================= */
