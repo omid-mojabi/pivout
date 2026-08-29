@@ -380,14 +380,14 @@ body[class*="fa"] #home a {
 
 html[lang="en"] #home .row,
 html[lang="en-us"] #home .row,
-html[lang="se"] #home .row,
+html[lang="sv"] #home .row,
 html[lang="sv-SE"] #home .row {
   transform: translateX(-280px) !important;
 }
 
 html[lang="en"] #home .row > div,
 html[lang="en-us"] #home .row > div,
-html[lang="se"] #home .row > div,
+html[lang="sv"] #home .row > div,
 html[lang="sv-SE"] #home .row > div {
   text-align: left !important;
 }
@@ -555,7 +555,7 @@ html[lang="sv-SE"] #home .row > div {
     text-align: left !important;
   }
 
-  html[lang="se"] .hero-image .hero-text h1,
+  html[lang="sv"] .hero-image .hero-text h1,
   html[lang="sv-SE"] .hero-image .hero-text h1 {
     font-size: 25px !important;
     direction: ltr !important;
@@ -667,7 +667,7 @@ html[lang="sv-SE"] #home .row > div {
 
   html[lang="en"] #home .row > div,
   html[lang="en-us"] #home .row > div,
-  html[lang="se"] #home .row > div,
+  html[lang="sv"] #home .row > div,
   html[lang="sv-SE"] #home .row > div,
   html[lang="en"] #home h1,
   html[lang="en"] #home h2,
@@ -677,10 +677,10 @@ html[lang="sv-SE"] #home .row > div {
   html[lang="en-us"] #home h2,
   html[lang="en-us"] #home h3,
   html[lang="en-us"] #home p,
-  html[lang="se"] #home h1,
-  html[lang="se"] #home h2,
-  html[lang="se"] #home h3,
-  html[lang="se"] #home p,
+  html[lang="sv"] #home h1,
+  html[lang="sv"] #home h2,
+  html[lang="sv"] #home h3,
+  html[lang="sv"] #home p,
   html[lang="sv-SE"] #home h1,
   html[lang="sv-SE"] #home h2,
   html[lang="sv-SE"] #home h3,
@@ -1063,7 +1063,7 @@ body[class*="fa"] .service-image img {
   /* English / Swedish */
   html[lang="en"] #home,
   html[lang="en-us"] #home,
-  html[lang="se"] #home,
+  html[lang="sv"] #home,
   html[lang="sv-SE"] #home {
     direction: ltr !important;
     text-align: left !important;
@@ -1071,7 +1071,7 @@ body[class*="fa"] .service-image img {
 
   html[lang="en"] #home .row,
   html[lang="en-us"] #home .row,
-  html[lang="se"] #home .row,
+  html[lang="sv"] #home .row,
   html[lang="sv-SE"] #home .row {
     transform: none !important;
     margin-left: 0 !important;
@@ -1086,10 +1086,10 @@ body[class*="fa"] .service-image img {
   html[lang="en-us"] #home h2,
   html[lang="en-us"] #home h3,
   html[lang="en-us"] #home p,
-  html[lang="se"] #home h1,
-  html[lang="se"] #home h2,
-  html[lang="se"] #home h3,
-  html[lang="se"] #home p,
+  html[lang="sv"] #home h1,
+  html[lang="sv"] #home h2,
+  html[lang="sv"] #home h3,
+  html[lang="sv"] #home p,
   html[lang="sv-SE"] #home h1,
   html[lang="sv-SE"] #home h2,
   html[lang="sv-SE"] #home h3,
@@ -1189,7 +1189,7 @@ body[class*="fa"] .service-image img {
   /* EN / SE CTA */
   html[lang="en"] #about-cta,
   html[lang="en-us"] #about-cta,
-  html[lang="se"] #about-cta,
+  html[lang="sv"] #about-cta,
   html[lang="sv-SE"] #about-cta {
     direction: ltr !important;
     text-align: left !important;
@@ -1197,7 +1197,7 @@ body[class*="fa"] .service-image img {
 
   html[lang="en"] #about-cta .text-center,
   html[lang="en-us"] #about-cta .text-center,
-  html[lang="se"] #about-cta .text-center,
+  html[lang="sv"] #about-cta .text-center,
   html[lang="sv-SE"] #about-cta .text-center {
     text-align: left !important;
   }
@@ -1222,7 +1222,7 @@ body[class*="fa"] .service-image img {
 /* English + Swedish = left aligned */
 html[lang="en"] .strip.bg-primary .text-center,
 html[lang="en-us"] .strip.bg-primary .text-center,
-html[lang="se"] .strip.bg-primary .text-center,
+html[lang="sv"] .strip.bg-primary .text-center,
 html[lang="sv-SE"] .strip.bg-primary .text-center {
   text-align: left !important;
   direction: ltr !important;
@@ -1245,7 +1245,6 @@ body[class*="fa"] .strip.bg-primary .text-center {
   /* row را از حالت centered خارج کن */
   html[lang="en"] .strip.bg-primary .row.justify-content-center,
   html[lang="en-us"] .strip.bg-primary .row.justify-content-center,
-  html[lang="se"] .strip.bg-primary .row.justify-content-center,
   html[lang="sv"] .strip.bg-primary .row.justify-content-center,
   html[lang="sv-SE"] .strip.bg-primary .row.justify-content-center {
     justify-content: flex-start !important;
@@ -1254,7 +1253,6 @@ body[class*="fa"] .strip.bg-primary .text-center {
   /* باکس متن از لبه چپ container شروع شود */
   html[lang="en"] .strip.bg-primary .col-md-8,
   html[lang="en-us"] .strip.bg-primary .col-md-8,
-  html[lang="se"] .strip.bg-primary .col-md-8,
   html[lang="sv"] .strip.bg-primary .col-md-8,
   html[lang="sv-SE"] .strip.bg-primary .col-md-8 {
     flex: 0 0 66.666667% !important;
@@ -1273,8 +1271,6 @@ body[class*="fa"] .strip.bg-primary .text-center {
   html[lang="en"] .strip.bg-primary p,
   html[lang="en-us"] .strip.bg-primary h2,
   html[lang="en-us"] .strip.bg-primary p,
-  html[lang="se"] .strip.bg-primary h2,
-  html[lang="se"] .strip.bg-primary p,
   html[lang="sv"] .strip.bg-primary h2,
   html[lang="sv"] .strip.bg-primary p,
   html[lang="sv-SE"] .strip.bg-primary h2,
@@ -1286,7 +1282,6 @@ body[class*="fa"] .strip.bg-primary .text-center {
   /* button */
   html[lang="en"] .strip.bg-primary .button,
   html[lang="en-us"] .strip.bg-primary .button,
-  html[lang="se"] .strip.bg-primary .button,
   html[lang="sv"] .strip.bg-primary .button,
   html[lang="sv-SE"] .strip.bg-primary .button {
     float: none !important;
@@ -1304,7 +1299,6 @@ body[class*="fa"] .strip.bg-primary .text-center {
   /* فقط سکشن عکس، نه سکشن آبی */
   html[lang="en"] #home:not(.bg-primary) .row,
   html[lang="en-us"] #home:not(.bg-primary) .row,
-  html[lang="se"] #home:not(.bg-primary) .row,
   html[lang="sv"] #home:not(.bg-primary) .row,
   html[lang="sv-SE"] #home:not(.bg-primary) .row {
     justify-content: flex-start !important;
@@ -1314,7 +1308,6 @@ body[class*="fa"] .strip.bg-primary .text-center {
   /* offset بوت‌استرپ را حذف کن */
   html[lang="en"] #home:not(.bg-primary) .offset-md-6,
   html[lang="en-us"] #home:not(.bg-primary) .offset-md-6,
-  html[lang="se"] #home:not(.bg-primary) .offset-md-6,
   html[lang="sv"] #home:not(.bg-primary) .offset-md-6,
   html[lang="sv-SE"] #home:not(.bg-primary) .offset-md-6 {
     margin-left: 0 !important;
@@ -1324,7 +1317,6 @@ body[class*="fa"] .strip.bg-primary .text-center {
   /* همان نصف صفحه بماند، فقط از چپ شروع شود */
   html[lang="en"] #home:not(.bg-primary) .col-md-6,
   html[lang="en-us"] #home:not(.bg-primary) .col-md-6,
-  html[lang="se"] #home:not(.bg-primary) .col-md-6,
   html[lang="sv"] #home:not(.bg-primary) .col-md-6,
   html[lang="sv-SE"] #home:not(.bg-primary) .col-md-6 {
     flex: 0 0 50% !important;
@@ -1337,8 +1329,6 @@ body[class*="fa"] .strip.bg-primary .text-center {
 
   html[lang="en"] #home:not(.bg-primary) h2,
   html[lang="en"] #home:not(.bg-primary) p,
-  html[lang="se"] #home:not(.bg-primary) h2,
-  html[lang="se"] #home:not(.bg-primary) p,
   html[lang="sv"] #home:not(.bg-primary) h2,
   html[lang="sv"] #home:not(.bg-primary) p,
   html[lang="sv-SE"] #home:not(.bg-primary) h2,
@@ -3062,7 +3052,7 @@ html[lang="fa-IR"] .blog-single-date {
    Main post LEFT / posts list RIGHT
 */
 html[lang="en"] .blog-layout,
-html[lang="se"] .blog-layout {
+html[lang="sv"] .blog-layout {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr) 320px !important;
   grid-template-areas: "main sidebar" !important;
@@ -3071,13 +3061,13 @@ html[lang="se"] .blog-layout {
 }
 
 html[lang="en"] .blog-main,
-html[lang="se"] .blog-main {
+html[lang="sv"] .blog-main {
   grid-area: main !important;
   text-align: left !important;
 }
 
 html[lang="en"] .blog-sidebar,
-html[lang="se"] .blog-sidebar {
+html[lang="sv"] .blog-sidebar {
   grid-area: sidebar !important;
   text-align: left !important;
 }
@@ -3110,7 +3100,8 @@ html[lang="fa-IR"] .blog-main {
 @media (max-width: 768px) {
 
   html[lang="en"] .blog-layout,
-  html[lang="se"] .blog-layout,
+  html[lang="sv"] .blog-layout,
+  html[lang="sv-se"] .blog-layout,
   html[lang="fa"] .blog-layout,
   html[lang="fa-IR"] .blog-layout {
     grid-template-columns: 1fr !important;
@@ -3490,14 +3481,14 @@ html[lang="fa-IR"] .page-services-single .service-single .content li::marker {
 
 /* English + Swedish */
 html[lang="en"] .page-services-single .service-single .content ul,
-html[lang="se"] .page-services-single .service-single .content ul {
+html[lang="sv"] .page-services-single .service-single .content ul {
   list-style: disc outside !important;
   padding-left: 1.8rem !important;
   margin-left: 0 !important;
 }
 
 html[lang="en"] .page-services-single .service-single .content ul > li,
-html[lang="se"] .page-services-single .service-single .content ul > li {
+html[lang="sv"] .page-services-single .service-single .content ul > li {
   display: list-item !important;
   list-style-type: disc !important;
   text-align: left;
@@ -3506,7 +3497,7 @@ html[lang="se"] .page-services-single .service-single .content ul > li {
 }
 
 html[lang="en"] .page-services-single .service-single .content ul > li::marker,
-html[lang="se"] .page-services-single .service-single .content ul > li::marker {
+html[lang="sv"] .page-services-single .service-single .content ul > li::marker {
   font-size: 0.9em;
 }
 /* =========================================
@@ -3662,7 +3653,6 @@ body.main-menu-mobile-open .language-switcher {
 /* English + Swedish: explicitly anchor the selector inside the RIGHT drawer. */
 html[lang="en"] body.main-menu-mobile-open .language-switcher,
 html[lang="en-us"] body.main-menu-mobile-open .language-switcher,
-html[lang="se"] body.main-menu-mobile-open .language-switcher,
 html[lang="sv"] body.main-menu-mobile-open .language-switcher,
 html[lang="sv-SE"] body.main-menu-mobile-open .language-switcher {
   right: 20px !important;
@@ -4111,4 +4101,12 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
   margin-top:25px;
   width: 90px !important;
   height: 50px !important;
+}
+
+@media (max-width: 768px) {
+  html[lang="fa"] .header.header-absolute .container {
+    flex-direction: row-reverse !important;
+       padding-right: 28px !important;
+       margin-right: 28px !important;
+  }
 }
