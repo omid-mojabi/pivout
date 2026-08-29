@@ -1,7 +1,7 @@
 ---
 title: 'Integritet & prestanda'
 weight: 2
-background: 'https://source.unsplash.com/_v-EHHKKW3w/1600x700'
+background: '/images/compare-fibre-jlrnBE3Jn3o-unsplash.jpg'
 align: left
 ---
 

@@ -33,7 +33,7 @@
         <a href="{{ "blog/" | relLangURL }}">بلاگ</a>
         <a href="{{ "contact/" | relLangURL }}">تماس با ما</a>
 
-      {{ else if eq .Site.Language.Lang "se" }}
+      {{ else if eq .Site.Language.Lang "sv" }}
 
         <a href="{{ "" | relLangURL }}">Hem</a>
 	<a href="{{ "about/" | relLangURL }}">Om Oss</a>
@@ -61,7 +61,7 @@
         <a href="{{ "blog/" | relLangURL }}">بلاگ</a>
         <a href="{{ "contact/" | relLangURL }}">تماس با ما</a>
 
-      {{ else if eq .Site.Language.Lang "se" }}
+      {{ else if eq .Site.Language.Lang "sv" }}
 
         <a href="{{ "" | relLangURL }}">Hem</a>
 	<a href="{{ "about/" | relLangURL }}">Om Oss</a>
@@ -85,7 +85,7 @@
   <button type="button" class="language-current">
     {{ if eq .Site.Language.Lang "fa" }}
       فارسی
-    {{ else if eq .Site.Language.Lang "se" }}
+    {{ else if eq .Site.Language.Lang "sv" }}
       Svenska
     {{ else }}
       English
@@ -99,7 +99,7 @@
       {{ if eq .Language.Lang "en" }}
         <a href="{{ .RelPermalink }}">English</a>
 
-      {{ else if eq .Language.Lang "se" }}
+      {{ else if eq .Language.Lang "sv" }}
         <a href="{{ .RelPermalink }}">Svenska</a>
 
       {{ else if eq .Language.Lang "fa" }}
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   /* Swedish */
-  {{ else if eq .Site.Language.Lang "se" }}
+  {{ else if eq .Site.Language.Lang "sv" }}
 
   images = [
     "/images/karlskrona-landscape-unsplash.jpg",

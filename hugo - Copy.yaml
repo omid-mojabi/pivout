@@ -1,8 +1,0 @@
-baseURL: https://omidmojabi.com/
-languageCode: en-us
-title: Omid Mojabi
-theme: "hugo-hero-theme"
-
-params:
-  customCSS:
-    - css/custom.css

@@ -1,26 +1,54 @@
 baseURL: https://pivout.se/
-title: Pivot
+title: Pivot - Make it awesome!
 theme: "hugo-hero-theme"
 
 params:
+  google_analytics_id: ""
   customCSS:
     - css/custom.css
 
-defaultContentLanguage: se
+defaultContentLanguage: sv
 defaultContentLanguageInSubdir: false
 
 languages:
   en:
     languageName: "English"
+    languageCode: "en-us"
     weight: 2
     contentDir: content/en
+    params:
+      homepage_meta_tags:
+        meta_description: "We help companies grow through smart digitalization."
+        meta_og_title: "Pivot | Make it awesome!"
+        meta_og_type: "website"
+        meta_og_url: "https://pivout.se"
+        meta_og_image: "https://pivout.se/images/logo.png"
+        meta_og_description: "We help companies grow through smart digitalization."
 
-  se:
+  sv:
     languageName: "Svenska"
+    languageCode: "sv-se"
     weight: 1
-    contentDir: content/se
+    contentDir: content/sv
+    params:
+      homepage_meta_tags:
+        meta_description: "Vi hjälper företag att växa genom smart digitalisering."
+        meta_og_title: "Pivot | Gör det fantastiskt"
+        meta_og_type: "website"
+        meta_og_url: "https://pivout.se"
+        meta_og_image: "https://pivout.se/images/logo.png"
+        meta_og_description: "Vi hjälper företag att växa genom smart digitalisering."
 
   fa:
     languageName: "فارسی"
+    languageCode: "fa-ir"
     weight: 3
     contentDir: content/fa
+    params:
+      homepage_meta_tags:
+        meta_description: "ما به شرکت‌ها کمک می‌کنیم از طریق دیجیتالی‌سازی هوشمند رشد کنند."
+        meta_og_title: "Pivot - Make it awesome!"
+        meta_og_type: "website"
+        meta_og_url: "https://pivout.se"
+        meta_og_image: "https://pivout.se/images/logo.png"
+        meta_og_description: "ما به شرکت‌ها کمک می‌کنیم از طریق دیجیتالی‌سازی هوشمند رشد کنند."

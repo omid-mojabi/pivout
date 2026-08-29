@@ -1877,6 +1877,13 @@ html[lang="fa-IR"] .page-work-list .work-content {
   direction: rtl !important;
 }
 
+html[lang="fa"] .page-work-list .header.header-absolute,
+html[lang="fa-IR"] .page-work-list .header.header-absolute,
+html[lang="fa"] .page-work-single .header.header-absolute,
+html[lang="fa-IR"] .page-work-single .header.header-absolute {
+  direction: ltr !important;
+}
+
 
 /* Mobile */
 
