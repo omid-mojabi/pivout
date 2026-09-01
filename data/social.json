@@ -11,8 +11,13 @@
     },
     {
         "name": "Instagram",
-        "link": "https://instagram/plvott",
+        "link": "https://instagram.com/plvott",
         "image": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+    },
+    {
+        "name": "Facebook",
+        "link": "https://www.facebook.com/pivouts",
+        "image": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@16.29.0/icons/facebook.svg"
     },
     {
         "name": "Telegram",

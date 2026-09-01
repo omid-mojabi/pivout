@@ -3,7 +3,7 @@ title: Pivot - Make it awesome!
 theme: "hugo-hero-theme"
 
 params:
-  google_analytics_id: ""
+  google_analytics_id: "G-MWJ3L0LZTX"
   customCSS:
     - css/custom.css
 
