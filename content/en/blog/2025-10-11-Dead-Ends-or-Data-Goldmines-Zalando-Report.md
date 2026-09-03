@@ -3,6 +3,10 @@ title: "Dead Ends or Data Goldmines"
 date: 2025-10-11
 draft: false
 thumbnail: "/images/blog/2025-10-11-Dead-Ends-or-Data-Goldmines-Zalando-Report.jpg"
+tags:
+  - AI
+  - data
+  - postmortem
 
 ---
 ## Investment Insights from Two Years of AI-Powered Postmortem Analysis

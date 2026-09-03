@@ -3,6 +3,12 @@ title: "چگونه داده‌های گذشته‌نگر به رأی دادن ک
 date: 2026-08-27
 draft: false
 thumbnail: "/images/blog/2026-08-27-Sweden-Election2026.jpg"
+tags:
+  - AI
+  - data
+  - Sweden
+  - politics
+  - democracy
 ---
 ## وقتی که مدل‌های هوشمند زمین بازی را تغییر می‌دهند
 

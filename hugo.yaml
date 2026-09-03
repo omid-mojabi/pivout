@@ -52,3 +52,10 @@ languages:
         meta_og_url: "https://pivout.se"
         meta_og_image: "https://pivout.se/images/logo.png"
         meta_og_description: "ما به شرکت‌ها کمک می‌کنیم از طریق دیجیتالی‌سازی هوشمند رشد کنند."
+
+related:
+  threshold: 80
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100

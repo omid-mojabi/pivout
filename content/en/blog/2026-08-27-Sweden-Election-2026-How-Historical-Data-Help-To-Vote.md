@@ -3,6 +3,12 @@ title: "How historical statistics helps to vote!"
 date: 2026-08-27
 draft: false
 thumbnail: "/images/blog/2026-08-27-Sweden-Election2026.jpg"
+tags:
+  - AI
+  - data
+  - Sweden
+  - politics
+  - democracy
 ---
 ## When AI models can change the playground
 

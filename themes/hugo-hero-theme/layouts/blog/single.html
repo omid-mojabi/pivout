@@ -69,17 +69,95 @@
         {{ .Content }}
       </div>
 
-<div class="blog-single-back">
-  <a href="{{ "blog/" | relLangURL }}">
-    {{ if eq $lang "fa" }}
-      بازگشت به بلاگ
-    {{ else if eq $lang "sv" }}
-      Tillbaka till bloggen
-    {{ else }}
-      Back to Blog
-    {{ end }}
-  </a>
-</div>
+
+      <!-- =====================================================
+           RELATED BLOG POSTS
+           ===================================================== -->
+
+      {{ $related := .Site.RegularPages.Related . | first 3 }}
+
+      {{ if gt (len $related) 0 }}
+
+      <section class="blog-related">
+
+        <h2 class="blog-related-title">
+          {{ if eq $lang "fa" }}
+            مطالب مرتبط
+          {{ else if eq $lang "sv" }}
+            Relaterade inlägg
+          {{ else }}
+            Related Posts
+          {{ end }}
+        </h2>
+
+        <div class="blog-related-list">
+
+          {{ range $related }}
+
+          <article class="blog-related-item">
+
+            {{ with .Params.thumbnail }}
+            <a href="{{ $.RelPermalink }}" class="blog-related-image">
+              <img
+                src="{{ . | relURL }}"
+                alt="{{ $.Title }}"
+              >
+            </a>
+            {{ end }}
+
+            <div class="blog-related-content">
+
+              <div class="blog-related-date">
+                {{ .Date.Format "2006-01-02" }}
+              </div>
+
+              <h3>
+                <a href="{{ .RelPermalink }}">
+                  {{ .Title }}
+                </a>
+              </h3>
+
+              <a
+                href="{{ .RelPermalink }}"
+                class="blog-related-link"
+              >
+                {{ if eq $lang "fa" }}
+                  ادامه مطلب
+                {{ else if eq $lang "sv" }}
+                  Läs mer
+                {{ else }}
+                  Read more
+                {{ end }}
+              </a>
+
+            </div>
+
+          </article>
+
+          {{ end }}
+
+        </div>
+
+      </section>
+
+      {{ end }}
+
+
+      <!-- =====================================================
+           BACK TO BLOG
+           ===================================================== -->
+
+      <div class="blog-single-back">
+        <a href="{{ "blog/" | relLangURL }}">
+          {{ if eq $lang "fa" }}
+            بازگشت به بلاگ
+          {{ else if eq $lang "sv" }}
+            Tillbaka till bloggen
+          {{ else }}
+            Back to Blog
+          {{ end }}
+        </a>
+      </div>
 
     </article>
 

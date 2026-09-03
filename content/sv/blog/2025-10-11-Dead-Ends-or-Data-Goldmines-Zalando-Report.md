@@ -3,6 +3,10 @@ title: "Återvändsgränder eller dataguldgruvor"
 date: 2025-10-11
 draft: false
 thumbnail: "/images/blog/2025-10-11-Dead-Ends-or-Data-Goldmines-Zalando-Report.jpg"
+tags:
+  - AI
+  - data
+  - postmortem
 ---
 ## Investeringsinsikter från två års AI-driven analys av postmortems
 
