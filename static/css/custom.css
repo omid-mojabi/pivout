@@ -785,32 +785,34 @@ body[class*="fa"] .service-image img {
      ----------------------------------------- */
 
   #home {
+    position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
-    min-height: auto !important;
+    height: 420px !important;
+    min-height: 420px !important;
 
-    background-size: 100% auto !important;
+    background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-position: top center !important;
+    background-position: 68% center !important;
 
-    padding-top: 52vw !important;
-    padding-bottom: 28px !important;
-
-    overflow: visible !important;
+    padding: 0 !important;
+    overflow: hidden !important;
   }
 
   #home .container {
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
-    min-height: auto !important;
+    height: 100% !important;
+    min-height: 100% !important;
 
     padding: 0 20px !important;
     margin: 0 !important;
 
     box-sizing: border-box !important;
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
 
   #home .row {
@@ -821,18 +823,41 @@ body[class*="fa"] .service-image img {
     padding: 0 !important;
 
     transform: none !important;
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
   }
 
   #home .row > div {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 47% !important;
+    max-width: 47% !important;
 
     margin: 0 !important;
     padding: 0 !important;
 
     transform: none !important;
     box-sizing: border-box !important;
+    flex: 0 0 47% !important;
+  }
+
+  /* Overlay position by language */
+  html[lang="en"] #home .row,
+  html[lang="en-us"] #home .row,
+  html[lang="sv"] #home .row,
+  html[lang="sv-SE"] #home .row {
+    justify-content: flex-start !important;
+  }
+
+  html[lang="fa"] #home .row,
+  html[lang="fa-IR"] #home .row {
+    justify-content: flex-end !important;
+  }
+
+  html[lang="fa"] #home .row > div,
+  html[lang="fa-IR"] #home .row > div {
+    flex: 0 0 47% !important;
+    width: 47% !important;
+    max-width: 47% !important;
   }
 
   /* English / Swedish */
