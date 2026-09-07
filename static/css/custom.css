@@ -543,14 +543,14 @@ html[lang="sv-SE"] #home .row > div {
 
   html[lang="fa"] .hero-image .hero-text h1,
   html[lang="fa-IR"] .hero-image .hero-text h1 {
-    font-size: 29px !important;
+    font-size: 28px !important;
     direction: rtl !important;
     text-align: right !important;
   }
 
   html[lang="en"] .hero-image .hero-text h1,
   html[lang="en-us"] .hero-image .hero-text h1 {
-    font-size: 31px !important;
+    font-size: 25px !important;
     direction: ltr !important;
     text-align: left !important;
   }
