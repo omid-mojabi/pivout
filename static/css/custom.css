@@ -4111,9 +4111,11 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
 
   html[lang="fa"] #home .row > div,
   html[lang="fa-IR"] #home .row > div {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
+  width: 47% !important;
+  max-width: 47% !important;
+  flex: 0 0 47% !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
   }
 
   html[lang="fa"] #home h1,
@@ -4172,4 +4174,177 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
        padding-right: 28px !important;
        margin-right: 28px !important;
   }
+}
+
+/* =========================================================
+   FINAL MOBILE HOME TEXT ALIGNMENT
+   MOBILE ONLY — DO NOT AFFECT DESKTOP
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -----------------------------------------
+     HOME SECOND SECTION — LAYOUT
+  ----------------------------------------- */
+
+  #home .row {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+
+    transform: none !important;
+  }
+
+  #home .row > div {
+    width: 47% !important;
+    max-width: 47% !important;
+
+    flex: 0 0 47% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  /* -----------------------------------------
+     ENGLISH + SWEDISH
+     Text block starts from LEFT
+  ----------------------------------------- */
+
+  html[lang="en"] #home .row,
+  html[lang="en-us"] #home .row,
+  html[lang="sv"] #home .row,
+  html[lang="sv-SE"] #home .row {
+    justify-content: flex-start !important;
+  }
+
+  html[lang="en"] #home .row > div,
+  html[lang="en-us"] #home .row > div,
+  html[lang="sv"] #home .row > div,
+  html[lang="sv-SE"] #home .row > div {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+
+  /* -----------------------------------------
+     PERSIAN
+     Text block starts from RIGHT
+  ----------------------------------------- */
+
+  html[lang="fa"] #home .row,
+  html[lang="fa-IR"] #home .row,
+  body[class*="fa"] #home .row {
+    justify-content: flex-end !important;
+  }
+
+  html[lang="fa"] #home .row > div,
+  html[lang="fa-IR"] #home .row > div,
+  body[class*="fa"] #home .row > div {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+
+  /* -----------------------------------------
+     TEXT SIZE
+     Same controlled mobile scale for all 3 languages
+  ----------------------------------------- */
+
+  #home h1,
+  #home h2,
+  #home h3 {
+    font-size: 21px !important;
+    line-height: 1.25 !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
+
+  #home p {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
+
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
+
+  #home a,
+  #home .button {
+    display: inline-block !important;
+
+    padding: 9px 12px !important;
+
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* -----------------------------------------
+     FORCE LANGUAGE TEXT ALIGNMENT
+  ----------------------------------------- */
+
+  html[lang="fa"] #home h1,
+  html[lang="fa"] #home h2,
+  html[lang="fa"] #home h3,
+  html[lang="fa"] #home p,
+  html[lang="fa-IR"] #home h1,
+  html[lang="fa-IR"] #home h2,
+  html[lang="fa-IR"] #home h3,
+  html[lang="fa-IR"] #home p,
+  body[class*="fa"] #home h1,
+  body[class*="fa"] #home h2,
+  body[class*="fa"] #home h3,
+  body[class*="fa"] #home p {
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+  html[lang="en"] #home h1,
+  html[lang="en"] #home h2,
+  html[lang="en"] #home h3,
+  html[lang="en"] #home p,
+  html[lang="en-us"] #home h1,
+  html[lang="en-us"] #home h2,
+  html[lang="en-us"] #home h3,
+  html[lang="en-us"] #home p,
+  html[lang="sv"] #home h1,
+  html[lang="sv"] #home h2,
+  html[lang="sv"] #home h3,
+  html[lang="sv"] #home p,
+  html[lang="sv-SE"] #home h1,
+  html[lang="sv-SE"] #home h2,
+  html[lang="sv-SE"] #home h3,
+  html[lang="sv-SE"] #home p {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  html[lang="fa"] #home,
+  html[lang="fa-IR"] #home,
+  body[class*="fa"] #home {
+    height: 420px !important;
+    min-height: 420px !important;
+    background-size: cover !important;
+  background-position: 28% center !important;
+  background-repeat: no-repeat !important;
+    overflow: visible !important;
+  }
+
 }
