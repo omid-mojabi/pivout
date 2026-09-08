@@ -543,7 +543,7 @@ html[lang="sv-SE"] #home .row > div {
 
   html[lang="fa"] .hero-image .hero-text h1,
   html[lang="fa-IR"] .hero-image .hero-text h1 {
-    font-size: 28px !important;
+    font-size: 25px !important;
     direction: rtl !important;
     text-align: right !important;
   }
@@ -4347,4 +4347,16 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
     overflow: visible !important;
   }
 
+}
+
+.blog-single-video {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.blog-single-video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
 }
