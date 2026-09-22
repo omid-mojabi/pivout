@@ -5,10 +5,10 @@ weight: 2
 companyURL: 'https://dsd-seaa.com/'
 heroHeading: ''
 heroSubHeading: ''
-heroBackground: '/images/SEAA2025-Conf.png'
-thumbnail: '/images/SEAA2025-Conf-2.png'
-images: ['/images/SEAA2025-Conf-01.jpg', 
-'/images/SEAA2025-Conf-02.jpg','/images/SEAA2025-Conf-03.jpg','/images/SEAA2025-Conf-04.png','/images/SEAA2025-Conf-05.png','/images/SEAA2025-Conf-06.jpg']
+heroBackground: '/images/showcases/seaa-2025/SEAA2025-Conf.png'
+thumbnail: '/images/showcases/seaa-2025/SEAA2025-Conf-2.png'
+images: ['/images/showcases/seaa-2025/SEAA2025-Conf-01.jpg', 
+'/images/showcases/seaa-2025/SEAA2025-Conf-02.jpg','/images/showcases/seaa-2025/SEAA2025-Conf-03.jpg','images/showcases/seaa-2025/SEAA2025-Conf-04.png','/images/showcases/seaa-2025/SEAA2025-Conf-05.png','/images/showcases/seaa-2025/SEAA2025-Conf-06.jpg']
 ---
 
 Euromicro SEAA (Software Engineering and Advanced Applications) är en väletablerad internationell konferensserie som samlar forskare, yrkesverksamma och studenter för att presentera och diskutera forskning, erfarenheter och nya utvecklingar inom programvaruteknik och programvaruintensiva system. Konferensserien arrangeras inom Euromicro, som grundades 1974, och SEAA har nått sin 52:a upplaga år 2026.

@@ -5,10 +5,10 @@ weight: 2
 companyURL: 'https://lyckakok.se/'
 heroHeading: 'Lyckåkök.se'
 heroSubHeading: 'Design och Renovering av Kök'
-heroBackground: '/images/lyckakok-016.jpg'
-thumbnail: '/images/lyckakok.png'
-images: ['/images/lyckakok-016.jpg', 
-'/images/lyckakok-013.jpg','/images/lyckakok-011.jpg','/images/lyckakok-005.jpg','/images/lyckakok-039.jpg']
+heroBackground: '/images/showcases/lyckakok/lyckakok-016.jpg'
+thumbnail: '/images/showcases/lyckakok/lyckakok.png'
+images: ['/images/showcases/lyckakok/lyckakok-016.jpg', 
+'/images/showcases/lyckakok/lyckakok-013.jpg','/images/showcases/lyckakok/lyckakok-011.jpg','/images/showcases/lyckakok/lyckakok-005.jpg','/images/showcases/lyckakok/lyckakok-039.jpg']
 ---
 
 Lyckåkök är ett köks- och inredningssnickeriföretag baserat i Karlskrona. De specialiserar sig på husrenoveringar, specialsnickeri och skräddarsydda kökslösningar i Blekinge, Kronoberg och Kalmar i södra Sverige.

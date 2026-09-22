@@ -14,9 +14,9 @@ tags:
 
 ![Flygblad som delats ut av politiska partier inför valet 2026](/images/blog/2026-09-10-Sweden-Election2026-Political-Campaigns.jpg)
 
-Vi närmar oss den avgörande dagen, och politiker partierna gör sitt bästa för att få fler röster. Därför kan det fortfarande finnas människor som inte känner sig säkra, bland allt information och alla löften, på vilket parti man egentligen kan lita på.
+Vi närmar oss den avgörande dagen, och politikerpartierna gör sitt bästa för att få fler röster. Därför kan det fortfarande finnas människor som inte känner sig säkra bland all information och alla löften om vilket parti man egentligen kan lita på.
 
-Många har säkert, efter reklam och debatter på svensk radio och tv, tittat lite på **valkompasserna** för att försöka förstå hur skillnaderna mellan politik och politikers åsikter faktiskt spelar roll för dem själva  och sedan bestämma sig. Men är det som visas i dessa kompasser tillräckligt pålitligt för att man ska rösta bara utifrån ett allmänt intryck?
+Många har säkert, efter reklam och debatter på svensk radio och tv, tittat lite på **valkompasserna** för att försöka förstå hur skillnaderna mellan politik och politikers åsikter faktiskt spelar roll för dem själva och sedan bestämma sig. Men är det som visas i dessa kompasser tillräckligt pålitligt för att man ska rösta bara utifrån ett allmänt intryck?
 
 
 AI kan vara ett väldigt användbart verktyg för att analysera den här typen av data, men det finns fortfarande utmaningar som hur mycket folk egentligen vet om hur man använder det rätt, och risken att göra ett fel val på grund av osäker eller slarvig användning. Hur som helst finns det i Sverige, precis som i resten av världen just nu, mycket oro kring hur pålitliga dessa AI-verktyg egentligen är. Bara tre dagar kvar till valet, och den här osäkerheten är lite jobbig och stressande.

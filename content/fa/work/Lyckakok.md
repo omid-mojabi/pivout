@@ -5,10 +5,10 @@ weight: 2
 companyURL: 'https://lyckakok.se/'
 heroHeading: 'Lyckåkök.se'
 heroSubHeading: 'طراحی و بازسازی آشپزخانه‌ها'
-heroBackground: '/images/lyckakok-016.jpg'
-thumbnail: '/images/lyckakok.png'
-images: ['/images/lyckakok-016.jpg', 
-'/images/lyckakok-013.jpg','/images/lyckakok-011.jpg','/images/lyckakok-005.jpg','/images/lyckakok-039.jpg']
+heroBackground: '/images/showcases/lyckakok/lyckakok-016.jpg'
+thumbnail: '/images/showcases/lyckakok/lyckakok.png'
+images: ['/images/showcases/lyckakok/lyckakok-016.jpg', 
+'/images/showcases/lyckakok/lyckakok-013.jpg','/images/showcases/lyckakok/lyckakok-011.jpg','/images/showcases/lyckakok/lyckakok-005.jpg','/images/showcases/lyckakok/lyckakok-039.jpg']
 ---
 
 لیکوشوک (به فارسی: آشپزخانه خوب) یک کسب و کار بازسازی آشپزخانه و دکوراسیون داخلی مستقر در کارلسکرونا در جنوب سوئد است. آنها در بازسازی خانه، نجاری سفارشی و راهکارهای آشپزخانه سفارشی در استان‌های بلکینگه، کرونوبرگ و کالمار در جنوب سوئد تخصص دارند.

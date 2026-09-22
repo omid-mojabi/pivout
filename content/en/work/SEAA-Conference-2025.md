@@ -5,10 +5,10 @@ weight: 2
 companyURL: 'https://dsd-seaa.com/'
 heroHeading: ''
 heroSubHeading: ''
-heroBackground: '/images/SEAA2025-Conf.png'
-thumbnail: '/images/SEAA2025-Conf-2.png'
-images: ['/images/SEAA2025-Conf-01.jpg', 
-'/images/SEAA2025-Conf-02.jpg','/images/SEAA2025-Conf-03.jpg','/images/SEAA2025-Conf-04.png','/images/SEAA2025-Conf-05.png','/images/SEAA2025-Conf-06.jpg']
+heroBackground: '/images/showcases/seaa-2025/SEAA2025-Conf.png'
+thumbnail: '/images/showcases/seaa-2025/SEAA2025-Conf-2.png'
+images: ['/images/showcases/seaa-2025/SEAA2025-Conf-01.jpg', 
+'/images/showcases/seaa-2025/SEAA2025-Conf-02.jpg','/images/showcases/seaa-2025/SEAA2025-Conf-03.jpg','/images/showcases/seaa-2025/SEAA2025-Conf-04.png','/images/showcases/seaa-2025/SEAA2025-Conf-05.png','/images/showcases/seaa-2025/SEAA2025-Conf-06.jpg']
 ---
 
 Euromicro SEAA (Software Engineering and Advanced Applications) is a long-standing international conference series bringing together researchers, practitioners, and students to exchange research, experience, and emerging developments in software engineering and software-intensive systems. Founded under the Euromicro organization established in 1974, SEAA has reached 52 editions and has been hosted across numerous European and international locations.

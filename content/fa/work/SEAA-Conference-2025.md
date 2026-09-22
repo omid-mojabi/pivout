@@ -5,10 +5,10 @@ weight: 2
 companyURL: 'https://dsd-seaa.com/'
 heroHeading: ''
 heroSubHeading: ''
-heroBackground: '/images/SEAA2025-Conf.png'
-thumbnail: '/images/SEAA2025-Conf-2.png'
-images: ['/images/SEAA2025-Conf-01.jpg', 
-'/images/SEAA2025-Conf-02.jpg','/images/SEAA2025-Conf-03.jpg','/images/SEAA2025-Conf-04.png','/images/SEAA2025-Conf-05.png','/images/SEAA2025-Conf-06.jpg']
+heroBackground: '/images/showcases/seaa-2025/SEAA2025-Conf.png'
+thumbnail: '/images/showcases/seaa-2025/SEAA2025-Conf-2.png'
+images: ['/images/showcases/seaa-2025/SEAA2025-Conf-01.jpg', 
+'/images/showcases/seaa-2025/SEAA2025-Conf-02.jpg','/images/showcases/seaa-2025/SEAA2025-Conf-03.jpg','/images/showcases/seaa-2025/SEAA2025-Conf-04.png','/images/showcases/seaa-2025/SEAA2025-Conf-05.png','/images/showcases/seaa-2025/SEAA2025-Conf-06.jpg']
 ---
 
 کنفرانس Euromicro SEAA (مهندسی نرم‌افزار و کاربردهای پیشرفته) یکی از مجموعه کنفرانس‌های بین‌المللی باسابقه در حوزه مهندسی نرم‌افزار است که پژوهشگران، متخصصان صنعت و دانشجویان را برای ارائه و تبادل یافته‌های پژوهشی، تجربیات و پیشرفت‌های جدید در مهندسی نرم‌افزار و سیستم‌های نرم‌افزارمحور گرد هم می‌آورد. این مجموعه تحت سازمان Euromicro، تأسیس‌شده در سال ۱۹۷۴، فعالیت می‌کند و SEAA در سال ۲۰۲۶ به پنجاه‌ودومین دوره خود رسیده است.
