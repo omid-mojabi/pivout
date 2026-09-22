@@ -3,7 +3,7 @@ title: 'کنفرانس SEAA/DSD 2025'
 draft: false
 weight: 3
 companyURL: 'https://dsd-seaa.com/'
-heroHeading: 'کنفرانس بین‌المللی یورومیکرو'
+heroHeading: ''
 heroSubHeading: ''
 heroBackground: '/images/showcases/seaa-2025/SEAA2025-Conf.png'
 thumbnail: '/images/showcases/seaa-2025/SEAA2025-Conf-2.png'
