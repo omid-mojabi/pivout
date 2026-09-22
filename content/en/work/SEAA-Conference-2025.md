@@ -1,9 +1,9 @@
 ---
 title: 'SEAA/DSD Conference 2025'
 draft: false
-weight: 2
+weight: 3
 companyURL: 'https://dsd-seaa.com/'
-heroHeading: ''
+heroHeading: 'SEAA/DSD Conference'
 heroSubHeading: ''
 heroBackground: '/images/showcases/seaa-2025/SEAA2025-Conf.png'
 thumbnail: '/images/showcases/seaa-2025/SEAA2025-Conf-2.png'

@@ -3,7 +3,7 @@ title: 'SEAA/DSD Konferens 2025'
 draft: false
 weight: 2
 companyURL: 'https://dsd-seaa.com/'
-heroHeading: ''
+heroHeading: 'SEAA/DSD Konferens'
 heroSubHeading: ''
 heroBackground: '/images/showcases/seaa-2025/SEAA2025-Conf.png'
 thumbnail: '/images/showcases/seaa-2025/SEAA2025-Conf-2.png'

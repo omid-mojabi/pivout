@@ -1,7 +1,7 @@
 ---
 title: 'lyckåkök'
 draft: false
-weight: 2
+weight: 3
 companyURL: 'https://lyckakok.se/'
 heroHeading: 'Lyckåkök.se'
 heroSubHeading: 'Design och Renovering av Kök'

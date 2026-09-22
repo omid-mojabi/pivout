@@ -1,8 +1,8 @@
 ---
 title: 'Musikfestivaler sommaren 2026'
 draft: false
-weight: 2
-companyURL: '#'
+weight: 1
+companyURL: ''
 heroHeading: 'Musikfestivaler sommaren 2026'
 heroSubHeading: ''
 heroBackground: '/images/showcases/festivals-2026/Sweden-Rock-Festival-2026.jpg'

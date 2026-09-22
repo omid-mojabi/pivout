@@ -1,8 +1,8 @@
 ---
 title: 'Summer 2026 music festivals'
 draft: false
-weight: 2
-companyURL: 'https://Paraply.se/'
+weight: 1
+companyURL: ''
 heroHeading: 'Summer 2026 festivals'
 heroSubHeading: ''
 heroBackground: '/images/showcases/festivals-2026/Sweden-Rock-Festival-2026.jpg'
