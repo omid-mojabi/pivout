@@ -11,7 +11,7 @@ images: ['/images/showcases/festivals-2026/Hasslofestival-20260709.jpg',
 '/images/showcases/festivals-2026/Karlskrona-Skargardsfestival-20260730.jpg','/images/showcases/festivals-2026/Sweden-Rock-Festival-2026-01.jpg','/images/showcases/festivals-2026/Hasslofestival-2026-01.jpg','/images/showcases/festivals-2026/Hasslofestival-2026-02.jpg','/images/showcases/festivals-2026/karlskrona-skargardsfestival-2026-01.jpg']
 ---
 
-تابستان امسال، طی یک همکاری خوب با پاراپلی پروداکشن سه رویداد بزرگ و عالی موسیقی در استان بلکینگه‌ی سوئد برگزار شد:
+تابستان امسال، طی یک همکاری خوب با [**شرکت پاراپلی**](https://paraply.se/) سه رویداد بزرگ و عالی موسیقی در استان بلکینگه‌ی سوئد برگزار شد:
 
 - **فستیوال موسیقی راک سوئد  ۲۰۲۶** (۳ تا ۶ ژوئن): با حدود ۴۰ هزار شرکت‌کننده و اجرای بیش از ۹۰ گروه و هنرمند در سبک‌های متنوعی چون هوی‌متال، هارد راک، ترش‌متال، دث‌متال، پاورمتال، پراگرسیو متال و پانک راک بر روی ۵ صحنه‌ی مختلف فستیوال.
 

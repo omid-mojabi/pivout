@@ -11,7 +11,7 @@ images: ['/images/showcases/festivals-2026/Hasslofestival-20260709.jpg',
 '/images/showcases/festivals-2026/Karlskrona-Skargardsfestival-20260730.jpg','/images/showcases/festivals-2026/Sweden-Rock-Festival-2026-01.jpg','/images/showcases/festivals-2026/Hasslofestival-2026-01.jpg','/images/showcases/festivals-2026/Hasslofestival-2026-02.jpg','/images/showcases/festivals-2026/karlskrona-skargardsfestival-2026-01.jpg']
 ---
 
-This summer, three major and outstanding music events were held across Blekinge County, Sweden, as part of a great collaboration with Paraply Production:
+This summer, three major and outstanding music events were held across Blekinge County, Sweden, as part of a great collaboration with [**Paraply Production**](https://paraply.se/):
 
 - **Sweden Rock Festival 2026** (June 3–6): with about 40,000 attendees and over 90 bands and artists performing across a wide range of genres such as heavy metal, hard rock, thrash metal, death metal, power metal, progressive metal, and punk rock, spread across the festival's 5 stages.
 
