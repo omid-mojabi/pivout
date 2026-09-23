@@ -143,56 +143,122 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   var hero = document.querySelector(".hero-image-fullscreen");
-
   if (!hero) return;
 
   var images = [];
 
-  /* Persian */
   {{ if eq .Site.Language.Lang "fa" }}
-
   images = [
     "/images/pexels-photo-3799176.jpeg",
     "/images/adrien-converse-unsplash.jpg",
     "/images/shutterstock_561931702.png",
     "/images/fabio-oyXis2kALVg-unsplash.jpg"
   ];
-
-  /* Swedish */
   {{ else if eq .Site.Language.Lang "sv" }}
-
   images = [
     "/images/karlskrona-landscape-unsplash.jpg",
     "/images/adrien-converse-unsplash.jpg",
     "/images/shutterstock_561931702.png",
     "/images/fabio-oyXis2kALVg-unsplash.jpg"
   ];
-
-  /* English */
   {{ else }}
-
   images = [
     "/images/hardik-pandya--Ey_0PMz900-unsplash.jpg",
     "/images/adrien-converse-unsplash.jpg",
     "/images/shutterstock_561931702.png",
     "/images/fabio-oyXis2kALVg-unsplash.jpg"
   ];
-
   {{ end }}
 
   var current = 0;
 
-  hero.style.backgroundImage =
+  function makeLayer(className) {
+    var outer = document.createElement("div");
+    outer.className = "hero-bg-layer " + className;
+
+    var inner = document.createElement("div");
+    inner.className = "hero-bg-inner";
+
+    outer.appendChild(inner);
+    return { outer: outer, inner: inner };
+  }
+
+  var currentLayer = makeLayer("hero-bg-current");
+  var nextLayer = makeLayer("hero-bg-next");
+
+  currentLayer.inner.style.backgroundImage =
     "url('" + images[current] + "')";
 
-  setInterval(function () {
+  hero.appendChild(currentLayer.outer);
+  hero.appendChild(nextLayer.outer);
 
-    current = (current + 1) % images.length;
+  /* -----------------------------------------
+     KEN BURNS 
+  ----------------------------------------- */
 
-    hero.style.backgroundImage =
-      "url('" + images[current] + "')";
+  var kenBurnsKeyframes = [
+    { transform: "scale(1) translate3d(0, 0, 0)" },
+    { transform: "scale(1.08) translate3d(-1.5%, -1%, 0)" },
+    { transform: "scale(1) translate3d(0, 0, 0)" }
+  ];
 
-  }, 7000);
+  var kenBurnsOptions = {
+    duration: 11500,
+    iterations: Infinity,
+    easing: "ease-in-out"
+  };
+
+  var animCurrent = currentLayer.inner.animate(kenBurnsKeyframes, kenBurnsOptions);
+  var animNext = nextLayer.inner.animate(kenBurnsKeyframes, kenBurnsOptions);
+
+  function updateMotionSpeed() {
+    var maxScroll = window.innerHeight * 0.8;
+    var progress = Math.min(window.scrollY / maxScroll, 1);
+    var rate = 1 - progress * 0.85; 
+
+    animCurrent.playbackRate = rate;
+    animNext.playbackRate = rate;
+  }
+
+  window.addEventListener("scroll", updateMotionSpeed, { passive: true });
+  updateMotionSpeed();
+
+  /* -----------------------------------------
+     NEXT SLIDE 
+  ----------------------------------------- */
+
+  function nextSlide() {
+
+    var next = (current + 1) % images.length;
+
+    nextLayer.inner.style.backgroundImage =
+      "url('" + images[next] + "')";
+
+    hero.classList.remove("hero-transition");
+    void hero.offsetWidth;
+    hero.classList.add("hero-transition");
+
+    setTimeout(function () {
+
+      current = next;
+
+      currentLayer.inner.style.backgroundImage =
+        "url('" + images[current] + "')";
+
+      hero.classList.remove("hero-transition");
+
+      currentLayer.outer.style.opacity = "1";
+      currentLayer.outer.style.transform =
+        "scale(1) translate3d(0, 0, 0)";
+
+      nextLayer.outer.style.opacity = "0";
+      nextLayer.outer.style.transform =
+        "scale(1.11) translate3d(7%, 0, 0)";
+
+    }, 3000);
+  }
+
+  setInterval(nextSlide, 9000);
 
 });
 </script>

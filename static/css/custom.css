@@ -4360,3 +4360,116 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
   aspect-ratio: 16 / 9;
   border: 0;
 }
+
+.hero-image-fullscreen {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* ================================
+   BLUE TINT OVERLAY
+================================ */
+
+.hero-image-fullscreen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(15, 55, 255, 0.72);
+  /*mix-blend-mode: multiply; */
+   pointer-events: none;
+}
+
+
+/* ================================
+   IMAGE LAYERS
+================================ */
+
+.hero-bg-layer {
+  position: absolute;
+  inset: 0; 
+  overflow: hidden;
+  pointer-events: none;
+  will-change: opacity, transform;
+  z-index: 0;
+}
+
+
+.hero-bg-inner {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  filter: saturate(1.08) contrast(1.08);
+}
+
+
+/* ================================
+   CURRENT IMAGE
+================================ */
+
+.hero-bg-current {
+  opacity: 1;
+  transform:
+    scale(1)
+    translate3d(0, 0, 0);
+}
+
+
+/* ================================
+   NEXT IMAGE
+================================ */
+
+.hero-bg-next {
+  opacity: 0;
+  transform:
+    scale(1.11)
+    translate3d(7%, 0, 0);
+}
+
+
+/* ================================
+   HERO CONTENT
+================================ */
+
+.hero-image-fullscreen > *:not(.hero-bg-layer) {
+  position: relative;
+  z-index: 2;  
+
+
+/* ================================
+   MOTION
+================================ */
+
+.hero-image-fullscreen.hero-transition .hero-bg-current {
+  animation: heroCurrentOut 3s ease-in-out forwards;
+}
+
+.hero-image-fullscreen.hero-transition .hero-bg-next {
+  animation: heroNextIn 3s ease-in-out forwards;
+}
+
+@keyframes heroCurrentOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);      
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.09) translate3d(-4%, 0, 0);  
+  }
+}
+
+@keyframes heroNextIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.11) translate3d(7%, 0, 0);   
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);        
+  }
+}
