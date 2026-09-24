@@ -1,8 +1,8 @@
 ---
-title: 'Tjänster'
+title: 'Våra Tjänster'
 translationKey: "services"
-heroHeading: 'Tjänster'
-heroSubHeading: 'Services that grow with your business'
+heroHeading: 'Våra Tjänster'
+heroSubHeading: 'Vi erbjuder dem som helhetslösningar!'
 heroBackground: 'images/jonakoh-_-r5lbaK3fDaM-unsplash.jpg'
 ---
 
