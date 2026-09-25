@@ -4,7 +4,7 @@ title: "Sustainability in Software Engineering"
 
 year: 2025
 
-description: 'A dataset for research on sustainability in software engineering between 2018 and 2026. The dataset was compiled from six reputable academic databases: **IEEE Xplore, Scopus, ScienceDirect, Web of Science, Springer, and ACM**. Tools such as **Zotero** and **Rayyan.ai** were used to organize, screen, evaluate, and select the relevant studies.'
+description: 'This dataset was prepared in 2025 as part of an academic study conducted as a Systematic Mapping Study on sustainability in software engineering, providing a review of academic literature published between 2018 and 2026. Data was compiled from 6 academic databases including **IEEE Xplore**, **Scopus**, **ScienceDirect**, **Web of Science**, **Springer**, and **ACM**. Tools such as **Zotero** and **Rayyan.ai** were used to organize, screen, evaluate, and select the relevant studies.'
 
 table:
   dataset: "Dataset"

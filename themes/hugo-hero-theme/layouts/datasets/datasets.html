@@ -99,6 +99,7 @@
             margin-bottom: 0;
           }
 
+
           /* =========================================================
              MAIN TABLE
              ========================================================= */
@@ -117,8 +118,28 @@
             table-layout: fixed;
           }
 
+          .pivout-dataset-table col.pivout-col-main-dataset {
+            width: 25%;
+          }
+
+          .pivout-dataset-table col.pivout-col-main-year {
+            width: 10%;
+          }
+
+          .pivout-dataset-table col.pivout-col-main-description {
+            width: 50%;
+          }
+
+          .pivout-dataset-table col.pivout-col-main-action {
+            width: 15%;
+          }
+
+
           /* =========================================================
              MAIN TABLE HEADER
+             Uses border-inline-end (logical property) instead of
+             border-right so the separator line automatically moves
+             to the correct physical side when direction is RTL.
              ========================================================= */
 
           .pivout-dataset-table > thead > tr > th {
@@ -127,15 +148,17 @@
             color: #ffffff;
             font-weight: 700;
             text-align: left;
-            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            border-inline-end: 1px solid rgba(255, 255, 255, 0.3);
             border-bottom: 1px solid #1C3ED3;
             overflow-wrap: anywhere;
             word-break: break-word;
+            box-sizing: border-box;
           }
 
           .pivout-dataset-table > thead > tr > th:last-child {
-            border-right: 0;
+            border-inline-end: 0;
           }
+
 
           /* =========================================================
              MAIN TABLE COLUMN WIDTHS
@@ -152,14 +175,15 @@
           }
 
           .pivout-main-description-column {
-            width: 45%;
+            width: 50%;
             text-align: left !important;
           }
 
           .pivout-main-action-column {
-            width: 20%;
+            width: 15%;
             text-align: center !important;
           }
+
 
           /* =========================================================
              MAIN DATASET ROW
@@ -177,14 +201,15 @@
           .pivout-dataset-main > td {
             padding: 18px;
             vertical-align: top;
-            border-right: 1px solid #d5dde7;
+            border-inline-end: 1px solid #d5dde7;
             border-bottom: 1px solid #d5dde7;
             overflow-wrap: anywhere;
             word-break: break-word;
+            box-sizing: border-box;
           }
 
           .pivout-dataset-main > td:last-child {
-            border-right: 0;
+            border-inline-end: 0;
           }
 
           .pivout-dataset-name {
@@ -216,6 +241,7 @@
             white-space: normal;
           }
 
+
           /* =========================================================
              ARROW
              ========================================================= */
@@ -230,6 +256,7 @@
           .pivout-dataset-main.is-open .pivout-dataset-arrow {
             transform: rotate(180deg);
           }
+
 
           /* =========================================================
              ACCORDION
@@ -249,6 +276,7 @@
             border-bottom: 1px solid #d5dde7;
           }
 
+
           /* =========================================================
              INNER VERSIONS TABLE
              ========================================================= */
@@ -262,41 +290,81 @@
             table-layout: fixed;
           }
 
+          .pivout-dataset-versions col.pivout-col-version {
+            width: 25%;
+          }
+
+          .pivout-dataset-versions col.pivout-col-records {
+            width: 10%;
+          }
+
+          .pivout-dataset-versions col.pivout-col-format {
+            width: 15%;
+          }
+
+          .pivout-dataset-versions col.pivout-col-size {
+            width: 20%;
+          }
+
+          .pivout-dataset-versions col.pivout-col-user {
+            width: 15%;
+          }
+
+          .pivout-dataset-versions col.pivout-col-download {
+            width: 15%;
+          }
+
+
+          /* =========================================================
+             INNER TABLE HEADER
+             Same logical-property fix as the main table header, so
+             the line between "user" and "download" (and every other
+             pair) survives the RTL column flip.
+             ========================================================= */
+
           .pivout-dataset-versions th {
             padding: 13px 15px;
             background: #1C3ED3;
             color: #ffffff;
             font-weight: 700;
             text-align: left;
-            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            border-inline-end: 1px solid rgba(255, 255, 255, 0.3);
             border-bottom: 1px solid #1C3ED3;
             overflow-wrap: anywhere;
             word-break: break-word;
             white-space: nowrap;
+            box-sizing: border-box;
           }
 
           .pivout-dataset-versions th:last-child {
-            border-right: 0;
+            border-inline-end: 0;
           }
+
+
+          /* =========================================================
+             INNER TABLE CELLS
+             ========================================================= */
 
           .pivout-dataset-versions td {
             padding: 14px 15px;
             color: #52606d;
             line-height: 1.5;
             vertical-align: middle;
-            border-right: 1px solid #d5dde7;
+            border-inline-end: 1px solid #d5dde7;
             border-bottom: 1px solid #d5dde7;
             overflow-wrap: anywhere;
             word-break: break-word;
+            box-sizing: border-box;
           }
 
           .pivout-dataset-versions td:last-child {
-            border-right: 0;
+            border-inline-end: 0;
           }
 
           .pivout-dataset-versions tbody tr:last-child td {
             border-bottom: 0;
           }
+
 
           /* =========================================================
              INNER TABLE COLUMN WIDTHS
@@ -323,13 +391,19 @@
           }
 
           .pivout-user-column {
-            width: 10%;
+            width: 15%;
+            min-width: 0;
+            max-width: 15%;
             text-align: center !important;
+            white-space: nowrap;
           }
 
           .pivout-download-column {
-            width: 20%;
+            width: 15%;
+            min-width: 0;
+            max-width: 15%;
             text-align: center !important;
+            white-space: nowrap;
           }
 
           .pivout-dataset-versions th.pivout-version-column,
@@ -350,6 +424,7 @@
             text-align: center !important;
           }
 
+
           /* =========================================================
              USER ICON
              ========================================================= */
@@ -360,6 +435,7 @@
             height: 22px;
             vertical-align: middle;
           }
+
 
           /* =========================================================
              BUTTON
@@ -375,6 +451,8 @@
             font-weight: 700;
             text-decoration: none !important;
             white-space: nowrap;
+            box-sizing: border-box;
+            max-width: 100%;
           }
 
           .pivout-dataset-button:hover {
@@ -382,8 +460,12 @@
             color: #ffffff !important;
           }
 
+
           /* =========================================================
-             RTL (Persian) OVERRIDES
+             RTL PERSIAN
+             Border direction is now handled automatically by
+             border-inline-end above, so only text-align, arrow
+             spacing and width overrides remain here.
              ========================================================= */
 
           .about-page[dir="rtl"] {
@@ -415,10 +497,106 @@
             margin-right: 5px;
           }
 
+
+          /* =========================================================
+             RTL MAIN TABLE WIDTHS
+             ========================================================= */
+
+          .about-page[dir="rtl"] .pivout-main-dataset-column {
+            width: 25% !important;
+          }
+
+          .about-page[dir="rtl"] .pivout-main-year-column {
+            width: 10% !important;
+          }
+
+          .about-page[dir="rtl"] .pivout-main-description-column {
+            width: 50% !important;
+          }
+
+          .about-page[dir="rtl"] .pivout-main-action-column {
+            width: 15% !important;
+          }
+
+
+          /* =========================================================
+             RTL INNER TABLE WIDTHS
+             ========================================================= */
+
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          th.pivout-version-column,
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          td.pivout-version-column {
+            width: 25% !important;
+          }
+
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          th.pivout-records-column,
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          td.pivout-records-column {
+            width: 10% !important;
+          }
+
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          th.pivout-format-column,
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          td.pivout-format-column {
+            width: 15% !important;
+          }
+
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          th.pivout-size-column,
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          td.pivout-size-column {
+            width: 20% !important;
+          }
+
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          th.pivout-user-column,
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          td.pivout-user-column {
+            width: 15% !important;
+            min-width: 0 !important;
+            max-width: 15% !important;
+            box-sizing: border-box;
+            text-align: center !important;
+            white-space: nowrap;
+          }
+
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          th.pivout-download-column,
+          .about-page[dir="rtl"] .pivout-dataset-versions
+          td.pivout-download-column {
+            width: 15% !important;
+            min-width: 0 !important;
+            max-width: 15% !important;
+            box-sizing: border-box;
+            text-align: center !important;
+            white-space: nowrap;
+          }
+
+
+          /* =========================================================
+             RTL BUTTON
+             ========================================================= */
+
+          .about-page[dir="rtl"] .pivout-dataset-button {
+            direction: rtl;
+            text-align: center;
+            white-space: nowrap;
+            max-width: 100%;
+          }
+
+
+          /* =========================================================
+             SLIDER RTL
+             ========================================================= */
+
           .about-slider[dir="rtl"] .about-slide-content {
             text-align: right;
             direction: rtl;
           }
+
 
           /* =========================================================
              MOBILE
@@ -478,7 +656,7 @@
               padding: 10px 5px;
               box-sizing: border-box;
               vertical-align: top;
-              border-right: 1px solid #d5dde7;
+              border-inline-end: 1px solid #d5dde7;
               border-bottom: 1px solid #d5dde7;
               overflow-wrap: anywhere;
               word-break: break-word;
@@ -487,7 +665,7 @@
             }
 
             .pivout-dataset-main > td:last-child {
-              border-right: 0;
+              border-inline-end: 0;
             }
 
             .pivout-main-dataset-column {
@@ -499,11 +677,11 @@
             }
 
             .pivout-main-description-column {
-              width: 45%;
+              width: 50%;
             }
 
             .pivout-main-action-column {
-              width: 20%;
+              width: 15%;
             }
 
             .pivout-dataset-name {
@@ -600,11 +778,15 @@
             }
 
             .pivout-user-column {
-              width: 10%;
+              width: 15% !important;
+              min-width: 0 !important;
+              max-width: 15% !important;
             }
 
             .pivout-download-column {
-              width: 20%;
+              width: 15% !important;
+              min-width: 0 !important;
+              max-width: 15% !important;
             }
 
             .pivout-user-icon {
@@ -613,16 +795,75 @@
             }
 
             .pivout-dataset-button {
-              white-space: normal;
-              word-break: break-word;
+              white-space: nowrap;
+              word-break: normal;
               padding: 5px 5px;
               font-size: 9px;
               line-height: 1.2;
+              max-width: 100%;
+            }
+
+
+            /* =====================================================
+               MOBILE RTL MAIN TABLE
+               ===================================================== */
+
+            .about-page[dir="rtl"] .pivout-main-dataset-column {
+              width: 25% !important;
+            }
+
+            .about-page[dir="rtl"] .pivout-main-year-column {
+              width: 10% !important;
+            }
+
+            .about-page[dir="rtl"] .pivout-main-description-column {
+              width: 50% !important;
+            }
+
+            .about-page[dir="rtl"] .pivout-main-action-column {
+              width: 15% !important;
+            }
+
+
+            /* =====================================================
+               MOBILE RTL INNER TABLE
+               (widths only — the separator lines are handled by
+               border-inline-end in the base rules above, so no
+               border-left/border-right overrides are needed here)
+               ===================================================== */
+
+            .about-page[dir="rtl"] .pivout-dataset-versions
+            td.pivout-user-column {
+              width: 15% !important;
+              min-width: 0 !important;
+              max-width: 15% !important;
+            }
+
+            .about-page[dir="rtl"] .pivout-dataset-versions
+            td.pivout-download-column {
+              width: 15% !important;
+              min-width: 0 !important;
+              max-width: 15% !important;
+            }
+
+            .about-page[dir="rtl"] .pivout-dataset-versions
+            th.pivout-user-column {
+              width: 15% !important;
+              min-width: 0 !important;
+              max-width: 15% !important;
+            }
+
+            .about-page[dir="rtl"] .pivout-dataset-versions
+            th.pivout-download-column {
+              width: 15% !important;
+              min-width: 0 !important;
+              max-width: 15% !important;
             }
 
           }
 
         </style>
+
 
         <div class="pivout-datasets">
 
@@ -635,6 +876,13 @@
             <div class="pivout-dataset">
 
               <table class="pivout-dataset-table">
+
+                <colgroup>
+                  <col class="pivout-col-main-dataset">
+                  <col class="pivout-col-main-year">
+                  <col class="pivout-col-main-description">
+                  <col class="pivout-col-main-action">
+                </colgroup>
 
                 <thead>
 
@@ -692,6 +940,15 @@
                     <td colspan="4">
 
                       <table class="pivout-dataset-versions">
+
+                        <colgroup>
+                          <col class="pivout-col-version">
+                          <col class="pivout-col-records">
+                          <col class="pivout-col-format">
+                          <col class="pivout-col-size">
+                          <col class="pivout-col-user">
+                          <col class="pivout-col-download">
+                        </colgroup>
 
                         <thead>
 
@@ -859,9 +1116,11 @@
 
 </div>
 
+
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
+
 
   /* =========================================================
      ABOUT SLIDER
@@ -947,6 +1206,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
   }
+
 
   /* =========================================================
      DATASET ACCORDIONS

@@ -4,7 +4,8 @@ title: "Hållbarhet inom programvaruutveckling"
 
 year: 2025
 
-description: 'Detta dataset har tagits fram för forskning om hållbarhet inom programvaruutveckling under perioden 2018–2026. Datasetet har sammanställts från sex välrenommerade vetenskapliga databaser: **IEEE Xplore, Scopus, ScienceDirect, Web of Science, Springer och ACM**. Verktyg som **Zotero** och **Rayyan.ai** har använts för att organisera, granska, utvärdera och välja ut relevanta studier.'
+description: '
+Detta dataset togs fram 2025 som en del av en akademisk studie i form av en systematisk kartläggningsstudie (Systematic Mapping Study) om hållbarhet inom mjukvaruteknik (software engineering), och ger en översikt av akademisk litteratur publicerad mellan 2018 och 2026. Datasetet har sammanställts från 6 inkl. **IEEE Xplore**, **Scopus**, **ScienceDirect**, **Web of Science**, **Springer** och **ACM**. Verktyg som **Zotero** och **Rayyan.ai** har använts för att organisera, granska, utvärdera och välja ut relevanta studier.'
 
 table:
   dataset: "Dataset"
