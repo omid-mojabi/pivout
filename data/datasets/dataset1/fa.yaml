@@ -33,7 +33,7 @@ versions:
         action: "receive"
 
       - format: "csv."
-        size: "236 KB"
+        size: "581 KB"
         user: "bot"
         action: "request"
 
@@ -48,7 +48,7 @@ versions:
         action: "request"
 
       - format: "csv."
-        size: "731 KB"
+        size: "509 KB"
         user: "bot"
         action: "request"
 
@@ -63,6 +63,6 @@ versions:
         action: "request"
 
       - format: "csv."
-        size: "6.72 MB"
+        size: "6.19 MB"
         user: "bot"
         action: "request"
