@@ -8,10 +8,11 @@
 
 {{ $slides := .Pages.ByWeight }}
 {{ $currentLang := .Site.Language.Lang }}
+{{ $isRTL := eq $currentLang "fa" }}
 
 {{ if $slides }}
 
-<div class="about-slider">
+<div class="about-slider"{{ if $isRTL }} dir="rtl"{{ end }}>
 
   {{ range $index, $slide := $slides }}
 
@@ -58,7 +59,7 @@
 
 {{ end }}
 
-<div class="about-page">
+<div class="about-page"{{ if $isRTL }} dir="rtl"{{ end }}>
 
   <div class="container">
 
@@ -379,6 +380,44 @@
           .pivout-dataset-button:hover {
             background: #1C3ED3;
             color: #ffffff !important;
+          }
+
+          /* =========================================================
+             RTL (Persian) OVERRIDES
+             ========================================================= */
+
+          .about-page[dir="rtl"] {
+            direction: rtl;
+          }
+
+          .about-page[dir="rtl"] .about-title,
+          .about-page[dir="rtl"] .about-content {
+            text-align: right;
+          }
+
+          .about-page[dir="rtl"] .pivout-dataset-table > thead > tr > th,
+          .about-page[dir="rtl"] .pivout-dataset-versions th {
+            text-align: right;
+          }
+
+          .about-page[dir="rtl"] .pivout-main-dataset-column,
+          .about-page[dir="rtl"] .pivout-main-description-column,
+          .about-page[dir="rtl"] .pivout-dataset-name,
+          .about-page[dir="rtl"] .pivout-dataset-description,
+          .about-page[dir="rtl"] .pivout-version-column,
+          .about-page[dir="rtl"] .pivout-dataset-versions th.pivout-version-column,
+          .about-page[dir="rtl"] .pivout-dataset-versions td.pivout-version-column {
+            text-align: right !important;
+          }
+
+          .about-page[dir="rtl"] .pivout-dataset-arrow {
+            margin-left: 0;
+            margin-right: 5px;
+          }
+
+          .about-slider[dir="rtl"] .about-slide-content {
+            text-align: right;
+            direction: rtl;
           }
 
           /* =========================================================
