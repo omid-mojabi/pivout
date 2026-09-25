@@ -389,9 +389,6 @@
               table-layout: fixed;
             }
 
-            /*
-             * Keep the blue header visible.
-             */
             .pivout-dataset-table > thead {
               display: table-header-group;
             }
@@ -411,10 +408,6 @@
               vertical-align: middle;
             }
 
-            /*
-             * Keep main body as a real table.
-             * This prevents all cells from becoming one column.
-             */
             .pivout-dataset-table > tbody {
               display: table-row-group;
             }
@@ -441,9 +434,8 @@
               border-right: 0;
             }
 
-            /*
-             * Keep the same proportions on mobile.
-             */
+            /* Keep same proportions on mobile */
+
             .pivout-main-dataset-column {
               width: 25%;
             }
@@ -583,6 +575,102 @@
             }
 
           }
+
+
+          /* =========================================================
+             PERSIAN / FARSI — ONLY FOR THIS FILE
+             ========================================================= */
+
+          {{ if eq .Site.Language.Lang "fa" }}
+
+          .pivout-dataset,
+          .pivout-dataset table,
+          .pivout-dataset th,
+          .pivout-dataset td {
+            direction: rtl;
+          }
+
+          /* Main table header */
+
+          .pivout-dataset-table > thead > tr > th {
+            text-align: right !important;
+          }
+
+          /* Main table text */
+
+          .pivout-main-dataset-column,
+          .pivout-main-description-column,
+          .pivout-dataset-name,
+          .pivout-dataset-description {
+            text-align: right !important;
+          }
+
+          /* Year and action remain centered */
+
+          .pivout-main-year-column,
+          .pivout-main-action-column,
+          .pivout-dataset-year,
+          .pivout-dataset-action {
+            text-align: center !important;
+          }
+
+          /* Inner versions table */
+
+          .pivout-dataset-versions th.pivout-version-column,
+          .pivout-dataset-versions td.pivout-version-column {
+            text-align: right !important;
+          }
+
+          .pivout-dataset-versions th.pivout-records-column,
+          .pivout-dataset-versions td.pivout-records-column,
+          .pivout-dataset-versions th.pivout-format-column,
+          .pivout-dataset-versions td.pivout-format-column,
+          .pivout-dataset-versions th.pivout-size-column,
+          .pivout-dataset-versions td.pivout-size-column,
+          .pivout-dataset-versions th.pivout-user-column,
+          .pivout-dataset-versions td.pivout-user-column,
+          .pivout-dataset-versions th.pivout-download-column,
+          .pivout-dataset-versions td.pivout-download-column {
+            text-align: center !important;
+          }
+
+          @media (max-width: 768px) {
+
+            .pivout-dataset-table > thead > tr > th {
+              text-align: right !important;
+            }
+
+            .pivout-dataset-name,
+            .pivout-dataset-description {
+              text-align: right !important;
+            }
+
+            .pivout-dataset-year,
+            .pivout-dataset-action {
+              text-align: center !important;
+            }
+
+            .pivout-dataset-versions th.pivout-version-column,
+            .pivout-dataset-versions td.pivout-version-column {
+              text-align: right !important;
+            }
+
+            .pivout-dataset-versions th.pivout-records-column,
+            .pivout-dataset-versions td.pivout-records-column,
+            .pivout-dataset-versions th.pivout-format-column,
+            .pivout-dataset-versions td.pivout-format-column,
+            .pivout-dataset-versions th.pivout-size-column,
+            .pivout-dataset-versions td.pivout-size-column,
+            .pivout-dataset-versions th.pivout-user-column,
+            .pivout-dataset-versions td.pivout-user-column,
+            .pivout-dataset-versions th.pivout-download-column,
+            .pivout-dataset-versions td.pivout-download-column {
+              text-align: center !important;
+            }
+
+          }
+
+          {{ end }}
 
         </style>
 
@@ -765,6 +853,7 @@
 
                       </tr>
 
+
                       <!-- FULL DATASET -->
 
                       <tr>
@@ -846,6 +935,7 @@
                         </td>
 
                       </tr>
+
 
                       <!-- RAW DATA -->
 
@@ -951,9 +1041,11 @@
 
 </div>
 
+
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
+
 
   /* =========================================================
      SLIDER
@@ -1037,6 +1129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
   }
+
 
   /* =========================================================
      DATASET ACCORDION
