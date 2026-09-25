@@ -1,12 +1,8 @@
 ---
 title: 'ما به رشد کسب‌وکارها کمک می‌کنیم'
-layout: 'about'
+layout: 'datasets'
 heroBackground: '/images/compare-fibre-jlrnBE3Jn3o-unsplash.jpg'
-draft: true
-
-_build:
-  render: never
-  list: never
+draft: false
 ---
 
 ما به کسب‌وکارها کمک می‌کنیم تا با استفاده هوشمندانه از فناوری و دیجیتالی‌سازی، روش‌های کاری خود را بهبود دهند و فرصت‌های تازه‌ای برای رشد ایجاد کنند. تمرکز ما بر راهکارهای عملی، قابل اجرا و متناسب با نیاز واقعی هر کسب‌وکار است.

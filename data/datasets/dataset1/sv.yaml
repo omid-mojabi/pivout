@@ -1,0 +1,31 @@
+id: sustainability-software-engineering
+
+title: "Hållbarhet inom programvaruutveckling"
+
+description: 'Detta dataset har tagits fram för forskning om hållbarhet inom programvaruutveckling under perioden 2018–2026. Datasetet har sammanställts från sex välrenommerade vetenskapliga databaser: **IEEE Xplore, Scopus, ScienceDirect, Web of Science, Springer och ACM**. Verktyg som **Zotero** och **Rayyan.ai** har använts för att organisera, granska, utvärdera och välja ut relevanta studier.'
+
+table:
+  dataset: "Dataset"
+  year: "År"
+  description: "Beskrivning"
+  action: "Åtgärd"
+  version: "Version"
+  records: "Poster"
+  format: "Format"
+  size: "Storlek"
+  user: "Användare"
+  receive: "Hämta"
+  request: "Begär"
+  view_details: "Visa detaljer"
+
+  official:
+    title: "Officiellt dataset"
+    records: 59
+
+  full:
+    title: "Fullständigt dataset"
+    records: 164
+
+  raw:
+    title: "Rådata"
+    records: 4266

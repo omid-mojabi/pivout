@@ -1,0 +1,953 @@
+{{ define "header_css" }}{{ end }}
+
+{{ define "body_classes" }}page-about{{ end }}
+
+{{ define "header_classes" }}header-absolute{{ end }}
+
+{{ define "main" }}
+
+{{ $slides := .Pages.ByWeight }}
+{{ $dataset := index site.Data.datasets.dataset1 .Site.Language.Lang }}
+
+{{ if $slides }}
+
+<div class="about-slider">
+
+  {{ range $index, $slide := $slides }}
+
+  <div
+    class="about-slide{{ if eq $index 0 }} active{{ end }}"
+    style="background-image: url('{{ $slide.Params.background | relURL }}');"
+  >
+
+    <div class="about-slide-overlay"></div>
+
+    <div class="container">
+
+      <div class="about-slide-content align-{{ $slide.Params.align }}">
+
+        <h2>{{ $slide.Title }}</h2>
+
+        <div class="about-slide-text">
+          {{ $slide.Content }}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {{ end }}
+
+  <div class="about-slider-dots">
+
+    {{ range $index, $slide := $slides }}
+
+    <button
+      type="button"
+      {{ if eq $index 0 }}class="active"{{ end }}
+      aria-label="Slide {{ add $index 1 }}"
+    ></button>
+
+    {{ end }}
+
+  </div>
+
+</div>
+
+{{ end }}
+
+<div class="about-page">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-12">
+
+        <h2 class="about-title">
+          {{ .Title }}
+        </h2>
+
+        <div class="about-content">
+          {{ .Content }}
+        </div>
+
+        <style>
+
+          .pivout-dataset {
+            width: 100%;
+            max-width: 100%;
+            margin: 40px 0;
+            box-sizing: border-box;
+          }
+
+          .pivout-dataset-table {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #d5dde7;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+            table-layout: fixed;
+          }
+
+          .pivout-dataset-table > thead > tr > th {
+            padding: 16px 18px;
+            background: #1C3ED3;
+            color: #ffffff;
+            font-weight: 700;
+            text-align: left;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid #1C3ED3;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+          }
+
+          .pivout-dataset-table > thead > tr > th:last-child {
+            border-right: 0;
+          }
+
+          .pivout-main-dataset-column {
+            width: 25%;
+            text-align: left !important;
+          }
+
+          .pivout-main-year-column {
+            width: 10%;
+            text-align: center !important;
+          }
+
+          .pivout-main-description-column {
+            width: 45%;
+            text-align: left !important;
+          }
+
+          .pivout-main-action-column {
+            width: 20%;
+            text-align: center !important;
+          }
+
+          .pivout-dataset-main {
+            cursor: pointer;
+            background: #ffffff;
+          }
+
+          .pivout-dataset-main:hover {
+            background: #f4f8fc;
+          }
+
+          .pivout-dataset-main > td {
+            padding: 18px;
+            vertical-align: top;
+            border-right: 1px solid #d5dde7;
+            border-bottom: 1px solid #d5dde7;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+          }
+
+          .pivout-dataset-main > td:last-child {
+            border-right: 0;
+          }
+
+          .pivout-dataset-name {
+            color: #172b4d;
+            font-weight: 700;
+            text-align: left !important;
+          }
+
+          .pivout-dataset-year {
+            color: #52606d;
+            font-weight: 600;
+            text-align: center !important;
+          }
+
+          .pivout-dataset-description {
+            color: #52606d;
+            line-height: 1.6;
+            text-align: left !important;
+          }
+
+          .pivout-dataset-description p {
+            margin: 0;
+          }
+
+          .pivout-dataset-action {
+            text-align: center !important;
+            color: #1C3ED3;
+            font-weight: 700;
+            white-space: normal;
+          }
+
+          .pivout-dataset-arrow {
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 10px;
+            transition: transform 0.25s ease;
+          }
+
+          .pivout-dataset-main.is-open .pivout-dataset-arrow {
+            transform: rotate(180deg);
+          }
+
+          .pivout-dataset-details {
+            display: none;
+          }
+
+          .pivout-dataset-details.is-open {
+            display: table-row;
+          }
+
+          .pivout-dataset-details > td {
+            padding: 0;
+            background: #ffffff;
+            border-bottom: 1px solid #d5dde7;
+          }
+
+          .pivout-dataset-versions {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+            border-spacing: 0;
+            table-layout: fixed;
+          }
+
+          .pivout-dataset-versions th {
+            padding: 13px 15px;
+            background: #1C3ED3;
+            color: #ffffff;
+            font-weight: 700;
+            text-align: left;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid #1C3ED3;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            white-space: nowrap;
+          }
+
+          .pivout-dataset-versions th:last-child {
+            border-right: 0;
+          }
+
+          .pivout-dataset-versions td {
+            padding: 14px 15px;
+            color: #52606d;
+            line-height: 1.5;
+            vertical-align: middle;
+            border-right: 1px solid #d5dde7;
+            border-bottom: 1px solid #d5dde7;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+          }
+
+          .pivout-dataset-versions td:last-child {
+            border-right: 0;
+          }
+
+          .pivout-dataset-versions tbody tr:last-child td {
+            border-bottom: 0;
+          }
+
+          .pivout-version-column {
+            width: 25%;
+            text-align: left !important;
+          }
+
+          .pivout-records-column {
+            width: 10%;
+            text-align: center !important;
+          }
+
+          .pivout-format-column {
+            width: 15%;
+            text-align: center !important;
+          }
+
+          .pivout-size-column {
+            width: 20%;
+            text-align: center !important;
+          }
+
+          .pivout-user-column {
+            width: 10%;
+            text-align: center !important;
+          }
+
+          .pivout-download-column {
+            width: 20%;
+            text-align: center !important;
+          }
+
+          .pivout-user-icon {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+          }
+
+          .pivout-dataset-versions th.pivout-version-column,
+          .pivout-dataset-versions td.pivout-version-column {
+            text-align: left !important;
+          }
+
+          .pivout-dataset-versions th.pivout-records-column,
+          .pivout-dataset-versions td.pivout-records-column,
+          .pivout-dataset-versions th.pivout-format-column,
+          .pivout-dataset-versions td.pivout-format-column,
+          .pivout-dataset-versions th.pivout-size-column,
+          .pivout-dataset-versions td.pivout-size-column,
+          .pivout-dataset-versions th.pivout-user-column,
+          .pivout-dataset-versions td.pivout-user-column,
+          .pivout-dataset-versions th.pivout-download-column,
+          .pivout-dataset-versions td.pivout-download-column {
+            text-align: center !important;
+          }
+
+          .pivout-dataset-button {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 7px;
+            background: #1C3ED3;
+            color: #ffffff !important;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none !important;
+            white-space: nowrap;
+          }
+
+          .pivout-dataset-button:hover {
+            background: #1C3ED3;
+            color: #ffffff !important;
+          }
+
+          @media (max-width: 768px) {
+
+            .pivout-dataset {
+              width: 100%;
+              max-width: 100%;
+              margin: 30px 0;
+              box-sizing: border-box;
+            }
+
+            .pivout-dataset-table {
+              width: 100%;
+              max-width: 100%;
+              table-layout: auto;
+            }
+
+            .pivout-dataset-table > thead {
+              display: none;
+            }
+
+            .pivout-dataset-table > tbody,
+            .pivout-dataset-table > tbody > tr,
+            .pivout-dataset-table > tbody > tr > td {
+              box-sizing: border-box;
+            }
+
+            .pivout-dataset-main {
+              display: block;
+              width: 100%;
+            }
+
+            .pivout-dataset-main > td {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              padding: 12px 14px;
+              box-sizing: border-box;
+              border-right: 0;
+              border-bottom: 1px solid #d5dde7;
+            }
+
+            .pivout-dataset-main > td:last-child {
+              border-bottom: 0;
+            }
+
+            .pivout-dataset-name,
+            .pivout-dataset-year,
+            .pivout-dataset-description,
+            .pivout-dataset-action {
+              width: 100%;
+              max-width: 100%;
+              box-sizing: border-box;
+            }
+
+            .pivout-dataset-name {
+              font-size: 15px;
+              text-align: left !important;
+            }
+
+            .pivout-dataset-year {
+              font-size: 14px;
+              text-align: center !important;
+            }
+
+            .pivout-dataset-description {
+              font-size: 14px;
+              line-height: 1.6;
+              text-align: left !important;
+            }
+
+            .pivout-dataset-action {
+              font-size: 14px;
+              text-align: center !important;
+            }
+
+            .pivout-dataset-details {
+              display: none;
+            }
+
+            .pivout-dataset-details.is-open {
+              display: block;
+            }
+
+            .pivout-dataset-details > td {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              padding: 0;
+              box-sizing: border-box;
+            }
+
+            .pivout-dataset-versions {
+              display: table;
+              width: 100%;
+              max-width: 100%;
+              table-layout: fixed;
+            }
+
+            .pivout-dataset-versions thead {
+              display: table-header-group;
+            }
+
+            .pivout-dataset-versions tbody {
+              display: table-row-group;
+            }
+
+            .pivout-dataset-versions tr {
+              display: table-row;
+            }
+
+            .pivout-dataset-versions th,
+            .pivout-dataset-versions td {
+              display: table-cell;
+              box-sizing: border-box;
+              padding: 10px 5px;
+              font-size: 12px;
+              overflow-wrap: anywhere;
+              word-break: break-word;
+            }
+
+            .pivout-dataset-versions th {
+              white-space: normal;
+            }
+
+            .pivout-user-icon {
+              width: 18px;
+              height: 18px;
+            }
+
+            .pivout-dataset-button {
+              white-space: normal;
+              word-break: break-word;
+              padding: 6px 8px;
+              font-size: 11px;
+            }
+
+          }
+
+        </style>
+
+        <div class="pivout-dataset">
+
+          <table class="pivout-dataset-table">
+
+            <thead>
+
+              <tr>
+
+                <th class="pivout-main-dataset-column">
+                  {{ $dataset.table.dataset }}
+                </th>
+
+                <th class="pivout-main-year-column">
+                  {{ $dataset.table.year }}
+                </th>
+
+                <th class="pivout-main-description-column">
+                  {{ $dataset.table.description }}
+                </th>
+
+                <th class="pivout-main-action-column">
+                  {{ $dataset.table.action }}
+                </th>
+
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr
+                class="pivout-dataset-main"
+                data-pivout-dataset-row
+                aria-expanded="false"
+              >
+
+                <td class="pivout-dataset-name pivout-main-dataset-column">
+                  {{ $dataset.title }}
+                </td>
+
+                <td class="pivout-dataset-year pivout-main-year-column">
+                  2025
+                </td>
+
+                <td class="pivout-dataset-description pivout-main-description-column">
+                  {{ $dataset.description | markdownify }}
+                </td>
+
+                <td class="pivout-dataset-action pivout-main-action-column">
+                  {{ $dataset.table.view_details }}
+                  <span class="pivout-dataset-arrow">
+                    ▼
+                  </span>
+                </td>
+
+              </tr>
+
+              <tr class="pivout-dataset-details">
+
+                <td colspan="4">
+
+                  <table class="pivout-dataset-versions">
+
+                    <thead>
+
+                      <tr>
+
+                        <th class="pivout-version-column">
+                          {{ $dataset.table.version }}
+                        </th>
+
+                        <th class="pivout-records-column">
+                          {{ $dataset.table.records }}
+                        </th>
+
+                        <th class="pivout-format-column">
+                          {{ $dataset.table.format }}
+                        </th>
+
+                        <th class="pivout-size-column">
+                          {{ $dataset.table.size }}
+                        </th>
+
+                        <th class="pivout-user-column">
+                          {{ $dataset.table.user }}
+                        </th>
+
+                        <th class="pivout-download-column">
+                          {{ $dataset.table.receive }}
+                        </th>
+
+                      </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                      <tr>
+
+                        <td
+                          class="pivout-version-column"
+                          rowspan="2"
+                        >
+                          {{ $dataset.table.official.title }}
+                        </td>
+
+                        <td
+                          class="pivout-records-column"
+                          rowspan="2"
+                        >
+                          {{ $dataset.table.official.records }}
+                        </td>
+
+                        <td class="pivout-format-column">
+                          .xlsx
+                        </td>
+
+                        <td class="pivout-size-column">
+                          236 KB
+                        </td>
+
+                        <td class="pivout-user-column">
+
+                          <img
+                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/graduation-cap.svg"
+                            alt="User"
+                            class="pivout-user-icon"
+                          >
+
+                        </td>
+
+                        <td class="pivout-download-column">
+
+                          <a
+                            href="https://zenodo.org/records/18386899"
+                            class="pivout-dataset-button"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {{ $dataset.table.receive }}
+                          </a>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td class="pivout-format-column">
+                          .csv
+                        </td>
+
+                        <td class="pivout-size-column">
+                          236 KB
+                        </td>
+
+                        <td class="pivout-user-column">
+
+                          <img
+                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/bot.svg"
+                            alt="Bot"
+                            class="pivout-user-icon"
+                          >
+
+                        </td>
+
+                        <td class="pivout-download-column">
+
+                          <a
+                            href="{{ "contact" | relLangURL }}"
+                            class="pivout-dataset-button"
+                          >
+                            {{ $dataset.table.request }}
+                          </a>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td
+                          class="pivout-version-column"
+                          rowspan="2"
+                        >
+                          {{ $dataset.table.full.title }}
+                        </td>
+
+                        <td
+                          class="pivout-records-column"
+                          rowspan="2"
+                        >
+                          {{ $dataset.table.full.records }}
+                        </td>
+
+                        <td class="pivout-format-column">
+                          .xlsx
+                        </td>
+
+                        <td class="pivout-size-column">
+                          731 KB
+                        </td>
+
+                        <td class="pivout-user-column">
+
+                          <img
+                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/graduation-cap.svg"
+                            alt="User"
+                            class="pivout-user-icon"
+                          >
+
+                        </td>
+
+                        <td class="pivout-download-column">
+
+                          <a
+                            href="{{ "contact" | relLangURL }}"
+                            class="pivout-dataset-button"
+                          >
+                            {{ $dataset.table.request }}
+                          </a>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td class="pivout-format-column">
+                          .csv
+                        </td>
+
+                        <td class="pivout-size-column">
+                          731 KB
+                        </td>
+
+                        <td class="pivout-user-column">
+
+                          <img
+                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/bot.svg"
+                            alt="Bot"
+                            class="pivout-user-icon"
+                          >
+
+                        </td>
+
+                        <td class="pivout-download-column">
+
+                          <a
+                            href="{{ "contact" | relLangURL }}"
+                            class="pivout-dataset-button"
+                          >
+                            {{ $dataset.table.request }}
+                          </a>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td
+                          class="pivout-version-column"
+                          rowspan="2"
+                        >
+                          {{ $dataset.table.raw.title }}
+                        </td>
+
+                        <td
+                          class="pivout-records-column"
+                          rowspan="2"
+                        >
+                          {{ $dataset.table.raw.records }}
+                        </td>
+
+                        <td class="pivout-format-column">
+                          .ris
+                        </td>
+
+                        <td class="pivout-size-column">
+                          6.72 MB
+                        </td>
+
+                        <td class="pivout-user-column">
+
+                          <img
+                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/graduation-cap.svg"
+                            alt="User"
+                            class="pivout-user-icon"
+                          >
+
+                        </td>
+
+                        <td class="pivout-download-column">
+
+                          <a
+                            href="{{ "contact" | relLangURL }}"
+                            class="pivout-dataset-button"
+                          >
+                            {{ $dataset.table.request }}
+                          </a>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td class="pivout-format-column">
+                          .csv
+                        </td>
+
+                        <td class="pivout-size-column">
+                          6.72 MB
+                        </td>
+
+                        <td class="pivout-user-column">
+
+                          <img
+                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/bot.svg"
+                            alt="Bot"
+                            class="pivout-user-icon"
+                          >
+
+                        </td>
+
+                        <td class="pivout-download-column">
+
+                          <a
+                            href="{{ "contact" | relLangURL }}"
+                            class="pivout-dataset-button"
+                          >
+                            {{ $dataset.table.request }}
+                          </a>
+
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+
+                  </table>
+
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const slides =
+    document.querySelectorAll(".about-slide");
+
+  const dots =
+    document.querySelectorAll(
+      ".about-slider-dots button"
+    );
+
+  if (slides.length) {
+
+    let current = 0;
+    let intervalId = null;
+
+    function showSlide(index) {
+
+      slides.forEach(function (slide, i) {
+
+        slide.classList.toggle(
+          "active",
+          i === index
+        );
+
+      });
+
+      dots.forEach(function (dot, i) {
+
+        dot.classList.toggle(
+          "active",
+          i === index
+        );
+
+      });
+
+      current = index;
+    }
+
+    function nextSlide() {
+
+      const next =
+        (current + 1) % slides.length;
+
+      showSlide(next);
+    }
+
+    dots.forEach(function (dot, index) {
+
+      dot.addEventListener(
+        "click",
+        function () {
+
+          showSlide(index);
+
+          if (intervalId) {
+            clearInterval(intervalId);
+          }
+
+          intervalId =
+            setInterval(
+              nextSlide,
+              6000
+            );
+
+        }
+      );
+
+    });
+
+    if (slides.length > 1) {
+
+      intervalId =
+        setInterval(
+          nextSlide,
+          6000
+        );
+
+    }
+
+  }
+
+  const datasetRows =
+    document.querySelectorAll(
+      "[data-pivout-dataset-row]"
+    );
+
+  datasetRows.forEach(function (row) {
+
+    row.addEventListener(
+      "click",
+      function () {
+
+        const details =
+          row.nextElementSibling;
+
+        const isOpen =
+          row.classList.contains("is-open");
+
+        row.classList.toggle(
+          "is-open",
+          !isOpen
+        );
+
+        details.classList.toggle(
+          "is-open",
+          !isOpen
+        );
+
+        row.setAttribute(
+          "aria-expanded",
+          String(!isOpen)
+        );
+
+      }
+    );
+
+  });
+
+});
+
+</script>
+
+{{ end }}
