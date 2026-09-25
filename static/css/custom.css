@@ -91,7 +91,7 @@ body.page-home,
   display: flex !important;
   align-items: center !important;
 
-  gap: 22px !important;
+  gap: 12px !important;
   justify-content: flex-start !important;
 
   min-width: 0 !important;
@@ -135,6 +135,7 @@ body.page-home,
   padding-right: 60px !important;
 }
 
+
 /* =========================================================
    FOOTER MOBILE
    ========================================================= */
@@ -151,6 +152,7 @@ body.page-home,
     grid-column: 1 !important;
     justify-content: center !important;
     flex-wrap: wrap !important;
+
     gap: 12px 20px !important;
   }
 
