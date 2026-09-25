@@ -341,9 +341,22 @@
               table-layout: auto;
             }
 
-            .pivout-dataset-table > thead {
-              display: none;
-            }
+.pivout-dataset-table > thead {
+  display: table-header-group;
+}
+
+.pivout-dataset-table > thead > tr {
+  display: table-row;
+}
+
+.pivout-dataset-table > thead > tr > th {
+  display: table-cell;
+  padding: 10px 8px;
+  font-size: 12px;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
 
             .pivout-dataset-table > tbody,
             .pivout-dataset-table > tbody > tr,
