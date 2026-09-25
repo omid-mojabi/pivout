@@ -2,6 +2,8 @@ id: sustainability-software-engineering
 
 title: "Sustainability in Software Engineering"
 
+year: 2025
+
 description: 'A dataset for research on sustainability in software engineering between 2018 and 2026. The dataset was compiled from six reputable academic databases: **IEEE Xplore, Scopus, ScienceDirect, Web of Science, Springer, and ACM**. Tools such as **Zotero** and **Rayyan.ai** were used to organize, screen, evaluate, and select the relevant studies.'
 
 table:
@@ -18,14 +20,49 @@ table:
   request: "Request"
   view_details: "View details"
 
-  official:
-    title: "Official Dataset"
+versions:
+
+  - title: "Official Dataset"
     records: 59
 
-  full:
-    title: "Full Dataset"
+    files:
+
+      - format: ".xlsx"
+        size: "236 KB"
+        user: "researcher"
+        action: "receive"
+
+      - format: ".csv"
+        size: "236 KB"
+        user: "bot"
+        action: "request"
+
+  - title: "Full Dataset"
     records: 164
 
-  raw:
-    title: "Raw Data"
+    files:
+
+      - format: ".xlsx"
+        size: "731 KB"
+        user: "researcher"
+        action: "request"
+
+      - format: ".csv"
+        size: "731 KB"
+        user: "bot"
+        action: "request"
+
+  - title: "Raw Data"
     records: 4266
+
+    files:
+
+      - format: ".ris"
+        size: "6.72 MB"
+        user: "researcher"
+        action: "request"
+
+      - format: ".csv"
+        size: "6.72 MB"
+        user: "bot"
+        action: "request"

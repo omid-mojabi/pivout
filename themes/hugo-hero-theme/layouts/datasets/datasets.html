@@ -7,7 +7,7 @@
 {{ define "main" }}
 
 {{ $slides := .Pages.ByWeight }}
-{{ $dataset := index site.Data.datasets.dataset1 .Site.Language.Lang }}
+{{ $currentLang := .Site.Language.Lang }}
 
 {{ if $slides }}
 
@@ -77,15 +77,30 @@
         <style>
 
           /* =========================================================
-             PIVOUT DATASET
+             PIVOUT DATASETS
              ========================================================= */
 
-          .pivout-dataset {
+          .pivout-datasets {
             width: 100%;
             max-width: 100%;
             margin: 40px 0;
             box-sizing: border-box;
           }
+
+          .pivout-dataset {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 28px 0;
+            box-sizing: border-box;
+          }
+
+          .pivout-dataset:last-child {
+            margin-bottom: 0;
+          }
+
+          /* =========================================================
+             MAIN TABLE
+             ========================================================= */
 
           .pivout-dataset-table {
             width: 100%;
@@ -372,16 +387,18 @@
 
           @media (max-width: 768px) {
 
-            .pivout-dataset {
+            .pivout-datasets {
               width: 100%;
               max-width: 100%;
               margin: 30px 0;
               box-sizing: border-box;
             }
 
-            /* -------------------------------------------------------
-               Main table
-               ------------------------------------------------------- */
+            .pivout-dataset {
+              width: 100%;
+              max-width: 100%;
+              margin-bottom: 22px;
+            }
 
             .pivout-dataset-table {
               width: 100%;
@@ -434,8 +451,6 @@
               border-right: 0;
             }
 
-            /* Keep same proportions on mobile */
-
             .pivout-main-dataset-column {
               width: 25%;
             }
@@ -479,10 +494,6 @@
               margin-left: 2px;
             }
 
-            /* -------------------------------------------------------
-               Accordion details
-               ------------------------------------------------------- */
-
             .pivout-dataset-details {
               display: none;
             }
@@ -498,10 +509,6 @@
               padding: 0;
               box-sizing: border-box;
             }
-
-            /* -------------------------------------------------------
-               Inner versions table
-               ------------------------------------------------------- */
 
             .pivout-dataset-versions {
               display: table;
@@ -576,460 +583,232 @@
 
           }
 
-
-          /* =========================================================
-             PERSIAN / FARSI — ONLY FOR THIS FILE
-             ========================================================= */
-
-          {{ if eq .Site.Language.Lang "fa" }}
-
-          .pivout-dataset,
-          .pivout-dataset table,
-          .pivout-dataset th,
-          .pivout-dataset td {
-            direction: rtl;
-          }
-
-          /* Main table header */
-
-          .pivout-dataset-table > thead > tr > th {
-            text-align: right !important;
-          }
-
-          /* Main table text */
-
-          .pivout-main-dataset-column,
-          .pivout-main-description-column,
-          .pivout-dataset-name,
-          .pivout-dataset-description {
-            text-align: right !important;
-          }
-
-          /* Year and action remain centered */
-
-          .pivout-main-year-column,
-          .pivout-main-action-column,
-          .pivout-dataset-year,
-          .pivout-dataset-action {
-            text-align: center !important;
-          }
-
-          /* Inner versions table */
-
-          .pivout-dataset-versions th.pivout-version-column,
-          .pivout-dataset-versions td.pivout-version-column {
-            text-align: right !important;
-          }
-
-          .pivout-dataset-versions th.pivout-records-column,
-          .pivout-dataset-versions td.pivout-records-column,
-          .pivout-dataset-versions th.pivout-format-column,
-          .pivout-dataset-versions td.pivout-format-column,
-          .pivout-dataset-versions th.pivout-size-column,
-          .pivout-dataset-versions td.pivout-size-column,
-          .pivout-dataset-versions th.pivout-user-column,
-          .pivout-dataset-versions td.pivout-user-column,
-          .pivout-dataset-versions th.pivout-download-column,
-          .pivout-dataset-versions td.pivout-download-column {
-            text-align: center !important;
-          }
-
-          @media (max-width: 768px) {
-
-            .pivout-dataset-table > thead > tr > th {
-              text-align: right !important;
-            }
-
-            .pivout-dataset-name,
-            .pivout-dataset-description {
-              text-align: right !important;
-            }
-
-            .pivout-dataset-year,
-            .pivout-dataset-action {
-              text-align: center !important;
-            }
-
-            .pivout-dataset-versions th.pivout-version-column,
-            .pivout-dataset-versions td.pivout-version-column {
-              text-align: right !important;
-            }
-
-            .pivout-dataset-versions th.pivout-records-column,
-            .pivout-dataset-versions td.pivout-records-column,
-            .pivout-dataset-versions th.pivout-format-column,
-            .pivout-dataset-versions td.pivout-format-column,
-            .pivout-dataset-versions th.pivout-size-column,
-            .pivout-dataset-versions td.pivout-size-column,
-            .pivout-dataset-versions th.pivout-user-column,
-            .pivout-dataset-versions td.pivout-user-column,
-            .pivout-dataset-versions th.pivout-download-column,
-            .pivout-dataset-versions td.pivout-download-column {
-              text-align: center !important;
-            }
-
-          }
-
-          {{ end }}
-
         </style>
 
-        <div class="pivout-dataset">
+        <div class="pivout-datasets">
 
-          <table class="pivout-dataset-table">
+          {{ range $datasetKey, $datasetLanguages := site.Data.datasets }}
 
-            <thead>
+            {{ $dataset := index $datasetLanguages $currentLang }}
 
-              <tr>
+            {{ if $dataset }}
 
-                <th class="pivout-main-dataset-column">
-                  {{ $dataset.table.dataset }}
-                </th>
+            <div class="pivout-dataset">
 
-                <th class="pivout-main-year-column">
-                  {{ $dataset.table.year }}
-                </th>
+              <table class="pivout-dataset-table">
 
-                <th class="pivout-main-description-column">
-                  {{ $dataset.table.description }}
-                </th>
+                <thead>
 
-                <th class="pivout-main-action-column">
-                  {{ $dataset.table.action }}
-                </th>
+                  <tr>
 
-              </tr>
+                    <th class="pivout-main-dataset-column">
+                      {{ $dataset.table.dataset }}
+                    </th>
 
-            </thead>
+                    <th class="pivout-main-year-column">
+                      {{ $dataset.table.year }}
+                    </th>
 
-            <tbody>
+                    <th class="pivout-main-description-column">
+                      {{ $dataset.table.description }}
+                    </th>
 
-              <tr
-                class="pivout-dataset-main"
-                data-pivout-dataset-row
-                aria-expanded="false"
-              >
+                    <th class="pivout-main-action-column">
+                      {{ $dataset.table.action }}
+                    </th>
 
-                <td class="pivout-dataset-name pivout-main-dataset-column">
-                  {{ $dataset.title }}
-                </td>
+                  </tr>
 
-                <td class="pivout-dataset-year pivout-main-year-column">
-                  2025
-                </td>
+                </thead>
 
-                <td class="pivout-dataset-description pivout-main-description-column">
-                  {{ $dataset.description | markdownify }}
-                </td>
+                <tbody>
 
-                <td class="pivout-dataset-action pivout-main-action-column">
-                  {{ $dataset.table.view_details }}
-                  <span class="pivout-dataset-arrow">▼</span>
-                </td>
+                  <tr
+                    class="pivout-dataset-main"
+                    data-pivout-dataset-row
+                    aria-expanded="false"
+                  >
 
-              </tr>
+                    <td class="pivout-dataset-name pivout-main-dataset-column">
+                      {{ $dataset.title }}
+                    </td>
 
-              <tr class="pivout-dataset-details">
+                    <td class="pivout-dataset-year pivout-main-year-column">
+                      {{ $dataset.year }}
+                    </td>
 
-                <td colspan="4">
+                    <td class="pivout-dataset-description pivout-main-description-column">
+                      {{ $dataset.description | markdownify }}
+                    </td>
 
-                  <table class="pivout-dataset-versions">
+                    <td class="pivout-dataset-action pivout-main-action-column">
+                      {{ $dataset.table.view_details }}
+                      <span class="pivout-dataset-arrow">▼</span>
+                    </td>
 
-                    <thead>
+                  </tr>
 
-                      <tr>
+                  <tr class="pivout-dataset-details">
 
-                        <th class="pivout-version-column">
-                          {{ $dataset.table.version }}
-                        </th>
+                    <td colspan="4">
 
-                        <th class="pivout-records-column">
-                          {{ $dataset.table.records }}
-                        </th>
+                      <table class="pivout-dataset-versions">
 
-                        <th class="pivout-format-column">
-                          {{ $dataset.table.format }}
-                        </th>
+                        <thead>
 
-                        <th class="pivout-size-column">
-                          {{ $dataset.table.size }}
-                        </th>
+                          <tr>
 
-                        <th class="pivout-user-column">
-                          {{ $dataset.table.user }}
-                        </th>
+                            <th class="pivout-version-column">
+                              {{ $dataset.table.version }}
+                            </th>
 
-                        <th class="pivout-download-column">
-                          {{ $dataset.table.receive }}
-                        </th>
+                            <th class="pivout-records-column">
+                              {{ $dataset.table.records }}
+                            </th>
 
-                      </tr>
+                            <th class="pivout-format-column">
+                              {{ $dataset.table.format }}
+                            </th>
 
-                    </thead>
+                            <th class="pivout-size-column">
+                              {{ $dataset.table.size }}
+                            </th>
 
-                    <tbody>
+                            <th class="pivout-user-column">
+                              {{ $dataset.table.user }}
+                            </th>
 
-                      <!-- OFFICIAL DATASET -->
+                            <th class="pivout-download-column">
+                              {{ $dataset.table.receive }}
+                            </th>
 
-                      <tr>
+                          </tr>
 
-                        <td
-                          class="pivout-version-column"
-                          rowspan="2"
-                        >
-                          {{ $dataset.table.official.title }}
-                        </td>
+                        </thead>
 
-                        <td
-                          class="pivout-records-column"
-                          rowspan="2"
-                        >
-                          {{ $dataset.table.official.records }}
-                        </td>
+                        <tbody>
 
-                        <td class="pivout-format-column">
-                          .xlsx
-                        </td>
+                          {{ range $version := $dataset.versions }}
 
-                        <td class="pivout-size-column">
-                          236 KB
-                        </td>
+                            {{ $files := $version.files }}
+                            {{ $fileCount := len $files }}
 
-                        <td class="pivout-user-column">
+                            {{ range $fileIndex, $file := $files }}
 
-                          <img
-                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/graduation-cap.svg"
-                            alt="User"
-                            class="pivout-user-icon"
-                          >
+                            <tr>
 
-                        </td>
+                              {{ if eq $fileIndex 0 }}
 
-                        <td class="pivout-download-column">
+                              <td
+                                class="pivout-version-column"
+                                rowspan="{{ $fileCount }}"
+                              >
+                                {{ $version.title }}
+                              </td>
 
-                          <a
-                            href="https://zenodo.org/records/18386899"
-                            class="pivout-dataset-button"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {{ $dataset.table.receive }}
-                          </a>
+                              <td
+                                class="pivout-records-column"
+                                rowspan="{{ $fileCount }}"
+                              >
+                                {{ $version.records }}
+                              </td>
 
-                        </td>
+                              {{ end }}
 
-                      </tr>
+                              <td class="pivout-format-column">
+                                {{ $file.format }}
+                              </td>
 
-                      <tr>
+                              <td class="pivout-size-column">
+                                {{ $file.size }}
+                              </td>
 
-                        <td class="pivout-format-column">
-                          .csv
-                        </td>
+                              <td class="pivout-user-column">
 
-                        <td class="pivout-size-column">
-                          236 KB
-                        </td>
+                                {{ if eq $file.user "researcher" }}
 
-                        <td class="pivout-user-column">
+                                <img
+                                  src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/graduation-cap.svg"
+                                  alt="Researcher"
+                                  class="pivout-user-icon"
+                                >
 
-                          <img
-                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/bot.svg"
-                            alt="Bot"
-                            class="pivout-user-icon"
-                          >
+                                {{ else if eq $file.user "bot" }}
 
-                        </td>
+                                <img
+                                  src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/bot.svg"
+                                  alt="Bot"
+                                  class="pivout-user-icon"
+                                >
 
-                        <td class="pivout-download-column">
+                                {{ end }}
 
-                          <a
-                            href="{{ "contact" | relLangURL }}"
-                            class="pivout-dataset-button"
-                          >
-                            {{ $dataset.table.request }}
-                          </a>
+                              </td>
 
-                        </td>
+                              <td class="pivout-download-column">
 
-                      </tr>
+                                {{ if $file.url }}
 
+                                <a
+                                  href="{{ $file.url }}"
+                                  class="pivout-dataset-button"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {{ if eq $file.action "receive" }}
+                                    {{ $dataset.table.receive }}
+                                  {{ else }}
+                                    {{ $dataset.table.request }}
+                                  {{ end }}
+                                </a>
 
-                      <!-- FULL DATASET -->
+                                {{ else if eq $file.action "receive" }}
 
-                      <tr>
+                                <a
+                                  href="https://zenodo.org/records/18386899"
+                                  class="pivout-dataset-button"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {{ $dataset.table.receive }}
+                                </a>
 
-                        <td
-                          class="pivout-version-column"
-                          rowspan="2"
-                        >
-                          {{ $dataset.table.full.title }}
-                        </td>
+                                {{ else }}
 
-                        <td
-                          class="pivout-records-column"
-                          rowspan="2"
-                        >
-                          {{ $dataset.table.full.records }}
-                        </td>
+                                <a
+                                  href="{{ "contact" | relLangURL }}"
+                                  class="pivout-dataset-button"
+                                >
+                                  {{ $dataset.table.request }}
+                                </a>
 
-                        <td class="pivout-format-column">
-                          .xlsx
-                        </td>
+                                {{ end }}
 
-                        <td class="pivout-size-column">
-                          731 KB
-                        </td>
+                              </td>
 
-                        <td class="pivout-user-column">
+                            </tr>
 
-                          <img
-                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/graduation-cap.svg"
-                            alt="User"
-                            class="pivout-user-icon"
-                          >
+                            {{ end }}
 
-                        </td>
+                          {{ end }}
 
-                        <td class="pivout-download-column">
+                        </tbody>
 
-                          <a
-                            href="{{ "contact" | relLangURL }}"
-                            class="pivout-dataset-button"
-                          >
-                            {{ $dataset.table.request }}
-                          </a>
+                      </table>
 
-                        </td>
+                    </td>
 
-                      </tr>
+                  </tr>
 
-                      <tr>
+                </tbody>
 
-                        <td class="pivout-format-column">
-                          .csv
-                        </td>
+              </table>
 
-                        <td class="pivout-size-column">
-                          731 KB
-                        </td>
+            </div>
 
-                        <td class="pivout-user-column">
+            {{ end }}
 
-                          <img
-                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/bot.svg"
-                            alt="Bot"
-                            class="pivout-user-icon"
-                          >
-
-                        </td>
-
-                        <td class="pivout-download-column">
-
-                          <a
-                            href="{{ "contact" | relLangURL }}"
-                            class="pivout-dataset-button"
-                          >
-                            {{ $dataset.table.request }}
-                          </a>
-
-                        </td>
-
-                      </tr>
-
-
-                      <!-- RAW DATA -->
-
-                      <tr>
-
-                        <td
-                          class="pivout-version-column"
-                          rowspan="2"
-                        >
-                          {{ $dataset.table.raw.title }}
-                        </td>
-
-                        <td
-                          class="pivout-records-column"
-                          rowspan="2"
-                        >
-                          {{ $dataset.table.raw.records }}
-                        </td>
-
-                        <td class="pivout-format-column">
-                          .ris
-                        </td>
-
-                        <td class="pivout-size-column">
-                          6.72 MB
-                        </td>
-
-                        <td class="pivout-user-column">
-
-                          <img
-                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/graduation-cap.svg"
-                            alt="User"
-                            class="pivout-user-icon"
-                          >
-
-                        </td>
-
-                        <td class="pivout-download-column">
-
-                          <a
-                            href="{{ "contact" | relLangURL }}"
-                            class="pivout-dataset-button"
-                          >
-                            {{ $dataset.table.request }}
-                          </a>
-
-                        </td>
-
-                      </tr>
-
-                      <tr>
-
-                        <td class="pivout-format-column">
-                          .csv
-                        </td>
-
-                        <td class="pivout-size-column">
-                          6.72 MB
-                        </td>
-
-                        <td class="pivout-user-column">
-
-                          <img
-                            src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/bot.svg"
-                            alt="Bot"
-                            class="pivout-user-icon"
-                          >
-
-                        </td>
-
-                        <td class="pivout-download-column">
-
-                          <a
-                            href="{{ "contact" | relLangURL }}"
-                            class="pivout-dataset-button"
-                          >
-                            {{ $dataset.table.request }}
-                          </a>
-
-                        </td>
-
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </td>
-
-              </tr>
-
-            </tbody>
-
-          </table>
+          {{ end }}
 
         </div>
 
@@ -1041,14 +820,12 @@
 
 </div>
 
-
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
-
   /* =========================================================
-     SLIDER
+     ABOUT SLIDER
      ========================================================= */
 
   const slides =
@@ -1085,6 +862,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       current = index;
+
     }
 
     function nextSlide() {
@@ -1093,6 +871,7 @@ document.addEventListener("DOMContentLoaded", function () {
         (current + 1) % slides.length;
 
       showSlide(next);
+
     }
 
     dots.forEach(function (dot, index) {
@@ -1130,9 +909,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-
   /* =========================================================
-     DATASET ACCORDION
+     DATASET ACCORDIONS
      ========================================================= */
 
   const datasetRows =
@@ -1148,6 +926,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const details =
           row.nextElementSibling;
+
+        if (!details) {
+          return;
+        }
 
         const isOpen =
           row.classList.contains("is-open");

@@ -2,6 +2,8 @@ id: sustainability-software-engineering
 
 title: "مفاهیم حوزه پایداری در مهندسی نرم‌افزار"
 
+year: 2025
+
 description: 'این مجموعه‌داده برای پژوهش درباره پایداری در مهندسی نرم‌افزار در بازه زمانی ۲۰۱۸ تا ۲۰۲۶ تهیه شده است. این مجموعه‌داده از شش پایگاه علمی معتبر شامل **IEEE Xplore، Scopus، ScienceDirect، Web of Science، Springer و ACM** گردآوری شده است. ابزارهایی مانند **Zotero** و **Rayyan.ai** برای سازمان‌دهی، غربالگری، ارزیابی و انتخاب پژوهش‌های مرتبط مورد استفاده قرار گرفته‌اند.'
 
 table:
@@ -18,14 +20,49 @@ table:
   request: "درخواست"
   view_details: "مشاهده جزئیات"
 
-  official:
-    title: "دیتاست رسمی"
+versions:
+
+  - title: "دیتاست اصلی"
     records: 59
 
-  full:
-    title: "دیتاست کامل"
+    files:
+
+      - format: "xlsx."
+        size: "236 KB"
+        user: "researcher"
+        action: "receive"
+
+      - format: "csv."
+        size: "236 KB"
+        user: "bot"
+        action: "request"
+
+  - title: "دیتاست کامل"
     records: 164
 
-  raw:
-    title: "دیتای خام"
+    files:
+
+      - format: "xlsx."
+        size: "731 KB"
+        user: "researcher"
+        action: "request"
+
+      - format: "csv."
+        size: "731 KB"
+        user: "bot"
+        action: "request"
+
+  - title: "دیتای خام"
     records: 4266
+
+    files:
+
+      - format: "ris."
+        size: "6.72 MB"
+        user: "researcher"
+        action: "request"
+
+      - format: "csv."
+        size: "6.72 MB"
+        user: "bot"
+        action: "request"
