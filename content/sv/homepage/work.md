@@ -6,4 +6,4 @@ button: 'Läs mer'
 buttonLink: 'services'
 ---
 
-Vi hjälper företag att växa genom smart digitalisering. Genom att kombinera strategi, teknik och processförbättringar gör vi det möjligt för företag att arbeta smartare, arbeta mer effektivt och identifiera samt ta tillvara på nya möjligheter.
+Vi erbjuder många olika tjänster inom digitalisering både för privatpersoner och företag. Vill ni komma in på marknaden? Eller driver ni ett företag och behöver hjälp? Vi hjälper att hitta rätt steg framåt och kan även vara med och genomföra dem tillsammans.

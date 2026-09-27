@@ -6,4 +6,4 @@ button: 'More Details'
 buttonLink: '/en/services'
 ---
 
-We help businesses grow through smart digitalization. By combining strategy, technology, and process improvement, we enable companies to work smarter, operate more efficiently, and identify and unlock new opportunities.
+We offer different services within digitalization for individuals and companies. Do you want to enter the market? Or run a company and need help starting or growing it? We help you find the right steps forward and join you in some of them.
