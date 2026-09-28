@@ -9,13 +9,13 @@
   "en" (dict
     "title"  "We help to find datasets"
     "text"   "In the age of AI, data is the main fuel of the engine of progress. We publish suitable, trustworthy and diverse datasets for people and AI agents to use in research and business."
-    "button" "Learn more"
+    "button" "MORE DETAILS"
     "alt"    "Datasets suited to research and business activites"
   )
   "sv" (dict
     "title"  "Vi hjälper att hitta dataset"
     "text"   "I AI:n-eran är data det viktigaste bränslet i utvecklingens motor. Vi publicerar lämpliga, pålitliga och varierade dataset som både människor och AI-agenter kan använda inom forskning och företag."
-    "button" "Läs mer"
+    "button" "LÄS MER"
     "alt"    "Dataset som passar för forskning och företag"
   )
 }}
@@ -29,7 +29,7 @@
     <div class="col-12 col-lg-5 order-lg-2 mb-8 mb-lg-0"{{ if eq .Site.Language.Lang "fa" }} dir="rtl" style="text-align: right;"{{ end }}>
       <h2 class="h1 mb-4">{{ $t.title }}</h2>
       <p class="lead mb-4">{{ $t.text }}</p>
-      <a href="{{ "datasets/" | relLangURL }}" class="btn btn-primary">{{ $t.button }}</a>
+      <a href="{{ "datasets/" | relLangURL }}" class="btn btn-primary dsl-btn">{{ $t.button }}</a>
     </div>
 
     <!-- Photo column. Scripts inserted with innerHTML do not run, so the image onload below starts the script at the bottom of this file. -->
@@ -51,12 +51,14 @@
 </div>
 
 <style>
+  .dsl-btn { border-radius: 0 !important; }
+
   .dsl-photo {
     position: relative;
     max-width: 760px;
     margin-inline: auto;
     overflow: hidden;
-    border: 1px solid #1C3ED3;
+    border: 2px solid #1C3ED3;
     border-radius: 16px;
     line-height: 0;
   }
