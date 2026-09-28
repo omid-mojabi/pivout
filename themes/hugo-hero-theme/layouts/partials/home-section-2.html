@@ -1,0 +1,212 @@
+{{/* Home section 2: dataset laptop. Texts for fa / en / sv, English is the fallback. */}}
+{{ $texts := dict
+  "fa" (dict
+    "title"  "ما کمک می‌کنیم دیتاست‌ها را بیابید"
+    "text"   "در عصر هوش مصنوعی دیتا سوخت اصلی موتور توسعه است. ما دیتاست‌های مناسب، قابل‌اعتماد و متنوعی را برای استفادهٔ افراد و ایجنت‌های هوش مصنوعی در پژوهش‌ها و کسب‌وکارها منتشر می‌کنیم."
+    "button" "جزئیات بیشتر"
+    "alt"    "دیتاست‌های مناسب برای کارهای پژوهشی و کسب‌وکارها"
+  )
+  "en" (dict
+    "title"  "We help to find datasets"
+    "text"   "In the age of AI, data is the main fuel of the engine of progress. We publish suitable, trustworthy and diverse datasets for people and AI agents to use in research and business."
+    "button" "Learn more"
+    "alt"    "Datasets suited to research and business activites"
+  )
+  "sv" (dict
+    "title"  "Vi hjälper att hitta dataset"
+    "text"   "I AI:n-eran är data det viktigaste bränslet i utvecklingens motor. Vi publicerar lämpliga, pålitliga och varierade dataset som både människor och AI-agenter kan använda inom forskning och företag."
+    "button" "Läs mer"
+    "alt"    "Dataset som passar för forskning och företag"
+  )
+}}
+{{ $t := index $texts "en" }}
+{{ with index $texts .Site.Language.Lang }}{{ $t = . }}{{ end }}
+
+<div class="container pt-8 pb-8 pt-md-14 pb-md-14">
+  <div class="row align-items-center">
+
+    <!-- Text column -->
+    <div class="col-12 col-lg-5 order-lg-2 mb-8 mb-lg-0"{{ if eq .Site.Language.Lang "fa" }} dir="rtl" style="text-align: right;"{{ end }}>
+      <h2 class="h1 mb-4">{{ $t.title }}</h2>
+      <p class="lead mb-4">{{ $t.text }}</p>
+      <a href="{{ "datasets/" | relLangURL }}" class="btn btn-primary">{{ $t.button }}</a>
+    </div>
+
+    <!-- Photo column. Scripts inserted with innerHTML do not run, so the image onload below starts the script at the bottom of this file. -->
+    <div class="col-12 col-lg-7 order-lg-1">
+      <!-- Add the class "dsl-calibrate" to the div below to see the screen outline while tuning -->
+      <div class="dsl-photo" id="dsl-photo" dir="ltr" role="img" aria-label="{{ $t.alt }}">
+        <picture>
+          <source srcset="{{ "images/laptop-side.webp" | relURL }}" type="image/webp">
+          <img src="{{ "images/laptop-side.jpg" | relURL }}" alt="" width="1600" height="1600" loading="lazy"
+               onload="var s=document.getElementById('dsl-src');if(s){var n=document.createElement('script');n.text=s.textContent;document.head.appendChild(n)}">
+        </picture>
+        <div class="dsl-screen" id="dsl-screen" aria-hidden="true">
+          <pre class="dsl-code"><code id="dsl-output"></code><span class="dsl-cursor"></span></pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .dsl-photo {
+    position: relative;
+    max-width: 760px;
+    margin-inline: auto;
+    overflow: hidden;
+    border: 1px solid #1C3ED3;
+    border-radius: 16px;
+    line-height: 0;
+  }
+  .dsl-photo img { display: block; width: 100%; height: auto; }
+
+  /* Fixed design size; JS warps it onto the four screen corners of the photo */
+  .dsl-screen {
+    position: absolute; left: 0; top: 0;
+    width: 800px; height: 520px;
+    transform-origin: 0 0;
+    visibility: hidden;                 /* shown by JS after the first layout */
+    box-sizing: border-box;
+    padding: 26px 30px;
+    display: flex; align-items: flex-end;
+    overflow: hidden;
+    background:
+      linear-gradient(115deg, rgba(255,255,255,.07) 0%, rgba(255,255,255,0) 38%),
+      #05080c;
+  }
+  .dsl-calibrate .dsl-screen { outline: 4px dashed #ff3b30; background: rgba(255, 59, 48, .35); }
+
+  .dsl-code {
+    margin: 0; padding: 0; width: 100%;
+    font: 21px/1.55 ui-monospace, Menlo, Consolas, monospace;
+    color: #7ee787;
+    text-shadow: 0 0 8px rgba(126, 231, 135, .45);
+    background: transparent;
+    white-space: pre;
+    overflow: hidden;
+  }
+  .dsl-code code { color: inherit; background: none; padding: 0; }
+  .dsl-cursor {
+    display: inline-block; width: .6em; height: 1em;
+    background: #7ee787; vertical-align: text-bottom;
+    animation: dsl-blink 1s steps(1) infinite;
+  }
+  @keyframes dsl-blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .dsl-cursor { animation: none; } }
+</style>
+
+<script id="dsl-src">
+  (function () {
+    if (window.__dslInit) return;   // run once, even if executed twice
+    window.__dslInit = true;
+    var photo  = document.getElementById('dsl-photo');
+    var screen = document.getElementById('dsl-screen');
+    var out    = document.getElementById('dsl-output');
+    if (!photo || !screen || !out) return;
+
+    /*
+      SCREEN CORNERS, as percentages of the photo (x, y).
+      Order: top-left, top-right, bottom-right, bottom-left.
+      Nudge these numbers to move a corner. Add class "dsl-calibrate" to #dsl-photo to see the outline.
+    */
+    var corners = [
+      [-6.0,  7.2],
+      [69.6, 27.4],
+      [85.9, 76.0],
+      [ 7.0, 72.0]
+    ];
+
+    // Solve the 8 unknowns of a homography mapping src points to dst points
+    function homography(src, dst) {
+      var A = [], b = [], i;
+      for (i = 0; i < 4; i++) {
+        var x = src[i][0], y = src[i][1], u = dst[i][0], v = dst[i][1];
+        A.push([x, y, 1, 0, 0, 0, -u * x, -u * y]); b.push(u);
+        A.push([0, 0, 0, x, y, 1, -v * x, -v * y]); b.push(v);
+      }
+      var n = 8, k, r, c;
+      for (k = 0; k < n; k++) {
+        var p = k;
+        for (r = k + 1; r < n; r++) if (Math.abs(A[r][k]) > Math.abs(A[p][k])) p = r;
+        var t = A[k]; A[k] = A[p]; A[p] = t;
+        var tb = b[k]; b[k] = b[p]; b[p] = tb;
+        for (r = k + 1; r < n; r++) {
+          var f = A[r][k] / A[k][k];
+          for (c = k; c < n; c++) A[r][c] -= f * A[k][c];
+          b[r] -= f * b[k];
+        }
+      }
+      var h = new Array(n);
+      for (k = n - 1; k >= 0; k--) {
+        var s = b[k];
+        for (c = k + 1; c < n; c++) s -= A[k][c] * h[c];
+        h[k] = s / A[k][k];
+      }
+      return h;
+    }
+
+    function layout() {
+      var W = photo.clientWidth, H = photo.clientHeight;
+      if (!W || !H) return;
+      var w = screen.offsetWidth, h = screen.offsetHeight;
+      var dst = corners.map(function (c) { return [c[0] / 100 * W, c[1] / 100 * H]; });
+      var m = homography([[0, 0], [w, 0], [w, h], [0, h]], dst);
+      screen.style.transform =
+        'matrix3d(' + [m[0], m[3], 0, m[6], m[1], m[4], 0, m[7], 0, 0, 1, 0, m[2], m[5], 0, 1].join(',') + ')';
+      screen.style.visibility = 'visible';
+    }
+
+    var img = photo.querySelector("img");
+    if (img.complete) layout(); else img.addEventListener('load', layout);
+    window.addEventListener('resize', layout);
+    if ('ResizeObserver' in window) new ResizeObserver(layout).observe(photo);
+
+    /* ---------- typing animation ---------- */
+    var lines = [
+      '{"id":1,"city":"Karlskrona","temp":14.2}',
+      '{"id":2,"city":"Malmo","temp":15.8}',
+      '{"id":3,"city":"Stockholm","temp":12.9}',
+      '{"id":4,"city":"Goteborg","temp":13.5}',
+      '{"id":5,"city":"Uppsala","temp":12.1}',
+      '{"id":6,"city":"Lund","temp":15.4}',
+      '{"id":7,"city":"Kalmar","temp":14.7}',
+      '{"id":8,"city":"Visby","temp":13.8}',
+      '{"id":9,"city":"Umea","temp":10.6}',
+      '{"id":10,"city":"Lulea","temp":9.8}'
+    ];
+    var keepLines = 14, charDelay = 28, lineDelay = 350, restartDelay = 2500;
+
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { out.textContent = lines.join('\n'); return; }
+
+    var buffer = [], li = 0;
+
+    function render(current) {
+      out.textContent = buffer.concat([current]).slice(-keepLines).join('\n');
+    }
+    function typeLine() {
+      if (li >= lines.length) {
+        setTimeout(function () { buffer = []; li = 0; out.textContent = ''; typeLine(); }, restartDelay);
+        return;
+      }
+      var text = lines[li], ci = 0;
+      (function tick() {
+        ci++;
+        render(text.slice(0, ci));
+        if (ci < text.length) setTimeout(tick, charDelay);
+        else { buffer.push(text); li++; setTimeout(typeLine, lineDelay); }
+      })();
+    }
+
+    if ('IntersectionObserver' in window) {
+      var started = false;
+      new IntersectionObserver(function (entries, obs) {
+        if (entries[0].isIntersecting && !started) { started = true; obs.disconnect(); typeLine(); }
+      }, { threshold: 0.3 }).observe(photo);
+    } else {
+      typeLine();
+    }
+  })();
+</script>

@@ -1,83 +1,354 @@
-{{ define "title" }}{{ .Site.Title }}{{ end}} 
-{{ define "header_css" }}{{ end }} 
-{{ define "body_classes" }}page-home{{ end }} 
-{{ define "header_classes" }}header-transparent{{ end }} 
- 
-{{ define "meta_tags" }} 
-<meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_description }}" /> 
-<meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" /> 
-<meta property="og:type" content="{{ .Site.Params.homepage_meta_tags.meta_og_type }}" /> 
-<meta property="og:url" content="{{ .Site.Params.homepage_meta_tags.meta_og_url }}" /> 
-<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image }}" /> 
-<meta property="og:description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" /> 
-<meta name="twitter:card" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_card }}" /> 
-<meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}" /> 
-<meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" /> 
-{{ end }} 
- 
-{{ define "main" }} 
- 
-{{ partial "hero-image-fullscreen.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .)}} 
- 
-{{ $headless := .Site.GetPage "/homepage" }} 
-{{ $reusablePages := $headless.Resources.ByType "page" }} 
-{{ $reusablePages := sort $reusablePages ".Params.weight" }} 
-{{ range first 1 $reusablePages }} 
-<div id="home" class="strip bg-cover bg-position-top bg-overlay" style="background-image: url('{{ .Params.background | relURL }}');"> 
-  <div class="container pt-17 pb-17"> 
-    <div class="row"> 
+{{ define "title" }}{{ .Site.Title }}{{ end}}
 
-      {{ if eq .Site.Language.Lang "fa" }}
-      <div class="col-12 col-md-6">
-      {{ else }}
-      <div class="col-12 col-md-6 offset-md-6">
-      {{ end }}
+{{ define "header_css" }}{{ end}}
 
-        <h2 class="text-primary text-capitalize">{{ .Title }}</h2> 
-        <p>{{ .Content }}</p> 
-        <a class="button" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a> 
-      </div> 
-    </div> 
-  </div> 
-</div> 
-{{ end }} 
- 
-{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }} 
-{{if gt (len $services) 0}} 
-<div class="container pt-8 pb-8 pb-md-14 pt-md-14"> 
-  <div class="row justify-content-start"> 
-    <div class="col-12"> 
-      <h2 class="text-center mb-3">{{ with .Site.GetPage "/services/" }}{{ .Title | default "Our Services" }}{{ end }}</h2> 
-    </div> 
-    {{ range first 6 (sort $services ".Params.weight") }} 
-    <div class="col-12 col-md-4 mb-1"> 
-      {{ .Render "summary" }} 
-    </div> 
-    {{ end }} 
-    <!--div class="col-12 text-center"> 
-      <a class="button button-primary" href="{{ .Site.BaseURL }}services">View All Services</a> 
-    </div--> 
-  </div> 
-</div> 
-{{end}} 
- 
-{{ range first 1 (after 1 $reusablePages) }} 
-<div id="about-cta" class="strip bg-primary bg-cover bg-position-top bg-overlay" style='background-image: url("{{ .Params.background | relURL }}");'> 
-  <div class="container pt-8 pb-8 pb-md-12 pt-md-12"> 
-    <div class="row justify-content-center"> 
-      <div class="col-12 col-md-8 text-center text-white"> 
-        <h2>{{ .Title }}</h2> 
-        {{ .Content }} 
-        {{ if .Params.button }} 
-          <a class="button button-white" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a> 
-        {{ end }} 
-      </div> 
-    </div> 
-  </div> 
-</div> 
-{{ end }} 
- 
-{{ end }} 
- 
-{{ define "footer_js" }} 
+{{ define "body_classes" }}page-home{{ end}}
+
+{{ define "header_classes" }}header-transparent{{ end}}
+
+{{ define "meta_tags" }}
+<meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_description }}" />
+<meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" />
+<meta property="og:type" content="{{ .Site.Params.homepage_meta_tags.meta_og_type }}" />
+<meta property="og:url" content="{{ .Site.Params.homepage_meta_tags.meta_og_url }}" />
+<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image }}" />
+<meta property="og:description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
+<meta name="twitter:card" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_card }}" />
+<meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
+{{ end }}
+
+{{ define "main" }}
+
+{{/* =========================================================
+     HERO / SLIDER - IMMEDIATE LOAD
+========================================================= */}}
+
+{{ partial "hero-image-fullscreen.html" (dict
+  "background" .Params.heroBackground
+  "heading" .Params.heroHeading
+  "subheading" .Params.heroSubHeading
+  "content" .
+) }}
+
+
+{{/* =========================================================
+     CREATE LAZY HTML RESOURCES
+========================================================= */}}
+
+{{ $section1 := resources.FromString
+  (printf "home-lazy/%s-section-1.html" .Site.Language.Lang)
+  (partial "home-section-1.html" .)
+}}
+
+{{ $section2 := resources.FromString
+  (printf "home-lazy/%s-section-2.html" .Site.Language.Lang)
+  (partial "home-section-2.html" .)
+}}
+
+{{ $section3 := resources.FromString
+  (printf "home-lazy/%s-section-3.html" .Site.Language.Lang)
+  (partial "home-section-3.html" .)
+}}
+
+
+{{/* =========================================================
+     LOADING TEXT (BASED ON SITE LANGUAGE)
+========================================================= */}}
+
+{{ $loadingText := "Loading..." }}
+
+{{ if eq .Site.Language.Lang "fa" }}
+  {{ $loadingText = "در حال بارگذاری..." }}
+{{ else if eq .Site.Language.Lang "sv" }}
+  {{ $loadingText = "Laddar..." }}
+{{ end }}
+
+
+{{/* =========================================================
+     LAZY SECTIONS
+========================================================= */}}
+
+<div
+  class="home-lazy-section"
+  data-lazy-url="{{ $section1.RelPermalink }}"
+  aria-live="polite"
+></div>
+
+<div
+  class="home-lazy-section"
+  data-lazy-url="{{ $section2.RelPermalink }}"
+  aria-live="polite"
+></div>
+
+<div
+  class="home-lazy-section"
+  data-lazy-url="{{ $section3.RelPermalink }}"
+  aria-live="polite"
+></div>
+
+
+{{/* =========================================================
+     LAZY LOAD STYLES
+========================================================= */}}
+
+<style>
+.home-lazy-section {
+  min-height: 260px;
+  position: relative;
+}
+
+.home-lazy-section.is-loading {
+  padding: 55px 0;
+}
+
+.home-lazy-skeleton {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.home-lazy-skeleton-label {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 22px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: .03em;
+  color: #777;
+  background: #f1f1f1;
+}
+
+.home-lazy-skeleton-line,
+.home-lazy-skeleton-box {
+  position: relative;
+  overflow: hidden;
+  background: #e9e9e9;
+  border-radius: 7px;
+}
+
+.home-lazy-skeleton-line::after,
+.home-lazy-skeleton-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 45%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,.9) 50%,
+    transparent 100%
+  );
+  animation: homeLazyShimmer 1.05s ease-in-out infinite;
+}
+
+.home-lazy-skeleton-title {
+  width: 35%;
+  height: 30px;
+  margin: 0 auto 25px;
+}
+
+.home-lazy-skeleton-text {
+  width: 72%;
+  height: 16px;
+  margin: 0 auto 12px;
+}
+
+.home-lazy-skeleton-text.short {
+  width: 50%;
+}
+
+.home-lazy-skeleton-box {
+  width: 100%;
+  height: 180px;
+  margin-top: 30px;
+}
+
+@keyframes homeLazyShimmer {
+  0% {
+    left: -60%;
+  }
+
+  100% {
+    left: 115%;
+  }
+}
+
+.home-lazy-section.is-loaded {
+  animation: homeLazyFadeIn .5s ease-out both;
+}
+
+@keyframes homeLazyFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+
+{{/* =========================================================
+     LAZY LOAD JAVASCRIPT
+========================================================= */}}
+
+<script>
+const homeLazyLoadingText = {{ $loadingText | jsonify }};
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const sections = document.querySelectorAll(".home-lazy-section");
+
+  if (!sections.length) {
+    return;
+  }
+
+  function showSkeleton(section) {
+
+    section.classList.add("is-loading");
+
+    section.innerHTML = `
+      <div class="home-lazy-skeleton">
+        <span class="home-lazy-skeleton-label">
+          ${homeLazyLoadingText}
+        </span>
+
+        <div class="home-lazy-skeleton-line home-lazy-skeleton-title"></div>
+
+        <div class="home-lazy-skeleton-line home-lazy-skeleton-text"></div>
+        <div class="home-lazy-skeleton-line home-lazy-skeleton-text"></div>
+        <div class="home-lazy-skeleton-line home-lazy-skeleton-text short"></div>
+
+        <div class="home-lazy-skeleton-box"></div>
+      </div>
+    `;
+  }
+
+  function wait(ms) {
+    return new Promise(function (resolve) {
+      setTimeout(resolve, ms);
+    });
+  }
+
+  async function loadSection(section) {
+
+    if (
+      section.dataset.loaded === "true" ||
+      section.dataset.loading === "true"
+    ) {
+      return;
+    }
+
+    const url = section.dataset.lazyUrl;
+
+    if (!url) {
+      return;
+    }
+
+    section.dataset.loading = "true";
+
+    showSkeleton(section);
+
+    const startedAt = Date.now();
+
+    try {
+
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          "Accept": "text/html"
+        },
+        credentials: "same-origin",
+        cache: "default"
+      });
+
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+
+      const html = await response.text();
+
+      const elapsed = Date.now() - startedAt;
+      const remaining = Math.max(0, 650 - elapsed);
+
+      if (remaining > 0) {
+        await wait(remaining);
+      }
+
+      section.innerHTML = html;
+
+      section.classList.remove("is-loading");
+      section.classList.add("is-loaded");
+
+      section.dataset.loaded = "true";
+
+    } catch (error) {
+
+      console.error("Homepage lazy-load error:", error);
+
+      section.innerHTML = "";
+      section.classList.remove("is-loading");
+
+    } finally {
+
+      section.dataset.loading = "false";
+
+    }
+  }
+
+  if ("IntersectionObserver" in window) {
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+
+            loadSection(entry.target);
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        root: null,
+
+        rootMargin: "500px 0px",
+
+        threshold: 0
+      }
+    );
+
+    sections.forEach(function (section) {
+      observer.observe(section);
+    });
+
+  } else {
+
+    sections.forEach(function (section) {
+      loadSection(section);
+    });
+
+  }
+
+});
+</script>
+
+{{ end }}
+
+{{ define "footer_js" }}
 {{ end }}
