@@ -2,19 +2,19 @@
 {{ $texts := dict
   "fa" (dict
     "title"  "ما کمک می‌کنیم دیتاست‌ها را بیابید"
-    "text"   "در عصر هوش مصنوعی دیتا سوخت اصلی موتور توسعه است. ما دیتاست‌های مناسب، قابل‌اعتماد و متنوعی را برای استفادهٔ افراد و ایجنت‌های هوش مصنوعی در پژوهش‌ها و کسب‌وکارها منتشر می‌کنیم."
+    "text"   "در عصر هوش مصنوعی داده‌ها را می‌توان به عنوان سوخت اصلی موتور توسعه در نظر گرفت. بدون داده‌های مرتبط و صحیح طراحی، توسعه و حتی ارزیابی راه‌حل‌ها و مدل‌ها عملا مقدور نیست. دیتاست‌های استفاده شده اغلب قابلیت استفاده مجدد به منظور یافتن نتایج یا الگوهای بیشتر را دارند اما یافتن آنها معمولا پیچیده و دشوار است. برای رفع این دغدغه دائمی ما به طور مداوم دیتاست‌های مناسب، قابل‌اعتماد و متنوعی را برای استفادهٔ پژوهشگران و ایجنت‌های هوشمند در پروژه‌های پژوهشی و تجاری منتشر می‌کنیم."
     "button" "جزئیات بیشتر"
     "alt"    "دیتاست‌های مناسب برای کارهای پژوهشی و کسب‌وکارها"
   )
   "en" (dict
     "title"  "We help to find datasets"
-    "text"   "In the age of AI, data is the main fuel of the engine of progress. We publish suitable, trustworthy and diverse datasets for people and AI agents to use in research and business."
+    "text"   "In the age of AI, data can be regarded as the main fuel of the engine of development. Without relevant, properly designed data, developing and even evaluating solutions and models is practically impossible. The datasets in use can often be reused to uncover further results or patterns, but finding them is usually complex and difficult. To address this persistent problem, we continuously publish suitable, reliable, and diverse datasets for researchers and intelligent agents to use in research and commercial projects."
     "button" "MORE DETAILS"
     "alt"    "Datasets suited to research and business activites"
   )
   "sv" (dict
     "title"  "Vi hjälper att hitta dataset"
-    "text"   "I AI:n-eran är data det viktigaste bränslet i utvecklingens motor. Vi publicerar lämpliga, pålitliga och varierade dataset som både människor och AI-agenter kan använda inom forskning och företag."
+    "text"   "I AI-eran kan data ses som det viktigaste bränslet i utvecklingens motor. Utan relevanta och korrekt utformade data är det i praktiken omöjligt att utveckla, och till och med utvärdera, lösningar och modeller. De dataset som används kan ofta återanvändas för att hitta fler resultat eller mönster, men att hitta dem är vanligtvis komplicerat och svårt. För att åtgärda detta ständigt återkommande problem publicerar vi fortlöpande lämpliga, pålitliga och varierade dataset som forskare och intelligenta agenter kan använda i forsknings- och kommersiella projekt."
     "button" "LÄS MER"
     "alt"    "Dataset som passar för forskning och företag"
   )
@@ -26,14 +26,14 @@
   <div class="row align-items-center">
 
     <!-- Text column -->
-    <div class="col-12 col-lg-5 order-lg-2 mb-8 mb-lg-0"{{ if eq .Site.Language.Lang "fa" }} dir="rtl" style="text-align: right;"{{ end }}>
-      <h2 class="h1 mb-4">{{ $t.title }}</h2>
-      <p class="lead mb-4">{{ $t.text }}</p>
-      <a href="{{ "datasets/" | relLangURL }}" class="btn btn-primary dsl-btn">{{ $t.button }}</a>
+    <div class="col-12 col-lg-7 order-lg-2 mb-8 mb-lg-0"{{ if eq .Site.Language.Lang "fa" }} dir="rtl" style="text-align: right;"{{ end }}>
+      <h2 class="text-primary text-capitalize">{{ $t.title }}</h2>
+      <p>{{ $t.text }}</p>
+      <a href="{{ "datasets/" | relLangURL }}" class="button">{{ $t.button }}</a>
     </div>
 
     <!-- Photo column. Scripts inserted with innerHTML do not run, so the image onload below starts the script at the bottom of this file. -->
-    <div class="col-12 col-lg-7 order-lg-1">
+    <div class="col-12 col-lg-5 order-lg-1">
       <!-- Add the class "dsl-calibrate" to the div below to see the screen outline while tuning -->
       <div class="dsl-photo" id="dsl-photo" dir="ltr" role="img" aria-label="{{ $t.alt }}">
         <picture>
@@ -55,14 +55,21 @@
 
   .dsl-photo {
     position: relative;
-    max-width: 760px;
-    margin-inline: auto;
+    width: 100%;
+    max-width: 420px;   /* smaller footprint on the page */
+    aspect-ratio: 4 / 3; /* wider crop than the square source photo */
+    margin-inline: 0;   /* align to the column's edge instead of centering, to match other sections */
     overflow: hidden;
-    border: 2px solid #1C3ED3;
+    border: 1px solid #1C3ED3;
     border-radius: 16px;
-    line-height: 0;
   }
-  .dsl-photo img { display: block; width: 100%; height: auto; }
+  .dsl-photo img {
+    display: block;
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: 50% 16%;  /* keeps the laptop screen framed after the crop */
+  }
 
   /* Fixed design size; JS warps it onto the four screen corners of the photo */
   .dsl-screen {
@@ -114,10 +121,10 @@
       Nudge these numbers to move a corner. Add class "dsl-calibrate" to #dsl-photo to see the outline.
     */
     var corners = [
-      [-6.0,  7.2],
-      [69.6, 27.4],
-      [85.9, 76.0],
-      [ 7.0, 72.0]
+      [-6.0,  4.3],
+      [69.6, 31.2],
+      [85.9, 96.0],
+      [ 7.0, 90.7]
     ];
 
     // Solve the 8 unknowns of a homography mapping src points to dst points
