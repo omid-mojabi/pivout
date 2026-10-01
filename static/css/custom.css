@@ -925,7 +925,6 @@ body[class*="fa"] .service-image img {
 
 @media (max-width: 768px) {
 
-  /* خود سکشن آبی */
   html[lang="fa"] .strip.bg-primary,
   html[lang="fa-IR"] .strip.bg-primary,
   body[class*="fa"] .strip.bg-primary {
@@ -1460,7 +1459,7 @@ html[lang="fa-IR"] .opening-hours-table {
 
 .contact-hero {
   width: 100% !important;
-  height: 380px !important;
+  height: 420px !important;
 
   background-size: cover !important;
   background-position: center center !important;
@@ -1509,7 +1508,7 @@ html[lang="fa-IR"] .opening-hours-table {
 .page-about .about-hero {
   display: block !important;
   width: 100% !important;
-  height: 380px !important;
+  height: 420px !important;
   min-height: 380px !important;
   position: relative !important;
   z-index: 1 !important;
@@ -2119,8 +2118,8 @@ html[lang="fa-IR"] .page-work-list .work-summary-text p {
 
 .blog-hero {
   width: 100% !important;
-  height: 520px !important;
-  min-height: 520px !important;
+  height: 420px !important;
+  min-height: 420px !important;
 
   position: relative !important;
 
@@ -3960,8 +3959,8 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
 
   /* Contact stays as it is */
   .page-contact .contact-hero {
-    height: 220px !important;
-    min-height: 220px !important;
+    height: 300px !important;
+    min-height: 300px !important;
   }
 }
 /* =========================================
@@ -4475,4 +4474,3 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
     transform: scale(1) translate3d(0, 0, 0);        
   }
 }
-
