@@ -7,32 +7,54 @@
 {{ $lang := .Site.Language.Lang }}
 {{ $contact := index .Site.Data.contact $lang }}
 
+
+<!-- =====================================================
+     CONTACT HERO
+     ===================================================== -->
+
 <div class="contact-hero"
      style="background-image: url('{{ "/images/contact-header.jpg" | relURL }}');">
+
+  <div class="contact-hero-overlay"></div>
+
+  <div class="container contact-hero-container">
+
+    <div class="contact-hero-text">
+
+      <h1 class="contact-title">
+        {{ .Title }}
+      </h1>
+
+      <div class="contact-intro">
+        {{ .Content }}
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
+
+
+<!-- =====================================================
+     CONTACT PAGE
+     ===================================================== -->
 
 <div class="contact-page">
   <div class="container">
 
-    <!-- PAGE TITLE -->
-    <div class="row">
-      <div class="col-12 col-lg-8">
 
-        <h1 class="contact-title">{{ .Title }}</h1>
+    <!-- =================================================
+         BOOKING + CONTACT FORM
+         ================================================= -->
 
-        <div class="contact-intro">
-          {{ .Content }}
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- BOOKING + CONTACT FORM -->
     <div class="contact-tools">
 
 
-      <!-- BOOKING -->
+      <!-- =================================================
+           BOOKING
+           ================================================= -->
+
       <section class="contact-booking">
 
         <h2>{{ $contact.booking_title }}</h2>
@@ -53,13 +75,16 @@
       </section>
 
 
-      <!-- CONTACT FORM -->
+      <!-- =================================================
+           CONTACT FORM
+           ================================================= -->
+
       <section class="contact-form-section">
 
         <h2>
           {{ if eq $lang "fa" }}
             ارسال پیام
-          {{ else if eq $lang "se" }}
+          {{ else if eq $lang "sv" }}
             Skicka ett meddelande
           {{ else }}
             Send a Message
@@ -69,7 +94,7 @@
         <p>
           {{ if eq $lang "fa" }}
             برای ارسال پیام فرم زیر را تکمیل کنید.
-          {{ else if eq $lang "se" }}
+          {{ else if eq $lang "sv" }}
             Fyll i formuläret nedan för att skicka ett meddelande.
           {{ else }}
             Complete the form below to send a message.
@@ -213,7 +238,12 @@
           </button>
 
         </form>
-             <div id="contact-form-result" class="contact-form-result"></div>
+
+        <div
+          id="contact-form-result"
+          class="contact-form-result">
+        </div>
+
       </section>
 
     </div>
@@ -222,19 +252,28 @@
 </div>
 
 
-<!-- Calendly -->
+<!-- =====================================================
+     CALENDLY
+     ===================================================== -->
+
 <script
   type="text/javascript"
   src="https://assets.calendly.com/assets/external/widget.js"
   async>
 </script>
+
+
+<!-- =====================================================
+     WEB3FORMS
+     ===================================================== -->
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.getElementById("contact-form");
   const result = document.getElementById("contact-form-result");
 
-  if (!form) return;
+  if (!form || !result) return;
 
   form.addEventListener("submit", async function (event) {
 
@@ -262,6 +301,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const resultData = await response.json();
 
+      result.classList.remove("success", "error");
+
       if (resultData.success) {
 
         result.textContent = "Message sent successfully.";
@@ -281,10 +322,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.error(error);
 
+      result.classList.remove("success");
+      result.classList.add("error");
+
       result.textContent =
         "Something went wrong. Please try again.";
-
-      result.classList.add("error");
     }
 
   });
