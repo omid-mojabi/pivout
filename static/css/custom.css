@@ -4030,7 +4030,7 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
     background-position: 68% center !important;
     background-repeat: no-repeat !important;
 
-    padding: 0 !important;
+    padding-top: 10px !important;
 
     overflow: hidden !important;
   }
