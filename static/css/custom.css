@@ -1564,7 +1564,7 @@ html[lang="fa-IR"] .opening-hours-table {
   display: block !important;
   width: 100% !important;
   height: 420px !important;
-  min-height: 420px !important;
+  min-height: 380px !important;
 
   position: relative !important;
   overflow: hidden !important;
@@ -1743,7 +1743,7 @@ body[class*="fa"].page-about .about-slide-content {
 @media (max-width: 768px) {
 
   .page-about .about-hero {
-    height: 220px !important;
+    height: 300px !important;
     min-height: 220px !important;
   }
 
@@ -1769,8 +1769,8 @@ body[class*="fa"].page-about .about-slide-content {
   }
 
   .page-about .about-slider {
-    height: 360px !important;
-    min-height: 360px !important;
+    height: 300px !important;
+    min-height: 220px !important;
   }
 
   .page-about .about-slide-content {
@@ -2236,8 +2236,8 @@ html[lang="fa-IR"] .blog-intro p {
 @media (max-width: 768px) {
 
   .blog-hero {
-    height: 420px !important;
-    min-height: 420px !important;
+    height: 300px !important;
+    min-height: 220px !important;
   }
 
   .blog-hero-inner {
@@ -2798,7 +2798,7 @@ html[lang="fa-IR"] .blog-featured.has-image .blog-featured-content {
 .blog-main-image img {
   display: block !important;
   width: 100% !important;
-  height: 340px !important;
+  height: 320px !important;
   object-fit: cover !important;
 }
 
@@ -3242,7 +3242,7 @@ html[lang="fa-IR"] .blog-main {
 
 .booking-widget {
   width: 100% !important;
-  min-height: 520px !important;
+  min-height: 420px !important;
 }
 
 .booking-placeholder {
@@ -3353,7 +3353,7 @@ html[lang="fa-IR"] .contact-submit {
   }
 
   .booking-widget {
-    min-height: 450px !important;
+    min-height: 420px !important;
   }
 
 }
@@ -3920,8 +3920,8 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
 
   /* Home / fullscreen hero */
   .hero-image.hero-image-fullscreen {
-    height: 320px !important;
-    min-height: 320px !important;
+    height: 300px !important;
+    min-height: 300px !important;
   }
 
   /* Generic internal-page hero */
@@ -3991,8 +3991,8 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
 
   /* Any other internal page using setheight hero */
   .hero-image.hero-image-setheight {
-    height: 220px !important;
-    min-height: 220px !important;
+    height: 300px !important;
+    min-height: 300px !important;
   }
 
 
@@ -4023,7 +4023,7 @@ html[lang="fa-IR"] body.main-menu-mobile-open .language-switcher {
   #home {
     position: relative !important;
 
-    min-height: 420px !important;
+    min-height: 300px !important;
     height: 420px !important;
 
     background-size: cover !important;
