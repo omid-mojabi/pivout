@@ -2,12 +2,15 @@ id: sustainability-software-engineering
 
 title: "مفاهیم حوزه پایداری در مهندسی نرم‌افزار"
 
-year: 2025
+year: ۲۰۲۵
+
+download_url: "https://zenodo.org/records/18386899"
 
 description: 'این دیتاست در سال ۲۰۲۵ برای یک پژوهش دانشگاهی آماده شده که در قالب یک مطالعه نگاشت سیستماتیک (Systematic Mapping Study) درباره‌ پایداری در حوزه‌ مهندسی نرم‌افزار انجام شده و مروری بر ادبیات آکادمیک منتشرشده بین سال‌های ۲۰۱۸ تا ۲۰۲۶ ارائه می‌دهد. داده‌های آن از ۶ پایگاه علمی شامل **IEEE Xplore**، **Scopus**، **ScienceDirect**، **Web of Science**، **Springer** و **ACM** گردآوری شده است. ابزارهایی مانند **Zotero** و **Rayyan.ai** برای سازمان‌دهی، غربالگری، ارزیابی و انتخاب پژوهش‌های مرتبط مورد استفاده قرار گرفته‌اند.'
 
 table:
   dataset: "دیتاست"
+  row: "ردیف"
   year: "سال"
   description: "توضیحات"
   action: "اکشن"

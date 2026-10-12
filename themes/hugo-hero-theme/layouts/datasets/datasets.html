@@ -118,16 +118,20 @@
             table-layout: fixed;
           }
 
+          .pivout-dataset-table col.pivout-col-main-number {
+            width: 5%;
+          }
+
           .pivout-dataset-table col.pivout-col-main-dataset {
-            width: 25%;
+            width: 23%;
           }
 
           .pivout-dataset-table col.pivout-col-main-year {
-            width: 10%;
+            width: 9%;
           }
 
           .pivout-dataset-table col.pivout-col-main-description {
-            width: 50%;
+            width: 48%;
           }
 
           .pivout-dataset-table col.pivout-col-main-action {
@@ -164,8 +168,13 @@
              MAIN TABLE COLUMN WIDTHS
              ========================================================= */
 
+          .pivout-main-number-column {
+            width: 5%;
+            text-align: center !important;
+          }
+
           .pivout-main-dataset-column {
-            width: 25%;
+            width: 23%;
             text-align: left !important;
           }
 
@@ -175,7 +184,7 @@
           }
 
           .pivout-main-description-column {
-            width: 50%;
+            width: 47%;
             text-align: left !important;
           }
 
@@ -291,15 +300,15 @@
           }
 
           .pivout-dataset-versions col.pivout-col-version {
-            width: 25%;
+            width: 20.5%;
           }
 
           .pivout-dataset-versions col.pivout-col-records {
-            width: 10%;
+            width: 10.9%;
           }
 
           .pivout-dataset-versions col.pivout-col-format {
-            width: 15%;
+            width: 17.2%;
           }
 
           .pivout-dataset-versions col.pivout-col-size {
@@ -311,7 +320,7 @@
           }
 
           .pivout-dataset-versions col.pivout-col-download {
-            width: 15%;
+            width: 16.4%;
           }
 
 
@@ -502,8 +511,13 @@
              RTL MAIN TABLE WIDTHS
              ========================================================= */
 
+          .about-page[dir="rtl"] .pivout-main-number-column {
+            width: 5% !important;
+            text-align: center !important;
+          }
+
           .about-page[dir="rtl"] .pivout-main-dataset-column {
-            width: 25% !important;
+            width: 22% !important;
           }
 
           .about-page[dir="rtl"] .pivout-main-year-column {
@@ -511,7 +525,7 @@
           }
 
           .about-page[dir="rtl"] .pivout-main-description-column {
-            width: 50% !important;
+            width: 48% !important;
           }
 
           .about-page[dir="rtl"] .pivout-main-action-column {
@@ -521,43 +535,46 @@
 
           /* =========================================================
              RTL INNER TABLE WIDTHS
+             Sum: 25.6 + 4.6842 + 17.5421 + 20.5 + 14.6842 + 16.9895
+                  = 100
              ========================================================= */
 
           .about-page[dir="rtl"] .pivout-dataset-versions
           th.pivout-version-column,
           .about-page[dir="rtl"] .pivout-dataset-versions
           td.pivout-version-column {
-            width: 25% !important;
+            width: 25.6% !important;
           }
 
           .about-page[dir="rtl"] .pivout-dataset-versions
           th.pivout-records-column,
           .about-page[dir="rtl"] .pivout-dataset-versions
           td.pivout-records-column {
-            width: 10% !important;
+            width: 4.6842% !important;
+            max-width: 4.6842% !important;
           }
 
           .about-page[dir="rtl"] .pivout-dataset-versions
           th.pivout-format-column,
           .about-page[dir="rtl"] .pivout-dataset-versions
           td.pivout-format-column {
-            width: 15% !important;
+            width: 17.5421% !important;
           }
 
           .about-page[dir="rtl"] .pivout-dataset-versions
           th.pivout-size-column,
           .about-page[dir="rtl"] .pivout-dataset-versions
           td.pivout-size-column {
-            width: 20% !important;
+            width: 20.5% !important;
           }
 
           .about-page[dir="rtl"] .pivout-dataset-versions
           th.pivout-user-column,
           .about-page[dir="rtl"] .pivout-dataset-versions
           td.pivout-user-column {
-            width: 15% !important;
+            width: 14.6842% !important;
             min-width: 0 !important;
-            max-width: 15% !important;
+            max-width: 14.6842% !important;
             box-sizing: border-box;
             text-align: center !important;
             white-space: nowrap;
@@ -567,9 +584,9 @@
           th.pivout-download-column,
           .about-page[dir="rtl"] .pivout-dataset-versions
           td.pivout-download-column {
-            width: 15% !important;
+            width: 16.9895% !important;
             min-width: 0 !important;
-            max-width: 15% !important;
+            max-width: 16.9895% !important;
             box-sizing: border-box;
             text-align: center !important;
             white-space: nowrap;
@@ -668,16 +685,21 @@
               border-inline-end: 0;
             }
 
+            .pivout-main-number-column {
+              width: 5%;
+              text-align: center !important;
+            }
+
             .pivout-main-dataset-column {
-              width: 25%;
+              width: 23%;
             }
 
             .pivout-main-year-column {
-              width: 10%;
+              width: 9%;
             }
 
             .pivout-main-description-column {
-              width: 50%;
+              width: 48%;
             }
 
             .pivout-main-action-column {
@@ -808,16 +830,21 @@
                MOBILE RTL MAIN TABLE
                ===================================================== */
 
+            .about-page[dir="rtl"] .pivout-main-number-column {
+              width: 5% !important;
+              text-align: center !important;
+            }
+
             .about-page[dir="rtl"] .pivout-main-dataset-column {
-              width: 25% !important;
+              width: 23% !important;
             }
 
             .about-page[dir="rtl"] .pivout-main-year-column {
-              width: 10% !important;
+              width: 9% !important;
             }
 
             .about-page[dir="rtl"] .pivout-main-description-column {
-              width: 50% !important;
+              width: 48% !important;
             }
 
             .about-page[dir="rtl"] .pivout-main-action-column {
@@ -866,27 +893,31 @@
 
 
         <div class="pivout-datasets">
+          {{ $tableOpened := false }}
+          {{ $datasetIndex := 0 }}
 
           {{ range $datasetKey, $datasetLanguages := site.Data.datasets }}
-
             {{ $dataset := index $datasetLanguages $currentLang }}
 
             {{ if $dataset }}
-
-            <div class="pivout-dataset">
-
-              <table class="pivout-dataset-table">
+              {{ $datasetIndex = add $datasetIndex 1 }}
+              {{ if not $tableOpened }}
+                <table class="pivout-dataset-table">
 
                 <colgroup>
+                  <col class="pivout-col-main-number">
                   <col class="pivout-col-main-dataset">
                   <col class="pivout-col-main-year">
                   <col class="pivout-col-main-description">
                   <col class="pivout-col-main-action">
                 </colgroup>
 
+
                 <thead>
 
                   <tr>
+
+                    <th class="pivout-main-number-column">#</th>
 
                     <th class="pivout-main-dataset-column">
                       {{ $dataset.table.dataset }}
@@ -908,13 +939,17 @@
 
                 </thead>
 
-                <tbody>
+                {{ $tableOpened = true }}
+              {{ end }}
 
+                <tbody>
                   <tr
                     class="pivout-dataset-main"
                     data-pivout-dataset-row
                     aria-expanded="false"
                   >
+
+                    <td class="pivout-main-number-column" rowspan="2">{{ $datasetIndex }}</td>
 
                     <td class="pivout-dataset-name pivout-main-dataset-column">
                       {{ $dataset.title }}
@@ -934,6 +969,7 @@
                     </td>
 
                   </tr>
+
 
                   <tr class="pivout-dataset-details">
 
@@ -1041,46 +1077,55 @@
 
                               </td>
 
-                              <td class="pivout-download-column">
+<td class="pivout-download-column">
 
-                                {{ if $file.url }}
+  {{ $link := "" }}
+  {{ if $file.url }}
+    {{ $link = $file.url }}
+  {{ else if $dataset.download_url }}
+    {{ $link = $dataset.download_url }}
+  {{ end }}
 
-                                <a
-                                  href="{{ $file.url }}"
-                                  class="pivout-dataset-button"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  {{ if eq $file.action "receive" }}
-                                    {{ $dataset.table.receive }}
-                                  {{ else }}
-                                    {{ $dataset.table.request }}
-                                  {{ end }}
-                                </a>
+  {{ $requestLink := "" }}
+  {{ if $file.request_url }}
+    {{ $requestLink = $file.request_url }}
+  {{ else if $dataset.request_url }}
+    {{ $requestLink = $dataset.request_url }}
+  {{ end }}
 
-                                {{ else if eq $file.action "receive" }}
+  {{ if and $link (eq $file.action "receive") }}
 
-                                <a
-                                  href="https://zenodo.org/records/18386899"
-                                  class="pivout-dataset-button"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  {{ $dataset.table.receive }}
-                                </a>
+  <a
+    href="{{ $link }}"
+    class="pivout-dataset-button"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {{ $dataset.table.receive }}
+  </a>
 
-                                {{ else }}
+  {{ else if $requestLink }}
 
-                                <a
-                                  href="{{ "contact" | relLangURL }}"
-                                  class="pivout-dataset-button"
-                                >
-                                  {{ $dataset.table.request }}
-                                </a>
+  <a
+    href="{{ $requestLink | safeURL }}"
+    class="pivout-dataset-button"
+    {{ if not (strings.HasPrefix $requestLink "mailto:") }}target="_blank" rel="noopener noreferrer"{{ end }}
+  >
+    {{ $dataset.table.request }}
+  </a>
 
-                                {{ end }}
+  {{ else }}
 
-                              </td>
+  <a
+    href="{{ "contact" | relLangURL }}"
+    class="pivout-dataset-button"
+  >
+    {{ $dataset.table.request }}
+  </a>
+
+  {{ end }}
+
+</td>
 
                             </tr>
 
@@ -1097,17 +1142,13 @@
                   </tr>
 
                 </tbody>
-
-              </table>
-
-            </div>
-
             {{ end }}
-
           {{ end }}
 
+          {{ if $tableOpened }}
+                </table>
+          {{ end }}
         </div>
-
       </div>
 
     </div>
