@@ -1,0 +1,47 @@
+id: ai-global-index
+
+title: "دیتاست شاخص جهانی هوش مصنوعی"
+
+year: ۲۰۲۳
+
+download_url: "https://www.kaggle.com/datasets/katerynameleshenko/ai-index"
+
+description: 'این دیتاست ۶۳ کشور را بر اساس سرمایه‌گذاری، نوآوری و پیاده‌سازی هوش مصنوعی رتبه‌بندی کرده است و بینشی درباره دسترسی به نیروی متخصص، زیرساخت و راهبرد دولت‌ها ارائه می‌دهد. [**اطلاعات بیشتر**](https://tortoisemedia.com/data/global-ai)'
+
+table:
+  dataset: "دیتاست"
+  row: "ردیف"
+  year: "سال"
+  description: "توضیحات"
+  action: "اکشن"
+  version: "نسخه"
+  records: "رکوردها"
+  format: "فرمت"
+  size: "حجم"
+  user: "کاربر"
+  receive: "دریافت"
+  request: "درخواست"
+  view_details: "مشاهده جزئیات"
+
+versions:
+
+  - title: "دیتاست رسمی"
+    records: ۶۳
+
+    files:
+
+      - format: ".csv"
+        size: "۶.۲۳KB"
+        user: "researcher"
+        action: "receive"
+
+  - title: "دیتاست کامل"
+    records: ۶۳
+
+    files:
+
+      - format: "توافقی"
+        size: "توافقی"
+        user: "researcher"
+        action: "request"
+request_url: "mailto:aiindex@tortoisemedia.com?subject=Dataset%20request"

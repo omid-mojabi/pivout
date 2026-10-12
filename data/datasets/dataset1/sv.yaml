@@ -20,7 +20,7 @@ table:
   size: "Storlek"
   user: "Användare"
   receive: "Hämta"
-  request: "Begär"
+  request: "Begä"
   view_details: "Visa detaljer"
 row: "Rad"
 
