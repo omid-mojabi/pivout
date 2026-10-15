@@ -6,6 +6,7 @@ thumbnail: "/images/blog/2025-10-11-Dead-Ends-or-Data-Goldmines-Zalando-Report.j
 tags:
   - AI
   - data
+  - Agentic AI
   - postmortem
 
 ---
