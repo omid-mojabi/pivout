@@ -1,14 +1,15 @@
-id: sustainability-software-engineering
+id: nav-complexity-genai-in-software-engineering
 
-title: "AI Global Index Dataset"
+title: "Replication Package: Navigating the Complexity of Generative AI Adoption in Software Engineering"
 
-year: 2023
+year: 2024
 
-download_url: "https://www.kaggle.com/datasets/katerynameleshenko/ai-index"
+download_url: "https://zenodo.org/records/8124332"
 
-description: 'This dataset benchmarked 63 countries based on AI investment innovation, and implementation. It discover insights on talent availability, infrastructure and government strategy. [**More info**](https://tortoisemedia.com/data/global-ai)'
+description: 'This dataset was prepared in 2024 as part of an academic study and titled as a Replication Package in data analysis stage of the research. Data from 100 software engineers and 183 software professionals was used to develop and validate the **Human–AI Collaboration and Adaptation Framework (HACAF)**, examining individual, technological, and social factors influencing Generative AI adoption in software engineering.'
 
 table:
+  row: "Row"
   dataset: "Dataset"
   year: "Year"
   description: "Description"
@@ -25,22 +26,11 @@ table:
 versions:
 
   - title: "Official Dataset"
-    records: 63
+    records: 183
 
     files:
 
-      - format: ".csv"
-        size: "6.23 KB"
+      - format: ".zip"
+        size: "7.1 MB"
         user: "researcher"
         action: "receive"
-
-  - title: "Full Dataset"
-    records: 63
-
-    files:
-
-      - format: "Negotiable"
-        size: "Negotiable"
-        user: "researcher"
-        action: "request"
-request_url: "mailto:aiindex@tortoisemedia.com?subject=Dataset%20request"

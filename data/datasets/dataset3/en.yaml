@@ -1,0 +1,46 @@
+id: ai-global-index
+
+title: "AI Global Index Dataset"
+
+year: 2023
+
+download_url: "https://www.kaggle.com/datasets/katerynameleshenko/ai-index"
+
+description: 'This dataset benchmarked 63 countries based on AI investment innovation, and implementation. It discover insights on talent availability, infrastructure and government strategy. [**More info**](https://tortoisemedia.com/data/global-ai)'
+
+table:
+  dataset: "Dataset"
+  year: "Year"
+  description: "Description"
+  action: "Action"
+  version: "Version"
+  records: "Records"
+  format: "Format"
+  size: "Size"
+  user: "User"
+  receive: "Receive"
+  request: "Request"
+  view_details: "View details"
+
+versions:
+
+  - title: "Official Dataset"
+    records: 63
+
+    files:
+
+      - format: ".csv"
+        size: "6.23 KB"
+        user: "researcher"
+        action: "receive"
+
+  - title: "Full Dataset"
+    records: 63
+
+    files:
+
+      - format: "Negotiable"
+        size: "Negotiable"
+        user: "researcher"
+        action: "request"
+request_url: "mailto:aiindex@tortoisemedia.com?subject=Dataset%20request"

@@ -1,17 +1,14 @@
-id: ai-global-index
+id: nav-complexity-genai-in-software-engineering
 
-title: "Dataset för globalt AI-index"
+title: "Att hantera komplexiteten vid införandet av generativ AI inom mjukvaruutveckling"
 
-year: 2023
+year: 2024
 
-download_url: "https://www.kaggle.com/datasets/katerynameleshenko/ai-index"
+download_url: "https://zenodo.org/records/8124332"
 
-request_url: "mailto:aiindex@tortoisemedia.com?subject=Dataset%20request"
-
-description: 'Detta dataset jämför 63 länder utifrån investeringar i AI, innovation och implementering. Det ger insikter om tillgången på talang, infrastruktur och regeringars strategier. [**Mer information**](https://tortoisemedia.com/data/global-ai)'
+description: 'Detta dataset sammanställdes 2024 som en del av en akademisk studie och presenterades som ett reproduktionspaket (Replication Package) under forskningens dataanalysfas. Data från 100 mjukvaruingenjörer och 183 mjukvaruprofessionella användes för att utveckla och validera **ramverket för samarbete och anpassning mellan människa och AI (HACAF)**. Studien undersöker individuella, tekniska och sociala faktorer som påverkar införandet av generativ AI inom programvaruutveckling.'
 
 table:
-  row: "Rad"
   dataset: "Dataset"
   year: "År"
   description: "Beskrivning"
@@ -24,25 +21,16 @@ table:
   receive: "Hämta"
   request: "Begä"
   view_details: "Visa detaljer"
+row: "Rad"
 
 versions:
 
   - title: "Officiellt dataset"
-    records: 63
+    records: 183
 
     files:
 
-      - format: ".csv"
-        size: "6,23 KB"
+      - format: ".zip"
+        size: "7.1 MB"
         user: "researcher"
         action: "receive"
-
-  - title: "Fullständigt dataset"
-    records: 63
-
-    files:
-
-      - format: "Förhandlingsbar"
-        size: "Förhandlingsbar"
-        user: "researcher"
-        action: "request"

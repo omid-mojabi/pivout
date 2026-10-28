@@ -1,12 +1,12 @@
-id: ai-global-index
+id: nav-complexity-genai-in-software-engineering
 
-title: "دیتاست شاخص جهانی هوش مصنوعی"
+title: "پیچیدگی پذیرش هوش مصنوعی مولد در مهندسی نرم‌افزار"
 
-year: ۲۰۲۳
+year: ۲۰۲۴
 
-download_url: "https://www.kaggle.com/datasets/katerynameleshenko/ai-index"
+download_url: "https://zenodo.org/records/8124332"
 
-description: 'این دیتاست ۶۳ کشور را بر اساس سرمایه‌گذاری، نوآوری و پیاده‌سازی هوش مصنوعی رتبه‌بندی کرده است و بینشی درباره دسترسی به نیروی متخصص، زیرساخت و راهبرد دولت‌ها ارائه می‌دهد. [**اطلاعات بیشتر**](https://tortoisemedia.com/data/global-ai)'
+description: 'این مجموعه‌داده در سال ۲۰۲۴ به‌عنوان بخشی از یک مطالعه دانشگاهی تهیه و در مرحله تحلیل داده‌های پژوهش، با عنوان بسته بازتولیدپذیری (Replication Package) ارائه شد. داده‌های حاصل از ۱۰۰ مهندس نرم‌افزار و ۱۸۳ متخصص نرم‌افزار برای توسعه و اعتبارسنجی **چارچوب همکاری و سازگاری انسان و هوش مصنوعی (HACAF)** استفاده شدند. این پژوهش عوامل فردی، فناورانه و اجتماعی مؤثر بر پذیرش هوش مصنوعی مولد در مهندسی نرم‌افزار را بررسی می‌کند.'
 
 table:
   dataset: "دیتاست"
@@ -25,23 +25,12 @@ table:
 
 versions:
 
-  - title: "دیتاست رسمی"
-    records: ۶۳
+  - title: "دیتاست اصلی"
+    records: ۱۸۳
 
     files:
 
-      - format: ".csv"
-        size: "۶.۲۳KB"
+      - format: "zip."
+        size: "۷.۱MB"
         user: "researcher"
         action: "receive"
-
-  - title: "دیتاست کامل"
-    records: ۶۳
-
-    files:
-
-      - format: "توافقی"
-        size: "توافقی"
-        user: "researcher"
-        action: "request"
-request_url: "mailto:aiindex@tortoisemedia.com?subject=Dataset%20request"
