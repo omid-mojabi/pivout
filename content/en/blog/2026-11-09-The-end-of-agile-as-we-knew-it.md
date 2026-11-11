@@ -30,12 +30,12 @@ The Agile Manifesto was written by a group of software engineers who mostly buil
 ### Key Challenges
 
 - **Purpose**: no clear, shared definition of Agile; goals and means getting mixed up; the "why" and the "what" being forgotten because of too much focus on the "how"; and mismatch with the rest of the company, such as support and sales, caused by frequent releases throughout the product lifetime.
-- **Continuous value**: regulatory and certification constraints that generally assume waterfall-style software development; transactional business models that do not fit continuous delivery; and the difficulty of end-to-end delivery.
-- **Superset platform**: a waterfall mindset in systems engineering; the ineffectiveness of MVPs and short iterations in products that must be complete in order to pass quality and functionality tests; difficulty decoupling teams; interdependencies; and customization instead of configuration.
-- **Learning loops**: perfectionism in engineering culture; and lack of short feedback cycles, especially in a B2B context.
-- **AI first**: small, incremental improvements that lead to commoditization.
+- **Deliver value continuously**: under increasing regulatory constraints, how difficult it is to shift from traditional business models and how end-to-end delivery of features is still challenging and Agile practices have done little to alleviate.
+- **Superset platform**: Platforms that contain all the features of a system, both software and non-software, so that each product is in practice just a configuration of the platform with more or fewer features. This idea solves many problems, including the waterfall mindset in design, MVPs that can be tested before delivery, internal dependencies, and customization, and it makes teams responsive. However, current agile ways of working do little about it and leave its implementation in practice to the teams themselves.
+- **Learning loops**: Traditionally, companies built features that were either realized or not. Today, focus is shifting toward capabilities with quantitative KPIs, and iterative deployment lets companies experiment and measure impact. Teams aim to improve capabilities rather than build endless lists of features customers do not use, as often happens in agile today.
+- **AI first**: an increasing number of tasks are being designed to maximize the use of artificial intelligence capabilities, with human involvement introduced only when this approach fails to deliver satisfactory results. This is a technology that, at the time the Agile concept was introduced, had no practical role in industry and was not given much consideration.
 - **Cross-functional teams**: mismatch in governance and regulatory compliance; failure to scale the way of working beyond teams; and lack of adaptation to the context.
-- **Data as infrastructure**: lack of trust.
+- **Data as infrastructure**: Data has played a significant role for decades in companies. However, much of that data is collected, stored and used in silos and optimized for specific use cases and this is often enforced in agile organizations too where teams collect and use data for a specific feature and for their own use.
 
 ![RADICAL perspective on systems engineering  - from the paper](/images/blog/2026-11-09-The-end-of-agile-as-we-knew-it-Radical-framework.png "RADICAL perspective on systems engineering  - from the paper")
 

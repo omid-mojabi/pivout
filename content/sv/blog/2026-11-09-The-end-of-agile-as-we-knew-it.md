@@ -29,12 +29,12 @@ Det agila manifestet skrevs av en grupp mjukvaruingenjörer som mest byggde skr�
 ### Centrala utmaningar
 
 - **Syfte**: ingen tydlig, gemensam definition av agile; att mål och medel blandas ihop; att ”varför” och ”vad” glöms bort på grund av för stort fokus på ”hur”; och bristande överensstämmelse med resten av organisationen, som support och försäljning, till följd av täta releaser under produktens livstid.
-- **Kontinuerligt värde**: regulatoriska krav och certifieringskrav som ofta förutsätter vattenfallsliknande mjukvaruutveckling; transaktionella affärsmodeller som inte passar med kontinuerlig leverans; och svårigheter med leverans från början till slut.
-- **Superset-plattform**: ett vattenfallstänkande inom systemteknik; att MVP:er och korta iterationer är verkningslösa i produkter som måste vara kompletta för att klara kvalitets- och funktionstester; svårigheter att frikoppla team; ömsesidiga beroenden; och skräddarsydda lösningar i stället för konfiguration.
-- **Lärloopar**: perfektionism i ingenjörskulturen; och avsaknad av korta återkopplingscykler, särskilt i en B2B-miljö.
-- **AI först**: små, stegvisa förbättringar som leder till varufiering.
+- **Leverera värde kontinuerligt**: under allt strängare regelkrav; hur svårt det är att ställa om från traditionella affärsmodeller; hur leverans av funktioner – från start till mål – fortfarande är en utmaning, och hur agila arbetssätt inte har gjort mycket för att underlätta detta.
+- **Superset-plattform**: Plattformar som innehåller alla systemets funktioner, både mjukvara och annat, så att varje produkt i praktiken bara är en konfiguration av plattformen med fler eller färre funktioner. Idén löser många problem, bland annat vattenfallstänkandet i design, MVP:er som kan testas före leverans, interna beroenden och skräddarsydda lösningar, och den gör teamen responsiva. Men dagens agila arbetssätt gör föga åt detta och överlåter genomförandet i praktiken åt teamen själva.
+- **Lärloopar**: Traditionellt byggde företag funktioner som antingen realiserades eller inte. Nu skiftar fokus mot förmågor med kvantitativa KPI:er, och iterativ driftsättning låter företag experimentera och mäta effekten. Teamens mål är att förbättra förmågor i stället för att bygga oändliga listor med funktioner som kunderna inte använder, vilket ofta sker i dagens agila paradigm.
+- **AI först**: utformas allt fler arbetsuppgifter på ett sätt som syftar till att maximera utnyttjandet av artificiell intelligens, där människor involveras först när detta arbetssätt inte leder till tillfredsställande resultat. Detta är en teknik som, när det agila konceptet introducerades, ännu inte hade någon praktisk tillämpning inom industrin och inte heller fick någon större uppmärksamhet..
 - **Tvärfunktionella team**: brister i styrning och regelefterlevnad; att arbetssättet inte går att skala bortom teamnivån; och bristande anpassning till sammanhanget.
-- **Data som infrastruktur**: bristande tillit.
+- **Data som infrastruktur**: Data samlas ofta in i silos, något agila team förstärker genom att samla in den för sina egna funktioner. Tveksam kvalitet och semantik gör att företag misstror den och till och med ignorerar den när den motsäger ledares åsikter. Data som infrastruktur skapar tillit och möjliggör strukturerad, företagsövergripande, genuint datadriven mätning av framsteg och värde.
 
 ![RADIKALT perspektiv på systemteknik – från artikeln](/images/blog/2026-11-09-The-end-of-agile-as-we-knew-it-Radical-framework.png "RADIKALT perspektiv på systemteknik – från artikeln")
 
