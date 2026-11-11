@@ -3,25 +3,82 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-{{ partial "hero-image-setheight.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "section" .Section "content" .)}}
+
+{{ $lang := .Site.Language.Lang }}
+{{ $contactLabel := "CONTACT US" }}
+{{ $servicesLabel := "BACK TO SERVICES" }}
+
+{{ if eq $lang "fa" }}
+  {{ $contactLabel = "تماس با ما" }}
+  {{ $servicesLabel = "بازگشت به لیست خدمات" }}
+{{ else if eq $lang "sv" }}
+  {{ $contactLabel = "KONTACT OSS" }}
+  {{ $servicesLabel = "TILLBAKA TILL TJÄNSTER" }}
+{{ end }}
+
+{{ partial "hero-image-setheight.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "section" .Section "content" .) }}
+
 <div class="container pt-4 pt-md-10 pb-4 pb-md-10">
   <div class="row justify-content-start">
     <div class="col-12 col-md-8">
       <div class="service service-single">
-        <div class="content">{{.Content}}</div>
+
+        <div class="content">
+          {{ .Content }}
+        </div>
+
+        <div class="service-contact-cta{{ if eq $lang "fa" }} service-contact-cta-rtl{{ end }}">
+          <a href="{{ "contact" | relLangURL }}" class="btn btn-primary">
+            {{ $contactLabel }}
+          </a>
+
+          <a href="{{ "services" | relLangURL }}" class="btn btn-outline-primary">
+            {{ $servicesLabel }}
+          </a>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .service-contact-cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
+
+  .service-contact-cta-rtl {
+    direction: rtl;
+    justify-content: flex-start;
+    text-align: right;
+  }
+
+  .service-contact-cta .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-weight: 700;
+    border-radius: 7px;
+    text-decoration: none;
+  }
+</style>
+
 {{ end }}
 
 {{ define "footer_js" }}
 {{ $library := resources.Get "js/libs/library.js" }}
 {{ $services := resources.Get "js/pages/services.js" }}
-{{ $servicesJS := slice $library $services |resources.Concat "js/services.js" }}
+{{ $servicesJS := slice $library $services | resources.Concat "js/services.js" }}
+
 {{ if hugo.IsServer }}
   <script type="text/javascript" src="{{ $servicesJS.RelPermalink }}"></script>
-  {{ else }}
+{{ else }}
   <script type="text/javascript" src="{{ ($servicesJS | minify | fingerprint).RelPermalink }}"></script>
-  {{ end }}
+{{ end }}
+
 {{ end }}
